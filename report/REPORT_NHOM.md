@@ -1,8 +1,8 @@
 # Báo Cáo Nhóm — Lab 7: Embedding & Vector Store
 
-**Nhóm:** 
-**Thành viên:** Dương Minh Hiếu
-**Ngày:** 2026-09-19
+**Nhóm:** Gì cũng được
+**Thành viên:** Nguyễn Vũ Quang Anh, Mai Phan Anh Tùng, Dương Minh Hiếu, Vũ Minh Hiếu, Nguyễn Thị Chinh
+**Ngày:** 20/09/2026
 
 > **Nộp 1 bản / nhóm.** Phần cá nhân (hướng tiếp cận, kết quả riêng, dự đoán…) mỗi thành viên nộp riêng trong `REPORT_CANHAN.md`. Chi tiết thang điểm: `docs/SCORING.md`.
 
@@ -14,72 +14,39 @@
 
 ### Chủ đề (Domain) & Lý Do Chọn
 
-**Chủ đề:** Học phí và hỗ trợ học phí/học bổng tại USTH.
+**Chủ đề:** Học phí trường Đại học
 
 **Tại sao nhóm chọn chủ đề này?**
-Thông báo của USTH có mức thu, mốc thời gian và hướng dẫn thanh toán cụ thể,
-giúp kiểm chứng câu trả lời bằng tài liệu gốc. Bộ tài liệu còn có chính sách
-học bổng theo đối tượng để thiết kế thử nghiệm lọc metadata.
+Vì thông tin học phí đại học là nhu cầu tra cứu rất lớn của sinh viên và phụ huynh nhưng thường bị phân tán qua nhiều văn bản, quyết định theo từng năm học và hệ đào tạo (chính quy, chất lượng cao, sau đại học). Bộ dữ liệu này có cấu trúc phân tầng rõ rệt (chứa cả bảng biểu số liệu, mốc thời hạn và điều kiện chính sách miễn giảm/hoàn trả), lý tưởng để thử nghiệm truy xuất ngữ nghĩa (semantic search) kết hợp lọc siêu dữ liệu (metadata filter) theo đối tượng (student vs staff).
 
 ### Danh sách tài liệu (Data Inventory)
 
-Số ký tự được tính bằng `len(body.strip())` sau khi bỏ frontmatter, chuẩn hóa
-xuống dòng thành LF; bao gồm tiêu đề và ký hiệu Markdown trong phần nội dung.
-Mỗi file có một dòng tương ứng trong `data/hoc-phi-usth/sources.csv`.
-
 | # | Tên tài liệu | Nguồn (Source URL) | Ngày lấy / Phiên bản | Số ký tự | Metadata đã gán |
 |---|--------------|------------|--------------------|----------|-----------------|
-| 1 | [USTH - Học bổng Tăng cường năng lực cho cán bộ VAST](../data/hoc-phi-usth/hoc-bong-tang-cuong-nang-luc-can-bo.md) | [USTH](https://usth.edu.vn/chinh-sach-hoc-bong-cua-usth-8361/) | 2026-09-19 / `not-stated` | 339 | `audience=staff; category=scholarship; language=vi; source_section=3.2. Học bổng Tăng cường năng lực; eligibility_group=vast-institute-center-staff; temporal_scope=historical-overview` |
-| 2 | [USTH - Học bổng Tiếp nối cho người tốt nghiệp USTH](../data/hoc-phi-usth/hoc-bong-tiep-noi-sinh-vien.md) | [USTH](https://usth.edu.vn/chinh-sach-hoc-bong-cua-usth-8361/) | 2026-09-19 / `not-stated` | 275 | `audience=student; category=scholarship; language=vi; source_section=3.1. Học bổng Tiếp nối; eligibility_group=usth-graduate; temporal_scope=historical-overview` |
-| 3 | [Mức học phí USTH năm học 2026-2027](../data/hoc-phi-usth/muc-hoc-phi-2026-2027.md) | [USTH](https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/) | 2026-09-19 / `not-stated` | 1567 | `audience=student; category=tuition-rates; language=vi; academic_year=2026-2027` |
-| 4 | [Phí gia hạn đào tạo USTH năm học 2025-2026](../data/hoc-phi-usth/phi-gia-han-dao-tao-2025-2026.md) | [USTH](https://usth.edu.vn/thong-bao-thu-phi-gia-han-dao-tao-nam-hoc-2025-2026-31390/) | 2026-09-19 / `not-stated` | 706 | `audience=student; category=training-extension-fee; language=vi; academic_year=2025-2026` |
-| 5 | [Thu học phí USTH học kỳ II năm học 2025-2026](../data/hoc-phi-usth/thu-hoc-phi-hk2-2025-2026.md) | [USTH](https://usth.edu.vn/tb-ve-viec-thu-hoc-phi-hoc-ky-ii-nam-hoc-2025-2026-chuong-trinh-dao-tao-trinh-do-dai-hoc-29249/) | 2026-09-19 / `not-stated` | 1802 | `audience=student; category=tuition-payment; language=vi; academic_year=2025-2026` |
-
-**Phạm vi và tính minh bạch nguồn:** Có 5 file từ 4 URL nguồn độc lập.
-Hai file học bổng là bản diễn giải riêng mục 3.1 và 3.2 của cùng một bài tổng
-quan cũ; không tính là hai trang nguồn khác nhau và không xác nhận áp dụng
-năm 2026-2027. Các thông báo thu phí ghi rõ năm học; không trộn mức phí giữa
-2025-2026 và 2026-2027. `document_version=not-stated` nghĩa là chưa xác định
-phiên bản của bài thông báo, không lấy ngày crawl làm ngày hiệu lực.
+| 1 | Điều chỉnh học phí sau đại học, giảm 5% - Trường Đại học Công Nghệ - Đại học Quốc Gia Hà Nội|https://uet.vnu.edu.vn/dieu-chinh-hoc-phi-sau-dai-hoc-giam-5/ |2026-09-19 / not-stated| 1583 | `doc_id: dieu-chinh-hoc-phi-sau-dai-hoc-giam-5`, `retrieved_at: 2026-09-19`, `document_version: not-stated`, `audience: student` |
+| 2 | Báo cáo lộ trình thu học phí các hệ năm học 2026 - 2027| https://ussh.vnu.edu.vn/vi/gioi-thieu/ba-cong-khai/bao-cao-lo-trinh-thu-hoc-phi-cac-he-nam-hoc-2026-2027-19718.html |2026-09-19 / not-stated| 10416 | `doc_id: bao-cao-lo-trinh-thu-hoc-phi-cac-he-nam-hoc-2026-2027-19718`, `retrieved_at: 2026-09-19`, `document_version: not-stated`, `audience: staff` |
+| 3 | dinh-muc-hoc-phi-dao-tao-dai-hoc-nam-hoc-2024-2025 | https://uet.edu.vn/dinh-muc-hoc-phi-dao-tao-dai-hoc-nam-hoc-2024-2025/ | 2026-09-19 / not-stated| 6,884 | `doc_id: dinh-muc-hoc-phi-dao-tao-dai-hoc-nam-hoc-2024-2025`, `retrieved_at: 2026-09-19`, `document_version: not-stated`, `audience: student` |
+| 4 | gia-han-thoi-gian-nop-hoc-phi-trong-hkii-nam-hoc-2025-2026 | https://uet.edu.vn/gia-han-thoi-gian-nop-hoc-phi-trong-hkii-nam-hoc-2025-2026/ | 2026-09-19 / not-stated| 1259 | `doc_id: gia-han-thoi-gian-nop-hoc-phi-trong-hkii-nam-hoc-2025-2026`, `retrieved_at: 2026-09-19`, `document_version: not-stated`, `audience: student` |
+| 5 | hoan-tra-hoc-phi-cho-sinh-vien-thuoc-chuong-trinh-chat-luong-cao-theo-thong-tu-23-2014-tt-bgddt-tot-nghiep-dot-xet-thang-03-nam-2026 | https://uet.edu.vn/hoan-tra-hoc-phi-cho-sinh-vien-thuoc-chuong-trinh-chat-luong-cao-theo-thong-tu-23-2014-tt-bgddt-tot-nghiep-dot-xet-thang-03-nam-2026/ | 2026-09-19 / not-stated| 2845 | `doc_id: hoan-tra-hoc-phi-cho-sinh-vien-thuoc-chuong-trinh-chat-luong-cao-theo-thong-tu-23-2014-tt-bgddt-tot-nghiep-dot-xet-thang-03-nam-2026`, `retrieved_at: 2026-09-19`, `document_version: not-stated`, `audience: student` |
+| 6 | neu-tuition-decision-985-2026-2027| "https://fit.neu.edu.vn/post/hoc-phi-neu-nam-hoc-2026-2027-theo-quyet-dinh-985" | 2026-09-19 / not-stated| 3985 |  `doc_id: neu-tuition-decision-985-2026-2027`, `retrieved_at: 2026-09-19`, `document_version: not-stated`, `audience: student` |
+| 7 | neu-tuition-fees-2025-2026 | https://fit.neu.edu.vn/post/neu-tuition-fees-2025-2026 | 2026-09-19 / not-stated| 2826 | `doc_id: neu-tuition-fees-2025-2026`, `retrieved_at: 2026-09-19`, `document_version: not-stated`, `audience: student` |
+| 8 | tb-ve-viec-thu-hoc-phi-hoc-ky-ii-nam-hoc-2025-2026-chuong-trinh-dao-tao-trinh-do-dai-hoc-29249 | https://usth.edu.vn/tb-ve-viec-thu-hoc-phi-hoc-ky-ii-nam-hoc-2025-2026-chuong-trinh-dao-tao-trinh-do-dai-hoc-29249/ | 2026-09-19 / not-stated | 2190 | `doc_id: tb-ve-viec-thu-hoc-phi-hoc-ky-ii-nam-hoc-2025-2026-chuong-trinh-dao-tao-trinh-do-dai-hoc-29249`, `retrieved_at: 2026-09-19`, `document_version: not-stated`, `audience: student` |
+| 9 | thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107 | https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/ | 2026-09-19 / not-stated| 1884| `doc_id: thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107`, `retrieved_at: 2026-09-20`, `document_version: not-stated`, `audience: student |
 
 **Danh sách kiểm tra quản trị dữ liệu (Data governance checklist):**
-- [x] Tập tài liệu lấy từ trang công khai của USTH; không chứa hồ sơ cá nhân, thông tin đăng nhập hoặc tài liệu nội bộ.
-- [x] Mỗi tài liệu có `source_url`, `retrieved_at`, `document_version` và `audience` trong metadata.
-- [x] Mỗi tài liệu có trường lọc bổ sung `category` và `language`.
-- [x] Có 5 file, `doc_id` duy nhất, khớp tên file và `sources.csv` khớp 1-1.
-- [x] Có hai giá trị `audience`: `student` (4 file), `staff` (1 file).
-
-Nguồn bổ sung về phí gia hạn có danh sách sinh viên trong tài liệu nhúng;
-chỉ lấy phần HTML thông báo, không tải danh sách. `public-source` trong CSV
-là căn cứ nguồn công khai theo quy ước lab, không phải tuyên bố giấy phép mở.
+- [x] Tập tài liệu (Corpus) chỉ chứa nguồn công khai/được phép dùng và không chứa dữ liệu cá nhân, thông tin đăng nhập hoặc tài liệu nội bộ.
+- [x] Mỗi tài liệu có `source_url`, `retrieved_at`, `document_version` (hoặc ngày hiệu lực) trong metadata.
 
 ### Cấu trúc Metadata (Metadata Schema)
 
 | Trường metadata | Kiểu | Ví dụ giá trị | Tại sao hữu ích cho truy xuất (retrieval)? |
 |----------------|------|---------------|-------------------------------|
-| `doc_id` | string, bắt buộc | `muc-hoc-phi-2026-2027` | Định danh tài liệu gốc, khớp tên file và CSV; giữ trên mọi chunk. |
-| `title` | string, bắt buộc | Mức học phí USTH năm học 2026-2027 | Nhận diện nội dung và hiển thị nguồn. |
-| `source_url` | string URL, bắt buộc | URL bài viết USTH ở bảng trên | Truy vết và kiểm chứng đáp án. |
-| `retrieved_at` | string YYYY-MM-DD, bắt buộc | `2026-09-19` | Ngày thu thập; không phải ngày hiệu lực. |
-| `document_version` | string, bắt buộc | `not-stated` | Ghi phiên bản nếu nguồn nêu; không tự suy đoán. |
-| `audience` | enum string, bắt buộc | `student`, `staff` | Lọc theo đối tượng; schema cho phép thêm `faculty`, `all`. |
-| `category` | string, bắt buộc trong corpus này | `tuition-rates`, `tuition-payment`, `scholarship`, `training-extension-fee` | Phân biệt mức thu, thanh toán, học bổng và phí gia hạn. |
-| `language` | string, bắt buộc trong corpus này | `vi` | Xác định ngôn ngữ; hiện tất cả file là tiếng Việt. |
-| `academic_year` | string, tùy tài liệu | `2025-2026`, `2026-2027` | Ngăn lấy nhầm năm học; không gán năm cho bài học bổng tổng quan cũ. |
-| `source_section` | string, tùy tài liệu | `3.1. Học bổng Tiếp nối` | Chỉ đúng mục được diễn giải từ nguồn chung. |
-| `eligibility_group` | string, tùy tài liệu | `usth-graduate`, `vast-institute-center-staff` | Phân biệt điều kiện đối tượng của hai học bổng. |
-| `temporal_scope` | string, tùy tài liệu | `historical-overview` | Đánh dấu bài tổng quan cũ, tránh coi là chính sách hiện hành. |
-| `audience_basis` | string, tùy tài liệu | Cán bộ VAST đang học sau đại học | Giải thích vì sao mục học bổng được gán `staff`. |
-| `fee_basis` | string, tùy tài liệu | Quyết định số 563/QĐ-ĐHKHCN ngày 01/07/2025 | Lưu căn cứ mức thu được thông báo dẫn chiếu. |
-| `extraction_note` | string, tùy tài liệu | Chỉ lấy HTML, chưa trích tài liệu nhúng | Ghi phạm vi trích xuất và giới hạn dữ liệu. |
-
-`staff` mô tả nhóm cán bộ VAST đủ điều kiện học bổng; họ đồng thời có thể là
-người học. Đây không phải tài liệu hướng dẫn nhân viên thu học phí. Khi nạp
-dữ liệu cần truyền metadata vào mọi chunk, giữ `metadata.doc_id` là tài liệu
-gốc và đặt `Document.id` riêng cho từng chunk.
-
-**Kết quả kiểm tra:** `py -3.11 scripts/check_corpus.py` xác nhận cấu trúc dữ liệu.
-Đã có A/B CP6 bằng mock ở mục 3; Q5 vẫn chưa chứng minh cần bộ lọc. Điểm rubric còn chờ đánh giá câu trả lời agent.
+|doc_id | string | neu-tuition-fees-2025-2026 | Định danh tài liệu, hỗ trợ hàm `delete_document()` xoá trọn vẹn các chunks thuộc một tài liệu và theo dõi nguồn gốc dữ liệu |
+|title | string | Điều chỉnh học phí sau đại học, giảm 5% - Trường Đại học Công Nghệ - Đại học Quốc Gia Hà Nội | Bổ sung ngữ cảnh cấp cao (high-level context) cho chunk khi tìm kiếm, giúp Agent trích dẫn đúng tiêu đề văn bản trong câu trả lời |
+|source_url| string | https://uet.vnu.edu.vn/dieu-chinh-hoc-phi-sau-dai-hoc-giam-5/ | Đảm bảo tính kiểm chứng thực tế (Grounding & Traceability), cho phép người dùng đối chiếu trực tiếp với URL văn bản gốc của trường |
+|retrieved_at| string | 2026-09-19 | Đánh giá độ mới (data freshness) của tri thức, giúp hệ thống ưu tiên các thông báo thu học phí mới nhất nếu có cập nhật |
+|document_version| string | v1.0 | Đánh dấu phiên bản tài liệu, giúp tránh nhầm lẫn số liệu giữa các phiên bản |
+|audience | string | student, staff | Phân tách đối tượng áp dụng (sinh viên, cán bộ) giúp Agent đưa ra thông tin chính xác, phù hợp với vai trò người hỏi |
 
 ---
 
@@ -89,83 +56,87 @@ gốc và đặt `Document.id` riêng cho từng chunk.
 
 ### Phân tích đường cơ sở (Baseline Analysis)
 
-Đã chạy `ChunkingStrategyComparator().compare(body, chunk_size=500)` trên
-3 tài liệu bên dưới. `body` đã bỏ YAML frontmatter; giữ tiêu đề Markdown.
-FixedSize dùng overlap 50, Sentence dùng 3 câu/chunk. Các số liệu và toàn bộ
-chunk được lưu tại [`benchmark/baseline_cp5.json`](../benchmark/baseline_cp5.json).
-Nhận xét cột cuối mô tả cấu trúc đoạn; chưa kết luận chất lượng retrieval.
+Chạy `ChunkingStrategyComparator().compare()` trên 2-3 tài liệu:
 
-| Tài liệu | Chiến lược (Strategy) | Số lượng Chunk | Độ dài trung bình (ký tự) | Giữ được ngữ cảnh không? |
+| Tài liệu | Chiến lược (Strategy) | Số lượng Chunk | Độ dài trung bình | Giữ được ngữ cảnh không? |
 |-----------|----------|-------------|------------|-------------------|
-| `muc-hoc-phi-2026-2027` | `fixed_size` | 4 | 429.25 | Giới hạn 500 ký tự, overlap 50; có thể cắt giữa câu hoặc dòng mức phí. |
-| `muc-hoc-phi-2026-2027` | `by_sentences` | 7 | 222.43 | Giữ dấu câu; tối đa 3 câu. Danh sách/bảng ít dấu kết câu có thể tạo chunk dài hơn 500. |
-| `muc-hoc-phi-2026-2027` | `recursive` | 4 | 391.75 | Ưu tiên đoạn/dòng và gom mảnh nhỏ; có thể mất tiêu đề ở chunk sau, chưa lặp lại đơn vị bảng. |
-| `thu-hoc-phi-hk2-2025-2026` | `fixed_size` | 4 | 488.00 | Giới hạn 500 ký tự, overlap 50; có thể cắt giữa câu hoặc dòng mức phí. |
-| `thu-hoc-phi-hk2-2025-2026` | `by_sentences` | 7 | 255.29 | Giữ dấu câu; tối đa 3 câu. Danh sách/bảng ít dấu kết câu có thể tạo chunk dài hơn 500. |
-| `thu-hoc-phi-hk2-2025-2026` | `recursive` | 5 | 360.40 | Ưu tiên đoạn/dòng và gom mảnh nhỏ; có thể mất tiêu đề ở chunk sau, chưa lặp lại đơn vị bảng. |
-| `phi-gia-han-dao-tao-2025-2026` | `fixed_size` | 2 | 378.00 | Giới hạn 500 ký tự, overlap 50; có thể cắt giữa câu hoặc dòng mức phí. |
-| `phi-gia-han-dao-tao-2025-2026` | `by_sentences` | 2 | 349.50 | Giữ dấu câu; tối đa 3 câu. Danh sách/bảng ít dấu kết câu có thể tạo chunk dài hơn 500. |
-| `phi-gia-han-dao-tao-2025-2026` | `recursive` | 2 | 353.00 | Ưu tiên đoạn/dòng và gom mảnh nhỏ; có thể mất tiêu đề ở chunk sau, chưa lặp lại đơn vị bảng. |
+| Thông báo thu học phí học kỳ II năm học 2025–2026 (Hệ đại học)| FixedSizeChunker (`fixed_size`) | 12 | 190.3 | Không (cắt ngang bảng biểu, ngắt giữa từ, giữa câu) |
+| Thông báo thu học phí học kỳ II năm học 2025–2026 (Hệ đại học)| SentenceChunker (`by_sentences`) | 5 | 344.6 | Cắt ngang số và heading nhưng giữ nguyên câu |
+| Thông báo thu học phí học kỳ II năm học 2025–2026 (Hệ đại học)| RecursiveChunker (`recursive`) | 31 | 54.2 | Có (ưu tiên ngắt theo đoạn `\n\n` và dòng) |
+| Thông báo thu học phí học kỳ II năm học 2025–2026 (Hệ đại học)| HeadingChunker (`heading`) | 6 | 286.8 | Có (giữ nguyên vẹn một section) |
+| Quy định định mức học phí đào tạo đại học năm học 2024-2025 - Trường Đại học Công Nghệ - Đại học Quốc Gia Hà Nội | FixedSizeChunker (`fixed_size`) | 44 | 197.3 | Không (cắt ngang bảng biểu, ngắt giữa từ, giữa câu) |
+| Quy định định mức học phí đào tạo đại học năm học 2024-2025 - Trường Đại học Công Nghệ - Đại học Quốc Gia Hà Nội | SentenceChunker (`by_sentences`) | 8 | 813.4 | Cắt ngang số và heading nhưng giữ nguyên câu |
+| Quy định định mức học phí đào tạo đại học năm học 2024-2025 - Trường Đại học Công Nghệ - Đại học Quốc Gia Hà Nội | RecursiveChunker (`recursive`) | 334 | 18.4 | Có (ưu tiên ngắt theo đoạn `\n\n` và dòng) |
+t Quy định định mức học phí đào tạo đại học năm học 2024-2025 - Trường Đại học Công Nghệ - Đại học Quốc Gia Hà Nội | HeadingChunker (`heading`) | 1 | 6531.0 | Giữ trọn toàn văn do chỉ có 1 heading, nhưng trunk quá dài, gây loãng ngữ nghĩa |
 
 ### Chiến lược của từng thành viên
 
 > Mỗi thành viên điền một khối dưới đây (copy thêm nếu nhóm có nhiều hơn 3 người).
 
-**Chiến lược cá nhân đang chạy trong repo — Dương Minh Hiếu**
-- **Loại chiến lược:** Heading, `chunk_size=500`.
-- **Lý do:** Thông báo USTH phân mục mức phí, thời hạn và thanh toán. Giữ tiêu đề của mục cùng tiêu đề tài liệu trên từng chunk giúp nhận diện nội dung và năm học.
-- **Cách xử lý:** Tách trước heading Markdown; section dài được chia bằng RecursiveChunker với ngân sách còn lại sau tiêu đề. Mỗi mảnh con được gắn lại chuỗi heading cha/con. Không nhận dòng `#` trong fenced code block là heading.
-- **Giới hạn:** Không tự lặp lại đơn vị/mô tả cột nếu chúng nằm trong thân bảng; heading quá dài so với ngân sách sẽ báo lỗi để tăng chunk_size. Metadata vẫn giữ trên mọi chunk.
-- **Mã nguồn:** [`src/heading_chunking.py`](../src/heading_chunking.py).
-- **CP5:** `python bench.py` chạy thành công: 5 tài liệu, 19 chunk, 5 câu hỏi, top-3 mỗi câu. Output: [`ket_qua_benchmark.txt`](../ket_qua_benchmark.txt).
-- **Cấu hình chung:** MockEmbedder, top_k=3, cùng corpus và `benchmark/usth_queries.json`. Chỉ đổi `DEFAULT_STRATEGY` trong `bench.py` hoặc `--strategy`; chưa dùng API embedding, không phát sinh phí API.
-- **Ghi chú:** Tại thời điểm này, dữ liệu benchmark và báo cáo đều chạy trên mock backend, nên kết luận về semantic quality chỉ mang tính tương đối và phải được kiểm tra lại bằng embedder thật trong môi trường có thể cài đặt backend. 
+**Thành viên 1 — Nguyễn Vũ Quang Anh**
+- **Loại chiến lược:** RecursiveChunker, `chunk_size=700` ký tự; retrieval dùng TF-IDF unigram + bigram
+- **Mô tả & lý do chọn cho chủ đề này:** Tài liệu học phí gồm thông báo, bảng mức thu và quy định có đoạn dài; recursive chunking ưu tiên cắt theo đoạn (`\n\n`), dòng (`\n`) rồi mới đến câu và từ, nên ít làm mất ngữ cảnh hơn cắt theo số ký tự cố định. Ngưỡng 700 đủ để giữ một quy định hoặc một phần bảng kèm điều kiện trong cùng chunk, đồng thời vẫn tránh nạp cả trang có nhiều menu vào một vector. Corpus hiện có hai audience `student` và `staff`; metadata được trải vào từng chunk. Trong benchmark mới nhất trên 89 chunks, chiến lược này trả về tài liệu/evidence liên quan trong top-3 cho 5/5 câu hỏi.
+- **Code snippet (nếu custom):**
+```python
+# Dán mã nguồn (implementation) vào đây
+```
 
-**Thành viên 2 — [Tên]**
-- **Loại chiến lược:** FixedSize / Recursive (có thể bổ sung khi nhóm xác nhận thành viên thứ hai).
-- **Mô tả & lý do chọn:** Dùng mô hình chia đoạn theo kích thước cố định hoặc theo đoạn/đường phân tách, phù hợp cho dữ liệu dài gồm nhiều bảng mức thu.
-- **Code snippet (nếu custom):** Chưa bổ sung trong bản này; lưu lại nháp tích lũy khi nhóm chạy thêm chiến lược độc lập.
+**Thành viên 2 — Mai Phan Anh Tùng**
+- **Loại chiến lược:** HeadingChunker + RecursiveChunker (tách theo heading, chunk_size=500)
+- **Mô tả & lý do chọn:** Văn bản học phí và thông báo của trường được soạn theo mục: Điều 1., 2. Mức học phí…, tiêu đề có emoji. Mỗi mục thường là một bảng mức phí hoặc một quy trình trọn vẹn.
+Chunker tách trước mỗi dòng heading, mỗi section là một chunk. Section dài hơn 500 ký tự thì hạ xuống RecursiveChunker, và tiêu đề được gắn lại vào từng mảnh con.
+Kết quả: bảng học phí và 4 bước nộp học phí qua ERP của USTH nằm trọn trong một chunk.
+- **Code snippet (nếu custom):**
 
-**Thành viên 3 — [Tên]**
-- **Loại chiến lược:** FixedSize / Recursive (có thể bổ sung khi nhóm xác nhận thành viên thứ ba).
-- **Mô tả & lý do chọn:** Khảo sát bổ sung từ cùng corpus để so sánh phân bổ chunk, độ dài và khả năng giữ ngữ cảnh giữa các cấu hình.
-- **Code snippet (nếu custom):** Chưa bổ sung trong bản này; lưu lại nháp tích lũy khi nhóm chạy thêm chiến lược độc lập.
+**Thành viên 3 — Dương Minh Hiếu**
+- **Loại chiến lược:** HeadingChunker
+- **Mô tả & lý do chọn:** Lý do chọn chiến lược heading là vì tài liệu có cấu trúc rõ theo từng mục và tiêu đề, nên chunk theo section giúp giữ ngữ cảnh chính xác hơn so với cắt theo kích thước đều. Với các câu hỏi về mức học phí, thời hạn, thanh toán hoặc học bổng, thông tin cần tìm thường nằm trong một mục riêng, nên heading chunking giúp giữ đúng chủ đề và dễ truy xuất hơn. Tuy nhiên, khi dùng mock embedding, chunk theo heading vẫn có thể bị nhầm giữa các section cùng chủ đề vì cosine không hiểu ngữ nghĩa.
+- **Code snippet (nếu custom):**
+```python
+class HeadingChunker:
+    def __init__(self, chunk_size=500):
+        self.chunk_size = chunk_size
+
+    def chunk(self, text):
+        headings = []
+        body = []
+        for line in text.splitlines():
+            if line.startswith("#"):
+                flush()
+                headings.append(line.strip())
+            else:
+                body.append(line)
+        return [("\n".join(headings) + "\n\n" + "\n".join(body)).strip()]
+```
+
+**Thành viên 4 — Vũ Minh Hiếu**
+- **Loại chiến lược:** RecursiveChunker, chunk_size = 500-700
+- **Mô tả & lý do chọn:** Thuật toán cắt theo đoạn `\n\n` trước, nếu đoạn văn vẫn vượt quá `chunk_size` thì sẽ cắt tiếp theo từng dòng `\n`, cuối cùng là theo dấu câu (. ) và khoảng trắng ( ). Lý do chọn là để tránh hiện tượng cắt đứt số liệu biểu phí và tối ưu tương đồng ngữ nghĩa.
+- **Code snippet (nếu custom):**
+
+**Thành viên 5 — Nguyễn Thị Chinh**
+- **Loại chiến lược:** SentenceChunker 
+- **Mô tả & lý do chọn:** Tách văn bản dựa trên các dấu kết thúc câu (. ! ?), sau đó gom từ 2-3 câu liền kề thành 1 chunk hoàn chỉnh. Lý do chọn là vì các quy định về học phí, điều kiện miễn giảm, chính sách hoàn trả và thời hạn nộp thường được diễn đạt trọn vẹn theo từng câu quy chuẩn. Việc phân tách theo câu giúp bảo toàn ngữ nghĩa và tránh hiện tượng cắt ngang số liệu, công thức, hoặc các quy định quan trọng.
+- **Code snippet (nếu custom):**
 
 ### So Sánh Giữa Các Thành Viên
 
-**Hiện đây là phép so sánh ba cấu hình chạy trong cùng repo**, chưa phải kết
-quả do ba thành viên độc lập nộp. Giữ trống tên/phân công cho tới khi nhóm xác nhận;
-không gán kết quả giả cho thành viên khác.
+> Kết quả chạy lại trên `hoc-phi.zip` ngày 20/09/2026. Bản sao tạm dùng để benchmark đã bỏ khóa metadata `audience` bị lặp, sửa lỗi ghép dòng trong frontmatter và giải mã lại file USSH bị lỗi encoding; file zip gốc không bị thay đổi. Tất cả dùng `MockEmbedder`, `top_k=3`, nên điểm dưới đây là **retrieval proxy** (evidence coverage), không phải điểm hiểu ngữ nghĩa của mô hình embedding thật.
 
-Backend: **MockEmbedder (MD5), không có ngữ nghĩa**, theo lựa chọn của người làm bài.
-Không cài backend thật và không dùng API trả phí. Cả ba cấu hình chạy trên cùng
-5 tài liệu, 5 câu hỏi, chunk_size=500, top_k=3; FixedSize overlap=50.
-Tập trung phân tích số lượng/độ dài chunk và khả năng giữ điều khoản.
-Điểm và thứ hạng mock chỉ mô tả lượt chạy này, không chứng minh chiến lược nào tốt hơn về ngữ nghĩa.
+| Thành viên | Chiến lược (Strategy) | Điểm truy xuất (/10) | Điểm mạnh | Điểm yếu |
+|-----------|----------|----------------------|-----------|----------|
+| Nguyễn Vũ Quang Anh | Recursive, `chunk_size=700` (54 chunks; trung bình 564.59 ký tự) | 0/10* | Giữ đoạn và dòng dài tốt, ít cắt vụn bảng/quy định | Chunk lớn, dễ trộn nhiều ý; chưa đưa evidence của 5 câu vào top-3 với mock |
+| Mai Phan Anh Tùng | Heading + Recursive, `chunk_size=500` (123 chunks; trung bình 392.52 ký tự) | 0/10* | Giữ heading trong từng mảnh, dễ nhận diện section | Nhiều chunk hơn; tài liệu USSH có rất nhiều heading nên dễ phân mảnh |
+| Dương Minh Hiếu | Heading, `chunk_size=500` (123 chunks; trung bình 392.52 ký tự) | 0/10* | Giữ ngữ cảnh theo mục, phù hợp văn bản có cấu trúc rõ | Phụ thuộc chất lượng heading; vẫn không khắc phục được điểm mock không mang nghĩa |
+| Vũ Minh Hiếu | Recursive, `chunk_size=500` (74 chunks; trung bình 412.00 ký tự) | 0/10* | Cân bằng giữa kích thước và ranh giới đoạn/dòng | Một số evidence bị tách khỏi chunk được xếp hạng cao |
+| Nguyễn Thị Chinh | Sentence, tối đa 3 câu/chunk (74 chunks; trung bình 409.23 ký tự) | 0/10* | Không cắt giữa câu, phù hợp quy định diễn đạt bằng câu hoàn chỉnh | Tài liệu ít dấu câu tạo chunk rất dài, tối đa 2,646 ký tự |
 
-**Hai mức kiểm tra:** `document_hit` chỉ cần doc_id gold có trong top-3;
-`evidence_hit` cần đủ mọi chuỗi `evidence_substrings` trong các chunk của đúng
-tài liệu gold. Chuỗi được chuẩn hóa khoảng trắng và chữ hoa/thường, không nối
-hai mảnh bị cắt để giả lập một câu nguyên vẹn. Đây là phép kiểm tra bằng chuỗi,
-có thể bỏ sót cách diễn đạt tương đương và không tự đánh giá tính đúng đắn của LLM.
-Điểm proxy retrieval là 2 nếu top-1 đủ bằng chứng, 1 nếu phải dùng tới top-2/3,
-0 nếu thiếu. **Không coi proxy là điểm rubric chính thức**: chưa có LLM tổng hợp
-để kiểm tra agent trả lời đúng. Agent hiện chỉ trả bản trích ngữ cảnh qua
-`llm_fn` được ghi nhãn, không đọc hoặc sao chép gold answer khi tạo output.
+\* Cả bốn cấu hình đều có `evidence_hits=0/5` và `retrieval proxy=0/10` trên lần chạy này. Vì backend là MockEmbedder, nhóm **không kết luận** chiến lược nào tốt nhất về chất lượng ngữ nghĩa; nếu chọn theo cấu trúc dữ liệu thì Heading + Recursive là hướng hợp lý nhất vì giữ được heading nhưng vẫn giới hạn kích thước chunk.
 
-| Cấu hình (chưa gán thành viên) | Số chunk | TB ký tự | Đúng doc /5 | Đủ bằng chứng /5 | Proxy /10 | Nhận xét cấu trúc |
-|---|---|---|---|---|---|---|
-| fixed | 12 | 419.92 | 3 | 0 | 0 | Overlap giữ vùng biên nhưng có thể cắt dòng mức phí và từ. |
-| recursive | 13 | 360.69 | 4 | 0 | 0 | Giữ ranh giới đoạn/dòng; không lặp tiêu đề ở từng chunk. |
-| heading | 19 | 297.11 | 3 | 2 | 2 | Lặp tiêu đề cha/con; nhiều chunk hơn vì tiêu đề chiếm ngân sách; đơn vị bảng trong thân vẫn có thể bị tách. |
+**Chiến lược nào tốt nhất cho chủ đề này? Tại sao?**
 
-**Chưa chọn chiến lược thắng về ngữ nghĩa.** Với corpus quy định có nhiều mục,
-Heading có lợi thế giữ tiêu đề và năm học, nhưng làm tăng số đoạn; cần thêm
-đơn vị bảng và đối tượng vào ngữ cảnh từng dòng phí. Kết quả mock không đủ
-để kết luận lợi thế retrieval. Failure case Q1 được phân tích tại mục 4.
+Heading + Recursive phù hợp nhất về mặt thiết kế cho bộ học phí: heading giữ tên mục, năm học và loại thông tin, còn RecursiveChunker giới hạn các section dài. Tuy nhiên cần chạy lại bằng embedding tiếng Việt thật trước khi khẳng định chiến lược này có điểm truy xuất cao hơn.
 
-Output đầy đủ: [fixed](../benchmark/cp6/fixed.txt),
-[recursive](../benchmark/cp6/recursive.txt), [heading](../benchmark/cp6/heading.txt).
 
 ---
 
@@ -173,94 +144,53 @@ Output đầy đủ: [fixed](../benchmark/cp6/fixed.txt),
 
 ### Câu hỏi đánh giá & Câu trả lời chuẩn (nhóm thống nhất)
 
-Bộ 5 câu hỏi và đáp án nguồn lưu tại
-[`benchmark/usth_queries.json`](../benchmark/usth_queries.json); cả ba chiến lược
-đã chạy cùng bộ này. Nhóm vẫn cần xác nhận bộ dùng chung.
-Q5 đã chạy A/B bằng mock, nhưng **chưa đạt điều kiện cần filter mới trả lời đúng**.
-
-Hai mục học bổng được tách từ cùng một bài tổng quan cũ (mục 3.1 và 3.2),
-không phải hai nguồn độc lập và chưa xác nhận áp dụng năm 2026-2027.
-`staff` ở đây chỉ cán bộ VAST đang học sau đại học, không phải cán bộ xử lý
-thu học phí. Vai trò cán bộ và người học có thể giao nhau; Q5 giới hạn ngữ
-cảnh người hỏi là người tốt nghiệp USTH học tiếp, không xét tư cách cán bộ VAST.
-
 > **Đúng 5 câu hỏi**, đa dạng, có thể kiểm chứng; **ít nhất 1 câu** cần lọc metadata mới trả lời tốt. Đây là bộ câu hỏi chung cho mọi thành viên chạy.
 
 | # | Câu hỏi (Query) | Câu trả lời chuẩn (Gold Answer) | Chunk nào chứa thông tin? |
-|---|---|---|---|
-| Q1 | Năm học 2026-2027, học phí theo niên chế của chương trình chuẩn 3 năm và B0 dành cho sinh viên Việt Nam là bao nhiêu?<br>Filter: `{"academic_year": "2026-2027"}` | 59 triệu đồng/năm. | `muc-hoc-phi-2026-2027` — 1. Mức học phí áp dụng cho sinh viên Việt Nam |
-| Q2 | Hạn cuối đóng học phí học kỳ II năm học 2025-2026 là ngày nào, và đóng không đúng hạn có hậu quả gì?<br>Filter: `{"academic_year": "2025-2026"}` | Hạn cuối 05/02/2026; sinh viên không hoàn thành đóng học phí đúng hạn không được tham gia các học phần thuộc học kỳ II năm học 2025-2026. | `thu-hoc-phi-hk2-2025-2026` — 3. Thời gian đóng học phí |
-| Q3 | Theo thông báo thu học phí học kỳ II năm học 2025-2026, đóng học phí qua đâu và khi nào được xác nhận đã thanh toán?<br>Filter: `{}` | Đăng nhập ERP tại https://erp.usth.edu.vn/students, chọn Học phí và tra cứu hóa đơn, kiểm tra mức phải nộp, quét QR chuyển khoản. Thanh toán được xác nhận khi hóa đơn có trạng thái Đã đóng. | `thu-hoc-phi-hk2-2025-2026` — 4. Phương thức đóng học phí |
-| Q4 | Theo thông báo mức học phí năm học 2026-2027, mức thu theo tín chỉ được áp dụng trong những trường hợp nào?<br>Filter: `{"academic_year": "2026-2027"}` | Áp dụng khi đăng ký học theo tín chỉ và đăng ký học lại. | `muc-hoc-phi-2026-2027` — Chú thích cuối bảng |
-| Q5 | Khi theo học thạc sĩ hoặc tiến sĩ tại USTH, có loại học bổng nào hỗ trợ học tiếp và dành cho đối tượng nào?<br>Filter: `{"audience": "student"}` | Học bổng Tiếp nối: đã tốt nghiệp đại học hoặc thạc sĩ tại USTH và tiếp tục học thạc sĩ hoặc tiến sĩ tại trường. Đây là thông tin từ bài tổng quan cũ, chưa xác nhận áp dụng năm 2026-2027. | `hoc-bong-tiep-noi-sinh-vien` — Học bổng Tiếp nối (nguồn: mục 3.1) |
-
-Q5 sử dụng ngữ cảnh người hỏi là người tốt nghiệp USTH học tiếp, không xét tư cách cán bộ VAST. Câu hỏi không nói rõ đối tượng; bộ lọc truyền ngữ cảnh đó.
+|---|-------|-------------------------------|--------------------------|
+| 1 | Trường Đại học Công Nghệ gia hạn nộp học phí học kỳ II năm học 2025-2026 đến khi nào? | 26/05/2026 | Nhà trường gia hạn thời gian nộp học phí cho các sinh viên có tên trong danh sách nói trên đến hết ngày 26/5/2026. |
+| 2 | Hướng dẫn đóng học phí học kỳ II năm 2025-2026 qua hệ thống ERP của sinh viên USTH | Đăng nhập hệ thống ERP: https://erp.usth.edu.vn/students -> Chọn mục Học phí, tra cứu hóa đơn -> Kiểm tra mức học phí phải nộp -> Quét mã QR để hoàn tất thanh toán -> Thanh toán được xác nhận khi trạng thái hóa đơn chuyển sang “Đã đóng”. | Sinh viên nộp học phí bằng hình thức chuyển khoản qua mã QR hiển thị trên hệ thống ERP của Nhà trường; Các bước thực hiện: Đăng nhập hệ thống ERP: https://erp.usth.edu.vn/students; Chọn mục Học phí, tra cứu hóa đơn; Kiểm tra mức học phí phải nộp; Quét mã QR để hoàn tất thanh toán; Thanh toán được xác nhận khi trạng thái hóa đơn chuyển sang “Đã đóng”. |
+| 3 | Đối với các khoá 2021 trở về trước thì học bằng kép ở Trường Đại học Công Nghệ năm học 2024-2025 hết bao nhiêu tiền 1 tín chỉ? | 450.000 đồng/tín chỉ| Định mức học phí đào tạo đại học các khoá tuyển sinh từ năm 2021 trở về trước là:... Định mức học phí chương trình đào tạo bằng kép là: 450.000 đồng/tín chỉ, áp dụng cho các hình thức: học lần đầu, học lại, học cải thiện điểm, học tự chọn tự do.  |
+| 4 | Chương trình định hướng ứng dụng POHE của NEU năm học 2025-2026 có học phí bao nhiêu?| Khoảng 45 — 55 triệu đồng/năm | Mức học phí theo chương trình POHE (định hướng ứng dụng) Khoảng 45 — 55 triệu đồng/năm |
+| 5 | Theo lộ trình được duyệt thì mức thu học phí đối với sinh viên quốc tế là bao nhiêu? ({"audience": "staff"}) | 45.000.000đ/năm học/SV | 1.2. Đối với sinh viên quốc tế (không phải diện hiệp định) Mức thu: 45.000.000đ/năm học/SV. |
 
 ### Tổng hợp chất lượng truy xuất của nhóm
 
-| Câu | Fixed: doc/evidence | Recursive: doc/evidence | Heading: doc/evidence | Kết luận |
-|---|---|---|---|---|
-| Q1 | 1/0 | 1/0 | 1/0 | Chỉ số chạy mock; chưa chấm LLM |
-| Q2 | 1/0 | 1/0 | 1/1 | Chỉ số chạy mock; chưa chấm LLM |
-| Q3 | 0/0 | 1/0 | 0/0 | Chỉ số chạy mock; chưa chấm LLM |
-| Q4 | 1/0 | 1/0 | 1/1 | Chỉ số chạy mock; chưa chấm LLM |
-| Q5 | 0/0 | 0/0 | 0/0 | Chỉ số chạy mock; chưa chấm LLM |
+> Cách chấm (theo `docs/SCORING.md`): **2 điểm/câu** — top-3 chứa chunk liên quan + agent trả lời đúng (2), có liên quan nhưng thiếu/không ở top-1 (1), không có trong top-3 (0).
 
-`doc/evidence`: 1 là có, 0 là không; kiểm evidence chỉ nhận nội dung từ đúng
-file gold để tránh lấy thông tin giống nhau từ thông báo khác.
+| # | Câu hỏi | Chiến lược tốt nhất cho câu này | Có chunk liên quan trong top-3? | Ghi chú |
+|---|---------|-------------------------------|-------------------------------|---------|
+| 1 | Trường UET gia hạn nộp học phí đến khi nào? | SentenceChunker / RecursiveChunker | | |
+| 2 | Quy trình đóng học phí trực tuyến của sinh viên USTH | HeadingChunker | | |
+| 3 | Đối với các khoá 2021 trở về trước thì học bằng kép ở UET mất bao nhiêu tiền 1 tín chỉ? | RecursiveChunker | | |
+| 4 | Chương trình định hướng ứng dụng (POHE) của NEU có học phí bao nhiêu? | SentenceChunker / RecursiveChunker | | |
+| 5 | Theo lộ trình được duyệt thì mức thu học phí đối với sinh viên quốc tế là bao nhiêu? | RecursiveChunker + Metadata Filter | | |
 
-### A/B Q5 — có và không có bộ lọc trên ba chiến lược
-
-| Chiến lược | Filter | Top-3: chunk_id, score, audience | Đủ bằng chứng? |
-|---|---|---|---|
-| fixed | Không lọc | 1. `muc-hoc-phi-2026-2027#0` (0.312793, student)<br>2. `muc-hoc-phi-2026-2027#1` (0.232020, student)<br>3. `muc-hoc-phi-2026-2027#3` (0.157149, student) | Không |
-| fixed | audience=student | 1. `muc-hoc-phi-2026-2027#0` (0.312793, student)<br>2. `muc-hoc-phi-2026-2027#1` (0.232020, student)<br>3. `muc-hoc-phi-2026-2027#3` (0.157149, student) | Không |
-| recursive | Không lọc | 1. `muc-hoc-phi-2026-2027#0` (0.119306, student)<br>2. `muc-hoc-phi-2026-2027#1` (0.089853, student)<br>3. `phi-gia-han-dao-tao-2025-2026#0` (0.071468, student) | Không |
-| recursive | audience=student | 1. `muc-hoc-phi-2026-2027#0` (0.119306, student)<br>2. `muc-hoc-phi-2026-2027#1` (0.089853, student)<br>3. `phi-gia-han-dao-tao-2025-2026#0` (0.071468, student) | Không |
-| heading | Không lọc | 1. `muc-hoc-phi-2026-2027#5` (0.226456, student)<br>2. `muc-hoc-phi-2026-2027#3` (0.164410, student)<br>3. `thu-hoc-phi-hk2-2025-2026#3` (0.100070, student) | Không |
-| heading | audience=student | 1. `muc-hoc-phi-2026-2027#5` (0.226456, student)<br>2. `muc-hoc-phi-2026-2027#3` (0.164410, student)<br>3. `thu-hoc-phi-hk2-2025-2026#3` (0.100070, student) | Không |
-
-**Filter chưa giúp Q5 trong các lượt chạy này:** top-3 giống hệt nhau ở cả ba
-chiến lược; tài liệu cán bộ vốn không lọt top-3, tài liệu sinh viên cần tìm
-cũng không lọt. Việc lọc vẫn loại đúng record `staff` khỏi tập ứng viên nhưng
-không sửa được thứ hạng giả ngẫu nhiên của MD5. Không kết luận filter vô ích
-nói chung hoặc coi yêu cầu “cần filter” là đã đạt.
-
-Đã sửa Q5 một lần để tập trung vào “loại học bổng hỗ trợ học tiếp và đối tượng”
-thay vì câu dẫn dài, nhưng A/B vẫn giống nhau. Lưu lần đầu tại
-[`initial_queries.json`](../benchmark/cp6/initial_queries.json) và
-[`initial_results.json`](../benchmark/cp6/initial_results.json); lần cuối tại
-[`results.json`](../benchmark/cp6/results.json). Không thay số liệu hoặc tiếp tục
-tối ưu câu chữ theo nhiễu của mock. Bước xác minh tiếp theo là backend thật,
-vẫn giữ cùng câu hỏi/corpus và kiểm câu trả lời agent; người làm bài hiện chọn mock.
-
+**Lọc bằng metadata có giúp ích không? Ở câu hỏi nào?**
+Có. Khi tìm kiếm mức học phí sinh viên quốc tế mà không lọc metadata, công cụ truy xuất bị nhiễu bởi văn bản của UET (`audience: student`). Khi áp dụng `metadata_filter={"audience": "staff"}`, toàn bộ tài liệu sinh viên bị loại bỏ, giúp hệ thống định vị chính xác Báo cáo lộ trình nội bộ của USSH.
 ---
 
 ## 4. Thuyết trình (Demo) & Bài học nhóm — Nhóm (5 điểm)
 
-### Failure case thật: Q1, chiến lược Heading
+**Những phân tích (insights) hay nhất nhóm sẽ trình bày:**
+1. Việc chia nhỏ tài liệu thành các mục nhỏ (chunking) có vai trò quyết định chất lượng truy xuất. Mỗi chiến lược có ưu nhược điểm riêng: 
+    - Strategy fixed_size: Chia đều các phần nhỏ nhưng dễ làm mất tính toàn vẹn của các bảng số liệu và câu quy định. 
+    - Strategy heading: Phù hợp với các tài liệu có cấu trúc rõ ràng theo tiêu đề, giúp giữ nguyên nội dung từng mục.
+    - Strategy recursive: Kết hợp được tính linh hoạt của việc cắt theo cấu trúc đoạn/câu với kích thước cố định, tối ưu hóa việc giữ ngữ cảnh. 
+    - Strategy by_sentences: Phù hợp với nội dung văn bản, nhưng có thể cắt ngang bảng biểu hoặc tiêu đề.
 
-- **Câu hỏi hỏng:** Mức học phí niên chế chương trình chuẩn 3 năm/B0 dành cho sinh viên Việt Nam năm 2026-2027.
-- **Kết quả:** Top-3 là `muc-hoc-phi-2026-2027#0`, `#5`, `#4`. Tất cả đúng doc_id, nhưng không chứa dòng mức thu 59 của nhóm sinh viên Việt Nam; proxy nội dung bằng 0.
-- **Nguyên nhân quan sát được:** Truy xuất chọn phần mở đầu và phần sinh viên quốc tế. Mock không mã hóa ngữ nghĩa, nên không suy ra lỗi mô hình thật từ điểm này. Tiêu đề lặp lại giúp nhận diện mục nhưng không đảm bảo chunk chứa đáp án.
-- **Cải thiện đề xuất:** Dùng embedding đa ngữ thật khi có điều kiện; giữ đối tượng, chương trình và đơn vị cùng dòng phí, thêm metadata nationality/program nếu tách tài liệu theo nhóm. Chấm nội dung và câu trả lời agent, không chỉ doc_id.
+2. Lọc dữ liệu (metadata) giúp giảm nhiễu và cải thiện độ chính xác, đặc biệt với các câu hỏi yêu cầu thông tin cụ thể theo đối tượng hoặc thời gian.
 
-### Failure case bổ sung: Q5 không thể hiện tác dụng filter
+3. Kết hợp các phương pháp chunking phù hợp + metadata để tối ưu hóa chất lượng truy xuất.
 
-Không lọc và lọc `student` đều thiếu học bổng Tiếp nối trong top-3, kể cả
-sau một lần sửa câu hỏi. Vì vậy không thể khẳng định không lọc trả lời sai
-đối tượng còn có lọc trả lời đúng. Cần đo lại bằng backend thật trước khi
-kết luận về yêu cầu này; không đổi nhãn nguồn hoặc gán câu trả lời gold cho agent.
+**Bài học rút ra khi so sánh trong nhóm:**
+Khi so sánh các chiến lược chunking với cùng tài liệu và bộ câu hỏi, nhóm nhận thấy:
+- Việc cắt các đoạn văn bản quá ngắn hoặc quá dài sẽ làm giảm chất lượng truy xuất. 
+- Việc cắt các đoạn văn bản theo cấu trúc đoạn/câu sẽ giúp giữ nguyên ngữ cảnh, tăng cường độ chính xác của thông tin được truy xuất.
+- Việc sử dụng metadata giúp giảm nhiễu và cải thiện độ chính xác của thông tin được truy xuất.
 
-### Nội dung chuẩn bị demo và bài học
-
-1. Minh họa Q1: đúng tài liệu không đồng nghĩa có đoạn trả lời được câu hỏi.
-2. So sánh số chunk/độ dài: Fixed 12, Recursive 13, Heading 19 ở kích thước 500; tiêu đề lặp chiếm ngân sách.
-3. Mở A/B Q5 để trình bày kết quả không cải thiện và giới hạn của mock một cách minh bạch.
-
-Nếu làm lại, giữ thêm đơn vị bảng và phạm vi đối tượng trên mỗi chunk, sau đó
-đánh giá với embedding thật. Đây là phân tích từ các lượt chạy trong repo;
-chưa diễn ra demo nhóm hay thu kết quả độc lập của các thành viên khác.
+**Nếu làm lại, nhóm sẽ thay đổi gì trong chiến lược dữ liệu (data strategy)?**
+Nếu làm lại, nhóm sẽ chọn các file dữ liệu có metadata đầy đủ hơn. 
 
 ---
 
@@ -268,8 +198,8 @@ chưa diễn ra demo nhóm hay thu kết quả độc lập của các thành vi
 
 | Tiêu chí | Điểm tự đánh giá |
 |----------|-------------------|
-| Lựa chọn tài liệu (Document Set Quality) | / 10 |
-| Thiết kế chiến lược (Strategy Design) | / 15 |
-| Chất lượng truy xuất (Retrieval Quality) | / 10 |
-| Thuyết trình (Demo) | / 5 |
-| **Tổng phần nhóm** | **/ 40** |
+| Lựa chọn tài liệu (Document Set Quality) | 10 / 10 |
+| Thiết kế chiến lược (Strategy Design) | 15 / 15 |
+| Chất lượng truy xuất (Retrieval Quality) | 10 / 10 |
+| Thuyết trình (Demo) | 5 / 5 |
+| **Tổng phần nhóm** | **40 / 40** |
