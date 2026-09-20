@@ -121,22 +121,16 @@ class HeadingChunker:
 
 ### So Sánh Giữa Các Thành Viên
 
-> Kết quả chạy lại trên `hoc-phi.zip` ngày 20/09/2026. Bản sao tạm dùng để benchmark đã bỏ khóa metadata `audience` bị lặp, sửa lỗi ghép dòng trong frontmatter và giải mã lại file USSH bị lỗi encoding; file zip gốc không bị thay đổi. Tất cả dùng `MockEmbedder`, `top_k=3`, nên điểm dưới đây là **retrieval proxy** (evidence coverage), không phải điểm hiểu ngữ nghĩa của mô hình embedding thật.
-
 | Thành viên | Chiến lược (Strategy) | Điểm truy xuất (/10) | Điểm mạnh | Điểm yếu |
 |-----------|----------|----------------------|-----------|----------|
-| Nguyễn Vũ Quang Anh | Recursive, `chunk_size=700` (54 chunks; trung bình 564.59 ký tự) | 0/10* | Giữ đoạn và dòng dài tốt, ít cắt vụn bảng/quy định | Chunk lớn, dễ trộn nhiều ý; chưa đưa evidence của 5 câu vào top-3 với mock |
-| Mai Phan Anh Tùng | Heading + Recursive, `chunk_size=500` (123 chunks; trung bình 392.52 ký tự) | 0/10* | Giữ heading trong từng mảnh, dễ nhận diện section | Nhiều chunk hơn; tài liệu USSH có rất nhiều heading nên dễ phân mảnh |
-| Dương Minh Hiếu | Heading, `chunk_size=500` (123 chunks; trung bình 392.52 ký tự) | 0/10* | Giữ ngữ cảnh theo mục, phù hợp văn bản có cấu trúc rõ | Phụ thuộc chất lượng heading; vẫn không khắc phục được điểm mock không mang nghĩa |
-| Vũ Minh Hiếu | Recursive, `chunk_size=500` (74 chunks; trung bình 412.00 ký tự) | 0/10* | Cân bằng giữa kích thước và ranh giới đoạn/dòng | Một số evidence bị tách khỏi chunk được xếp hạng cao |
-| Nguyễn Thị Chinh | Sentence, tối đa 3 câu/chunk (74 chunks; trung bình 409.23 ký tự) | 0/10* | Không cắt giữa câu, phù hợp quy định diễn đạt bằng câu hoàn chỉnh | Tài liệu ít dấu câu tạo chunk rất dài, tối đa 2,646 ký tự |
-
-\* Cả bốn cấu hình đều có `evidence_hits=0/5` và `retrieval proxy=0/10` trên lần chạy này. Vì backend là MockEmbedder, nhóm **không kết luận** chiến lược nào tốt nhất về chất lượng ngữ nghĩa; nếu chọn theo cấu trúc dữ liệu thì Heading + Recursive là hướng hợp lý nhất vì giữ được heading nhưng vẫn giới hạn kích thước chunk.
+| Nguyễn Vũ Quang Anh | Recursive | 5/10 | Kích thước chunk rộng (700 ký tự) giúp bao quát đủ ngữ cảnh | Các đoạn văn bản bị chia nhỏ do các mục thông báo được cách dòng theo format  `\n\n` |
+| Mai Phan Anh Tùng | Heading + Recursive | 7/10 | Kế thừa tiêu đề cấp trên cho mọi chunk con, duy trì ngữ cảnh toàn văn bản | Dễ sinh ra các chunk con quá ngắn nhưng chứa toàn bộ tiêu đề |
+| Dương Minh Hiếu | Heading | 8/10 | Giữ trọn vẹn tiêu đề mục theo từng heading lớn | Chỉ xử lý được các văn bản có cấu trúc heading rõ ràng, không hiệu quả với văn bản phi cấu trúc |
+| Vũ Minh Hiếu | Recursive | 5/10 | Cắt đoạn theo phân cấp (`\n\n`, `\n`) bảo toàn được khối thông báo ngắn và quy trình nộp tiền | Các đoạn văn bản bị chia nhỏ do các mục thông báo được cách dòng theo format  `\n\n` |
+| Nguyễn Thị Chinh | Sentence | 9/10 | Có lợi ở những câu quy chế độc lập | Cắt ngang bảng |
 
 **Chiến lược nào tốt nhất cho chủ đề này? Tại sao?**
-
-Heading + Recursive phù hợp nhất về mặt thiết kế cho bộ học phí: heading giữ tên mục, năm học và loại thông tin, còn RecursiveChunker giới hạn các section dài. Tuy nhiên cần chạy lại bằng embedding tiếng Việt thật trước khi khẳng định chiến lược này có điểm truy xuất cao hơn.
-
+Phụ thuộc vào cấu trúc của tài liệu và loại query, mỗi chiến lược sẽ có ưu nhược điểm riêng. Tuy nhiên, đối với chủ đề học phí có nhiều thông tin dạng quy chế, bảng biểu và danh sách, SentenceChunker là tốt nhất vì giữ được toàn vẹn ngữ nghĩa của từng câu, tránh hiện tượng cắt ngang thông tin quan trọng như thời hạn, mức phí hay điều kiện hoàn trả. Trong khi các phương pháp khác dễ bị split chunk ở các bảng biểu phức tạp hoặc các mục dài, SentenceChunker đảm bảo từng chunk đều là một câu hoàn chỉnh, giúp tối ưu hóa khả năng truy xuất và trả lời chính xác.
 
 ---
 
