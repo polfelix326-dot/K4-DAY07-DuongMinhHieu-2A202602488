@@ -1,0 +1,175 @@
+Strategy: heading; chunk_size=500; fixed_overlap=min(50,size-1); sentence_count=3
+Backend: MockEmbedder (MD5; no semantic meaning). CP5 only; no LLM answer or quality score.
+Documents: 5; stored chunks: 19
+
+Q1: Năm học 2026-2027, học phí theo niên chế của chương trình chuẩn 3 năm và B0 dành cho sinh viên Việt Nam là bao nhiêu?
+Filter: {"academic_year": "2026-2027"}
+Gold: 59 triệu đồng/năm.
+Gold source: muc-hoc-phi-2026-2027 / 1. Mức học phí áp dụng cho sinh viên Việt Nam
+[1] score=0.261108; doc_id=muc-hoc-phi-2026-2027; chunk_id=muc-hoc-phi-2026-2027#0; audience=student
+source_url=https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/
+# Mức học phí USTH năm học 2026-2027
+
+Trường Đại học Khoa học và Công nghệ Hà Nội thông báo quy định mức thu học phí năm học 2026-2027 như sau:
+[2] score=0.095389; doc_id=muc-hoc-phi-2026-2027; chunk_id=muc-hoc-phi-2026-2027#5; audience=student
+source_url=https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/
+# Mức học phí USTH năm học 2026-2027
+## 2. Mức học phí áp dụng cho sinh viên quốc tế (trừ sinh viên trao đổi thuộc Liên minh USTH)
+
+- Sinh viên đại học ngành Kỹ thuật Hàng không Y1-Y3: niên chế 145; tín chỉ 2.417.
+- Bằng đôi: niên chế 105; tín chỉ 1.750.
+- Chương trình chuẩn 3 năm và B0: niên chế 78; tín chỉ 1.300.
+- Học viên thạc sĩ chương trình chuẩn: niên chế 105; tín chỉ 1.750.
+- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ không nêu.
+[3] score=0.060324; doc_id=muc-hoc-phi-2026-2027; chunk_id=muc-hoc-phi-2026-2027#4; audience=student
+source_url=https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/
+# Mức học phí USTH năm học 2026-2027
+## 2. Mức học phí áp dụng cho sinh viên quốc tế (trừ sinh viên trao đổi thuộc Liên minh USTH)
+
+Đơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm).
+
+Q2: Hạn cuối đóng học phí học kỳ II năm học 2025-2026 là ngày nào, và đóng không đúng hạn có hậu quả gì?
+Filter: {"academic_year": "2025-2026"}
+Gold: Hạn cuối 05/02/2026; sinh viên không hoàn thành đóng học phí đúng hạn không được tham gia các học phần thuộc học kỳ II năm học 2025-2026.
+Gold source: thu-hoc-phi-hk2-2025-2026 / 3. Thời gian đóng học phí
+[1] score=0.147876; doc_id=phi-gia-han-dao-tao-2025-2026; chunk_id=phi-gia-han-dao-tao-2025-2026#0; audience=student
+source_url=https://usth.edu.vn/thong-bao-thu-phi-gia-han-dao-tao-nam-hoc-2025-2026-31390/
+# Phí gia hạn đào tạo USTH năm học 2025-2026
+
+USTH thông báo thu phí gia hạn đào tạo năm học 2025–2026 cho sinh viên đại học và học viên thạc sĩ. 
+
+Thời gian đóng từ 04/05/2026 đến 18/05/2026.
+
+Sinh viên nộp học phí bằng hình thức chuyển khoản qua mã QR hiển thị trên hệ thống ERP của Nhà trường.
+
+Các bước thực hiện:
+
+Đăng nhập hệ thống ERP: https://erp.usth.edu.vn/students
+
+Chọn mục Học phí, tra cứu hóa đơn
+
+Kiểm tra số tiền phải nộp
+
+Quét mã QR để hoàn tất thanh toán
+[2] score=0.073625; doc_id=thu-hoc-phi-hk2-2025-2026; chunk_id=thu-hoc-phi-hk2-2025-2026#6; audience=student
+source_url=https://usth.edu.vn/tb-ve-viec-thu-hoc-phi-hoc-ky-ii-nam-hoc-2025-2026-chuong-trinh-dao-tao-trinh-do-dai-hoc-29249/
+# Thu học phí USTH học kỳ II năm học 2025-2026
+## 4. Phương thức đóng học phí
+
+Sinh viên nộp học phí bằng hình thức chuyển khoản qua mã QR hiển thị trên hệ thống ERP của Nhà trường.
+
+Các bước thực hiện:
+
+Đăng nhập hệ thống ERP: https://erp.usth.edu.vn/students
+
+Chọn mục Học phí, tra cứu hóa đơn
+
+Kiểm tra mức học phí phải nộp
+
+Quét mã QR để hoàn tất thanh toán
+
+Thanh toán được xác nhận khi trạng thái hóa đơn chuyển sang “Đã đóng”.
+[3] score=0.026680; doc_id=thu-hoc-phi-hk2-2025-2026; chunk_id=thu-hoc-phi-hk2-2025-2026#5; audience=student
+source_url=https://usth.edu.vn/tb-ve-viec-thu-hoc-phi-hoc-ky-ii-nam-hoc-2025-2026-chuong-trinh-dao-tao-trinh-do-dai-hoc-29249/
+# Thu học phí USTH học kỳ II năm học 2025-2026
+## 3. Thời gian đóng học phí
+
+Từ ngày 23/01/2026 đến hết ngày 05/02/2026.
+
+Sinh viên không hoàn thành việc đóng học phí đúng thời hạn sẽ không được tham gia các học phần thuộc học kỳ II, năm học 2025–2026.
+
+Q3: Theo thông báo thu học phí học kỳ II năm học 2025-2026, đóng học phí qua đâu và khi nào được xác nhận đã thanh toán?
+Filter: {}
+Gold: Đăng nhập ERP tại https://erp.usth.edu.vn/students, chọn Học phí và tra cứu hóa đơn, kiểm tra mức phải nộp, quét QR chuyển khoản. Thanh toán được xác nhận khi hóa đơn có trạng thái Đã đóng.
+Gold source: thu-hoc-phi-hk2-2025-2026 / 4. Phương thức đóng học phí
+[1] score=0.147874; doc_id=phi-gia-han-dao-tao-2025-2026; chunk_id=phi-gia-han-dao-tao-2025-2026#0; audience=student
+source_url=https://usth.edu.vn/thong-bao-thu-phi-gia-han-dao-tao-nam-hoc-2025-2026-31390/
+# Phí gia hạn đào tạo USTH năm học 2025-2026
+
+USTH thông báo thu phí gia hạn đào tạo năm học 2025–2026 cho sinh viên đại học và học viên thạc sĩ. 
+
+Thời gian đóng từ 04/05/2026 đến 18/05/2026.
+
+Sinh viên nộp học phí bằng hình thức chuyển khoản qua mã QR hiển thị trên hệ thống ERP của Nhà trường.
+
+Các bước thực hiện:
+
+Đăng nhập hệ thống ERP: https://erp.usth.edu.vn/students
+
+Chọn mục Học phí, tra cứu hóa đơn
+
+Kiểm tra số tiền phải nộp
+
+Quét mã QR để hoàn tất thanh toán
+[2] score=0.120204; doc_id=hoc-bong-tiep-noi-sinh-vien; chunk_id=hoc-bong-tiep-noi-sinh-vien#0; audience=student
+source_url=https://usth.edu.vn/chinh-sach-hoc-bong-cua-usth-8361/
+# Học bổng Tiếp nối
+
+Theo bài tổng quan chính sách học bổng USTH, người đã tốt nghiệp bậc đại học hoặc thạc sĩ tại USTH và tiếp tục học thạc sĩ hoặc tiến sĩ tại trường thuộc đối tượng của học bổng Tiếp nối.
+
+Mục 3.1 không nêu mức tiền hay tỷ lệ miễn học phí của học bổng này.
+[3] score=0.118235; doc_id=hoc-bong-tang-cuong-nang-luc-can-bo; chunk_id=hoc-bong-tang-cuong-nang-luc-can-bo#0; audience=staff
+source_url=https://usth.edu.vn/chinh-sach-hoc-bong-cua-usth-8361/
+# Học bổng Tăng cường năng lực
+
+Theo bài tổng quan chính sách học bổng USTH, cán bộ các viện nghiên cứu hoặc trung tâm thuộc Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST), khi theo học thạc sĩ hoặc tiến sĩ tại USTH, thuộc đối tượng của học bổng Tăng cường năng lực.
+
+Mục 3.2 không nêu mức tiền hay tỷ lệ miễn học phí của học bổng này.
+
+Q4: Theo thông báo mức học phí năm học 2026-2027, mức thu theo tín chỉ được áp dụng trong những trường hợp nào?
+Filter: {"academic_year": "2026-2027"}
+Gold: Áp dụng khi đăng ký học theo tín chỉ và đăng ký học lại.
+Gold source: muc-hoc-phi-2026-2027 / Chú thích cuối bảng
+[1] score=0.322824; doc_id=muc-hoc-phi-2026-2027; chunk_id=muc-hoc-phi-2026-2027#5; audience=student
+source_url=https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/
+# Mức học phí USTH năm học 2026-2027
+## 2. Mức học phí áp dụng cho sinh viên quốc tế (trừ sinh viên trao đổi thuộc Liên minh USTH)
+
+- Sinh viên đại học ngành Kỹ thuật Hàng không Y1-Y3: niên chế 145; tín chỉ 2.417.
+- Bằng đôi: niên chế 105; tín chỉ 1.750.
+- Chương trình chuẩn 3 năm và B0: niên chế 78; tín chỉ 1.300.
+- Học viên thạc sĩ chương trình chuẩn: niên chế 105; tín chỉ 1.750.
+- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ không nêu.
+[2] score=0.067856; doc_id=muc-hoc-phi-2026-2027; chunk_id=muc-hoc-phi-2026-2027#6; audience=student
+source_url=https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/
+# Mức học phí USTH năm học 2026-2027
+## 2. Mức học phí áp dụng cho sinh viên quốc tế (trừ sinh viên trao đổi thuộc Liên minh USTH)
+
+*Áp dụng đối với trường hợp đăng ký học theo tín chỉ và đăng ký học lại.
+[3] score=0.043796; doc_id=muc-hoc-phi-2026-2027; chunk_id=muc-hoc-phi-2026-2027#0; audience=student
+source_url=https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/
+# Mức học phí USTH năm học 2026-2027
+
+Trường Đại học Khoa học và Công nghệ Hà Nội thông báo quy định mức thu học phí năm học 2026-2027 như sau:
+
+Q5: Khi theo học thạc sĩ hoặc tiến sĩ tại USTH, có loại học bổng nào hỗ trợ học tiếp và dành cho đối tượng nào?
+Filter: {"audience": "student"}
+Gold: Học bổng Tiếp nối: đã tốt nghiệp đại học hoặc thạc sĩ tại USTH và tiếp tục học thạc sĩ hoặc tiến sĩ tại trường. Đây là thông tin từ bài tổng quan cũ, chưa xác nhận áp dụng năm 2026-2027.
+Gold source: hoc-bong-tiep-noi-sinh-vien / Học bổng Tiếp nối (nguồn: mục 3.1)
+[1] score=0.226456; doc_id=muc-hoc-phi-2026-2027; chunk_id=muc-hoc-phi-2026-2027#5; audience=student
+source_url=https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/
+# Mức học phí USTH năm học 2026-2027
+## 2. Mức học phí áp dụng cho sinh viên quốc tế (trừ sinh viên trao đổi thuộc Liên minh USTH)
+
+- Sinh viên đại học ngành Kỹ thuật Hàng không Y1-Y3: niên chế 145; tín chỉ 2.417.
+- Bằng đôi: niên chế 105; tín chỉ 1.750.
+- Chương trình chuẩn 3 năm và B0: niên chế 78; tín chỉ 1.300.
+- Học viên thạc sĩ chương trình chuẩn: niên chế 105; tín chỉ 1.750.
+- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ không nêu.
+[2] score=0.164410; doc_id=muc-hoc-phi-2026-2027; chunk_id=muc-hoc-phi-2026-2027#3; audience=student
+source_url=https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/
+# Mức học phí USTH năm học 2026-2027
+## 1. Mức học phí áp dụng cho sinh viên Việt Nam
+
+- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ –.
+[3] score=0.100070; doc_id=thu-hoc-phi-hk2-2025-2026; chunk_id=thu-hoc-phi-hk2-2025-2026#3; audience=student
+source_url=https://usth.edu.vn/tb-ve-viec-thu-hoc-phi-hoc-ky-ii-nam-hoc-2025-2026-chuong-trinh-dao-tao-trinh-do-dai-hoc-29249/
+# Thu học phí USTH học kỳ II năm học 2025-2026
+## 2. Mức học phí học kỳ II năm học 2025–2026
+
+- Ngành Kỹ thuật Hàng không (3 năm tại Trường, 1 năm tại VAECO): sinh viên Việt Nam 62,5; sinh viên quốc tế Không áp dụng.
+- Ngành Kỹ thuật Hàng không (3 năm tại Trường): sinh viên Việt Nam 50,0; sinh viên quốc tế 70,25.
+- Các chương trình đại học (song bằng): sinh viên Việt Nam 39,5; sinh viên quốc tế 50,0.
+- Ngành Dược học: sinh viên Việt Nam 36,75; sinh viên quốc tế Không áp dụng.
+
+Q5: filter configured; necessity and answer correctness NOT validated. Run A/B in CP6.

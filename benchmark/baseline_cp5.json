@@ -1,0 +1,103 @@
+{
+  "chunk_size": 500,
+  "frontmatter_removed": true,
+  "documents": {
+    "muc-hoc-phi-2026-2027": {
+      "fixed_size": {
+        "count": 4,
+        "avg_length": 429.25,
+        "chunks": [
+          "# Mức học phí USTH năm học 2026-2027\n\nTrường Đại học Khoa học và Công nghệ Hà Nội thông báo quy định mức thu học phí năm học 2026-2027 như sau:\n\n## 1. Mức học phí áp dụng cho sinh viên Việt Nam\n\nĐơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm).\n\n- Kỹ thuật Hàng không Y1-Y3 (các tín chỉ do USTH đào tạo): niên chế 105; tín chỉ 1.750.\n- Kỹ thuật Hàng không (37 tín chỉ B1+B2 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không (60 tín chỉ năm B2+B3 d",
+          "000.\n- Kỹ thuật Hàng không (60 tín chỉ năm B2+B3 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không Y1-Y3 + Đào tạo B1&B2 tại VAECO (áp dụng cho những SV đã nộp HP theo niên chế trong năm học 2025-2026): niên chế 130; tín chỉ không nêu.\n- Bằng đôi: niên chế 83; tín chỉ 1384.\n- Dược học: niên chế 77; tín chỉ 1284.\n- Chương trình chuẩn 3 năm và B0: niên chế 59; tín chỉ 984.\n- Học viên thạc sĩ chương trình chuẩn: niên chế 59; tín chỉ 984.\n- Nghiên cứu sinh chương trình Đào ",
+          "; tín chỉ 984.\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ –.\n\n## 2. Mức học phí áp dụng cho sinh viên quốc tế (trừ sinh viên trao đổi thuộc Liên minh USTH)\n\nĐơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm).\n\n- Sinh viên đại học ngành Kỹ thuật Hàng không Y1-Y3: niên chế 145; tín chỉ 2.417.\n- Bằng đôi: niên chế 105; tín chỉ 1.750.\n- Chương trình chuẩn 3 năm và B0: niên chế 78; tín chỉ 1.300.\n- Học viên thạc sĩ chương trình chuẩn: niên chế 105; t",
+          "c viên thạc sĩ chương trình chuẩn: niên chế 105; tín chỉ 1.750.\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ không nêu.\n\n*Áp dụng đối với trường hợp đăng ký học theo tín chỉ và đăng ký học lại."
+        ]
+      },
+      "by_sentences": {
+        "count": 7,
+        "avg_length": 222.42857142857142,
+        "chunks": [
+          "# Mức học phí USTH năm học 2026-2027\n\nTrường Đại học Khoa học và Công nghệ Hà Nội thông báo quy định mức thu học phí năm học 2026-2027 như sau:\n\n## 1. Mức học phí áp dụng cho sinh viên Việt Nam\n\nĐơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm). - Kỹ thuật Hàng không Y1-Y3 (các tín chỉ do USTH đào tạo): niên chế 105; tín chỉ 1.750.",
+          "- Kỹ thuật Hàng không (37 tín chỉ B1+B2 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000. - Kỹ thuật Hàng không (60 tín chỉ năm B2+B3 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000. - Kỹ thuật Hàng không Y1-Y3 + Đào tạo B1&B2 tại VAECO (áp dụng cho những SV đã nộp HP theo niên chế trong năm học 2025-2026): niên chế 130; tín chỉ không nêu.",
+          "- Bằng đôi: niên chế 83; tín chỉ 1384. - Dược học: niên chế 77; tín chỉ 1284. - Chương trình chuẩn 3 năm và B0: niên chế 59; tín chỉ 984.",
+          "- Học viên thạc sĩ chương trình chuẩn: niên chế 59; tín chỉ 984. - Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ –. ## 2.",
+          "Mức học phí áp dụng cho sinh viên quốc tế (trừ sinh viên trao đổi thuộc Liên minh USTH)\n\nĐơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm). - Sinh viên đại học ngành Kỹ thuật Hàng không Y1-Y3: niên chế 145; tín chỉ 2.417. - Bằng đôi: niên chế 105; tín chỉ 1.750.",
+          "- Chương trình chuẩn 3 năm và B0: niên chế 78; tín chỉ 1.300. - Học viên thạc sĩ chương trình chuẩn: niên chế 105; tín chỉ 1.750. - Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ không nêu.",
+          "*Áp dụng đối với trường hợp đăng ký học theo tín chỉ và đăng ký học lại."
+        ]
+      },
+      "recursive": {
+        "count": 4,
+        "avg_length": 391.75,
+        "chunks": [
+          "# Mức học phí USTH năm học 2026-2027\n\nTrường Đại học Khoa học và Công nghệ Hà Nội thông báo quy định mức thu học phí năm học 2026-2027 như sau:\n\n## 1. Mức học phí áp dụng cho sinh viên Việt Nam\n\nĐơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm).\n\n",
+          "- Kỹ thuật Hàng không Y1-Y3 (các tín chỉ do USTH đào tạo): niên chế 105; tín chỉ 1.750.\n- Kỹ thuật Hàng không (37 tín chỉ B1+B2 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không (60 tín chỉ năm B2+B3 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không Y1-Y3 + Đào tạo B1&B2 tại VAECO (áp dụng cho những SV đã nộp HP theo niên chế trong năm học 2025-2026): niên chế 130; tín chỉ không nêu.\n- Bằng đôi: niên chế 83; tín chỉ 1384.\n",
+          "- Dược học: niên chế 77; tín chỉ 1284.\n- Chương trình chuẩn 3 năm và B0: niên chế 59; tín chỉ 984.\n- Học viên thạc sĩ chương trình chuẩn: niên chế 59; tín chỉ 984.\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ –.\n\n## 2. Mức học phí áp dụng cho sinh viên quốc tế (trừ sinh viên trao đổi thuộc Liên minh USTH)\n\nĐơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm).\n\n",
+          "- Sinh viên đại học ngành Kỹ thuật Hàng không Y1-Y3: niên chế 145; tín chỉ 2.417.\n- Bằng đôi: niên chế 105; tín chỉ 1.750.\n- Chương trình chuẩn 3 năm và B0: niên chế 78; tín chỉ 1.300.\n- Học viên thạc sĩ chương trình chuẩn: niên chế 105; tín chỉ 1.750.\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ không nêu.\n\n*Áp dụng đối với trường hợp đăng ký học theo tín chỉ và đăng ký học lại."
+        ]
+      }
+    },
+    "thu-hoc-phi-hk2-2025-2026": {
+      "fixed_size": {
+        "count": 4,
+        "avg_length": 488.0,
+        "chunks": [
+          "# Thu học phí USTH học kỳ II năm học 2025-2026\n\nUSTH thông báo thu học phí học kỳ II năm học 2025–2026 cho sinh viên đại học. Thời gian đóng từ 23/01/2026 đến 05/02/2026.\n\n## 1. Đối tượng áp dụng\n\nSinh viên thuộc một trong các đối tượng sau:\n\nTân sinh viên B0 (nhập học năm học 2025–2026) chưa được xét hoàn thành chương trình bồi dưỡng tiếng Anh;\n\nSinh viên B2, B3 của tất cả các chương trình đào tạo.\n\n## 2. Mức học phí học kỳ II năm học 2025–2026\n\n(Mức thu áp dụng theo Quyết định số 563/QĐ-ĐHKHCN",
+          "\n(Mức thu áp dụng theo Quyết định số 563/QĐ-ĐHKHCN ngày 01/07/2025)\n\nĐơn vị: triệu đồng/học kỳ.\n\n- Ngành Kỹ thuật Hàng không (3 năm tại Trường, 1 năm tại VAECO): sinh viên Việt Nam 62,5; sinh viên quốc tế Không áp dụng.\n- Ngành Kỹ thuật Hàng không (3 năm tại Trường): sinh viên Việt Nam 50,0; sinh viên quốc tế 70,25.\n- Các chương trình đại học (song bằng): sinh viên Việt Nam 39,5; sinh viên quốc tế 50,0.\n- Ngành Dược học: sinh viên Việt Nam 36,75; sinh viên quốc tế Không áp dụng.\n- Các chương trì",
+          " sinh viên quốc tế Không áp dụng.\n- Các chương trình đại học (đơn bằng): sinh viên Việt Nam 28,0; sinh viên quốc tế 37,0.\n\n## 3. Thời gian đóng học phí\n\nTừ ngày 23/01/2026 đến hết ngày 05/02/2026.\n\nSinh viên không hoàn thành việc đóng học phí đúng thời hạn sẽ không được tham gia các học phần thuộc học kỳ II, năm học 2025–2026.\n\n## 4. Phương thức đóng học phí\n\nSinh viên nộp học phí bằng hình thức chuyển khoản qua mã QR hiển thị trên hệ thống ERP của Nhà trường.\n\nCác bước thực hiện:\n\nĐăng nhập hệ ",
+          "ủa Nhà trường.\n\nCác bước thực hiện:\n\nĐăng nhập hệ thống ERP: https://erp.usth.edu.vn/students\n\nChọn mục Học phí, tra cứu hóa đơn\n\nKiểm tra mức học phí phải nộp\n\nQuét mã QR để hoàn tất thanh toán\n\nThanh toán được xác nhận khi trạng thái hóa đơn chuyển sang “Đã đóng”.\n\n## 5. Hỗ trợ sinh viên\n\nSinh viên vui lòng lưu giữ xác nhận chuyển khoản để đối chiếu khi cần thiết.\n\nMọi thắc mắc xin liên hệ Phòng Công tác Sinh viên:\n\n📧 student.services@usth.edu.vn"
+        ]
+      },
+      "by_sentences": {
+        "count": 7,
+        "avg_length": 255.28571428571428,
+        "chunks": [
+          "# Thu học phí USTH học kỳ II năm học 2025-2026\n\nUSTH thông báo thu học phí học kỳ II năm học 2025–2026 cho sinh viên đại học. Thời gian đóng từ 23/01/2026 đến 05/02/2026. ## 1.",
+          "Đối tượng áp dụng\n\nSinh viên thuộc một trong các đối tượng sau:\n\nTân sinh viên B0 (nhập học năm học 2025–2026) chưa được xét hoàn thành chương trình bồi dưỡng tiếng Anh;\n\nSinh viên B2, B3 của tất cả các chương trình đào tạo. ## 2. Mức học phí học kỳ II năm học 2025–2026\n\n(Mức thu áp dụng theo Quyết định số 563/QĐ-ĐHKHCN ngày 01/07/2025)\n\nĐơn vị: triệu đồng/học kỳ.",
+          "- Ngành Kỹ thuật Hàng không (3 năm tại Trường, 1 năm tại VAECO): sinh viên Việt Nam 62,5; sinh viên quốc tế Không áp dụng. - Ngành Kỹ thuật Hàng không (3 năm tại Trường): sinh viên Việt Nam 50,0; sinh viên quốc tế 70,25. - Các chương trình đại học (song bằng): sinh viên Việt Nam 39,5; sinh viên quốc tế 50,0.",
+          "- Ngành Dược học: sinh viên Việt Nam 36,75; sinh viên quốc tế Không áp dụng. - Các chương trình đại học (đơn bằng): sinh viên Việt Nam 28,0; sinh viên quốc tế 37,0. ## 3.",
+          "Thời gian đóng học phí\n\nTừ ngày 23/01/2026 đến hết ngày 05/02/2026. Sinh viên không hoàn thành việc đóng học phí đúng thời hạn sẽ không được tham gia các học phần thuộc học kỳ II, năm học 2025–2026. ## 4.",
+          "Phương thức đóng học phí\n\nSinh viên nộp học phí bằng hình thức chuyển khoản qua mã QR hiển thị trên hệ thống ERP của Nhà trường. Các bước thực hiện:\n\nĐăng nhập hệ thống ERP: https://erp.usth.edu.vn/students\n\nChọn mục Học phí, tra cứu hóa đơn\n\nKiểm tra mức học phí phải nộp\n\nQuét mã QR để hoàn tất thanh toán\n\nThanh toán được xác nhận khi trạng thái hóa đơn chuyển sang “Đã đóng”. ## 5.",
+          "Hỗ trợ sinh viên\n\nSinh viên vui lòng lưu giữ xác nhận chuyển khoản để đối chiếu khi cần thiết. Mọi thắc mắc xin liên hệ Phòng Công tác Sinh viên:\n\n📧 student.services@usth.edu.vn"
+        ]
+      },
+      "recursive": {
+        "count": 5,
+        "avg_length": 360.4,
+        "chunks": [
+          "# Thu học phí USTH học kỳ II năm học 2025-2026\n\nUSTH thông báo thu học phí học kỳ II năm học 2025–2026 cho sinh viên đại học. Thời gian đóng từ 23/01/2026 đến 05/02/2026.\n\n## 1. Đối tượng áp dụng\n\nSinh viên thuộc một trong các đối tượng sau:\n\nTân sinh viên B0 (nhập học năm học 2025–2026) chưa được xét hoàn thành chương trình bồi dưỡng tiếng Anh;\n\nSinh viên B2, B3 của tất cả các chương trình đào tạo.\n\n## 2. Mức học phí học kỳ II năm học 2025–2026\n\n",
+          "(Mức thu áp dụng theo Quyết định số 563/QĐ-ĐHKHCN ngày 01/07/2025)\n\nĐơn vị: triệu đồng/học kỳ.\n\n",
+          "- Ngành Kỹ thuật Hàng không (3 năm tại Trường, 1 năm tại VAECO): sinh viên Việt Nam 62,5; sinh viên quốc tế Không áp dụng.\n- Ngành Kỹ thuật Hàng không (3 năm tại Trường): sinh viên Việt Nam 50,0; sinh viên quốc tế 70,25.\n- Các chương trình đại học (song bằng): sinh viên Việt Nam 39,5; sinh viên quốc tế 50,0.\n- Ngành Dược học: sinh viên Việt Nam 36,75; sinh viên quốc tế Không áp dụng.\n- Các chương trình đại học (đơn bằng): sinh viên Việt Nam 28,0; sinh viên quốc tế 37,0.\n\n",
+          "## 3. Thời gian đóng học phí\n\nTừ ngày 23/01/2026 đến hết ngày 05/02/2026.\n\nSinh viên không hoàn thành việc đóng học phí đúng thời hạn sẽ không được tham gia các học phần thuộc học kỳ II, năm học 2025–2026.\n\n## 4. Phương thức đóng học phí\n\nSinh viên nộp học phí bằng hình thức chuyển khoản qua mã QR hiển thị trên hệ thống ERP của Nhà trường.\n\nCác bước thực hiện:\n\nĐăng nhập hệ thống ERP: https://erp.usth.edu.vn/students\n\nChọn mục Học phí, tra cứu hóa đơn\n\nKiểm tra mức học phí phải nộp\n\n",
+          "Quét mã QR để hoàn tất thanh toán\n\nThanh toán được xác nhận khi trạng thái hóa đơn chuyển sang “Đã đóng”.\n\n## 5. Hỗ trợ sinh viên\n\nSinh viên vui lòng lưu giữ xác nhận chuyển khoản để đối chiếu khi cần thiết.\n\nMọi thắc mắc xin liên hệ Phòng Công tác Sinh viên:\n\n📧 student.services@usth.edu.vn"
+        ]
+      }
+    },
+    "phi-gia-han-dao-tao-2025-2026": {
+      "fixed_size": {
+        "count": 2,
+        "avg_length": 378.0,
+        "chunks": [
+          "# Phí gia hạn đào tạo USTH năm học 2025-2026\n\nUSTH thông báo thu phí gia hạn đào tạo năm học 2025–2026 cho sinh viên đại học và học viên thạc sĩ. \n\nThời gian đóng từ 04/05/2026 đến 18/05/2026.\n\nSinh viên nộp học phí bằng hình thức chuyển khoản qua mã QR hiển thị trên hệ thống ERP của Nhà trường.\n\nCác bước thực hiện:\n\nĐăng nhập hệ thống ERP: https://erp.usth.edu.vn/students\n\nChọn mục Học phí, tra cứu hóa đơn\n\nKiểm tra số tiền phải nộp\n\nQuét mã QR để hoàn tất thanh toán\n\nThanh toán được xác nhận k",
+          "để hoàn tất thanh toán\n\nThanh toán được xác nhận khi trạng thái hóa đơn chuyển sang “Đã đóng”.\n\nSinh viên vui lòng lưu giữ xác nhận chuyển khoản để đối chiếu khi cần thiết.\n\nMọi thắc mắc xin liên hệ Phòng Công tác Sinh viên:\n\n📧 student.services@usth.edu.vn"
+        ]
+      },
+      "by_sentences": {
+        "count": 2,
+        "avg_length": 349.5,
+        "chunks": [
+          "# Phí gia hạn đào tạo USTH năm học 2025-2026\n\nUSTH thông báo thu phí gia hạn đào tạo năm học 2025–2026 cho sinh viên đại học và học viên thạc sĩ. Thời gian đóng từ 04/05/2026 đến 18/05/2026. Sinh viên nộp học phí bằng hình thức chuyển khoản qua mã QR hiển thị trên hệ thống ERP của Nhà trường.",
+          "Các bước thực hiện:\n\nĐăng nhập hệ thống ERP: https://erp.usth.edu.vn/students\n\nChọn mục Học phí, tra cứu hóa đơn\n\nKiểm tra số tiền phải nộp\n\nQuét mã QR để hoàn tất thanh toán\n\nThanh toán được xác nhận khi trạng thái hóa đơn chuyển sang “Đã đóng”. Sinh viên vui lòng lưu giữ xác nhận chuyển khoản để đối chiếu khi cần thiết. Mọi thắc mắc xin liên hệ Phòng Công tác Sinh viên:\n\n📧 student.services@usth.edu.vn"
+        ]
+      },
+      "recursive": {
+        "count": 2,
+        "avg_length": 353.0,
+        "chunks": [
+          "# Phí gia hạn đào tạo USTH năm học 2025-2026\n\nUSTH thông báo thu phí gia hạn đào tạo năm học 2025–2026 cho sinh viên đại học và học viên thạc sĩ. \n\nThời gian đóng từ 04/05/2026 đến 18/05/2026.\n\nSinh viên nộp học phí bằng hình thức chuyển khoản qua mã QR hiển thị trên hệ thống ERP của Nhà trường.\n\nCác bước thực hiện:\n\nĐăng nhập hệ thống ERP: https://erp.usth.edu.vn/students\n\nChọn mục Học phí, tra cứu hóa đơn\n\nKiểm tra số tiền phải nộp\n\nQuét mã QR để hoàn tất thanh toán\n\n",
+          "Thanh toán được xác nhận khi trạng thái hóa đơn chuyển sang “Đã đóng”.\n\nSinh viên vui lòng lưu giữ xác nhận chuyển khoản để đối chiếu khi cần thiết.\n\nMọi thắc mắc xin liên hệ Phòng Công tác Sinh viên:\n\n📧 student.services@usth.edu.vn"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "Q1",
+    "question": "Năm học 2026-2027, học phí theo niên chế của chương trình chuẩn 3 năm và B0 dành cho sinh viên Việt Nam là bao nhiêu?",
+    "gold_answer": "59 triệu đồng/năm.",
+    "gold_doc_id": "muc-hoc-phi-2026-2027",
+    "gold_section": "1. Mức học phí áp dụng cho sinh viên Việt Nam",
+    "metadata_filter": {"academic_year": "2026-2027"},
+    "evidence_substrings": ["Chương trình chuẩn 3 năm và B0: niên chế 59"],
+    "status": "not-run"
+  },
+  {
+    "id": "Q2",
+    "question": "Hạn cuối đóng học phí học kỳ II năm học 2025-2026 là ngày nào, và đóng không đúng hạn có hậu quả gì?",
+    "gold_answer": "Hạn cuối 05/02/2026; sinh viên không hoàn thành đóng học phí đúng hạn không được tham gia các học phần thuộc học kỳ II năm học 2025-2026.",
+    "gold_doc_id": "thu-hoc-phi-hk2-2025-2026",
+    "gold_section": "3. Thời gian đóng học phí",
+    "metadata_filter": {"academic_year": "2025-2026"},
+    "evidence_substrings": ["05/02/2026", "không được tham gia"],
+    "status": "not-run"
+  },
+  {
+    "id": "Q3",
+    "question": "Theo thông báo thu học phí học kỳ II năm học 2025-2026, đóng học phí qua đâu và khi nào được xác nhận đã thanh toán?",
+    "gold_answer": "Đăng nhập ERP tại https://erp.usth.edu.vn/students, chọn Học phí và tra cứu hóa đơn, kiểm tra mức phải nộp, quét QR chuyển khoản. Thanh toán được xác nhận khi hóa đơn có trạng thái Đã đóng.",
+    "gold_doc_id": "thu-hoc-phi-hk2-2025-2026",
+    "gold_section": "4. Phương thức đóng học phí",
+    "metadata_filter": {},
+    "evidence_substrings": ["https://erp.usth.edu.vn/students", "Đã đóng"],
+    "status": "not-run"
+  },
+  {
+    "id": "Q4",
+    "question": "Theo thông báo mức học phí năm học 2026-2027, mức thu theo tín chỉ được áp dụng trong những trường hợp nào?",
+    "gold_answer": "Áp dụng khi đăng ký học theo tín chỉ và đăng ký học lại.",
+    "gold_doc_id": "muc-hoc-phi-2026-2027",
+    "gold_section": "Chú thích cuối bảng",
+    "metadata_filter": {"academic_year": "2026-2027"},
+    "evidence_substrings": ["đăng ký học theo tín chỉ và đăng ký học lại"],
+    "status": "not-run"
+  },
+  {
+    "id": "Q5",
+    "question": "Theo bài tổng quan chính sách học bổng USTH, khi học tiếp thạc sĩ hoặc tiến sĩ tại trường thì có thể thuộc diện học bổng nào và điều kiện là gì?",
+    "requester_context": "Người hỏi là người tốt nghiệp USTH học tiếp, không xét tư cách cán bộ VAST. Truyền ngữ cảnh đối tượng qua metadata_filter, không thêm vào câu hỏi khi chạy A/B.",
+    "gold_answer": "Học bổng Tiếp nối: đã tốt nghiệp đại học hoặc thạc sĩ tại USTH và tiếp tục học thạc sĩ hoặc tiến sĩ tại trường. Đây là thông tin từ bài tổng quan cũ, chưa xác nhận áp dụng năm 2026-2027.",
+    "gold_doc_id": "hoc-bong-tiep-noi-sinh-vien",
+    "gold_section": "Học bổng Tiếp nối (nguồn: mục 3.1)",
+    "metadata_filter": {"audience": "student"},
+    "distractor_doc_id": "hoc-bong-tang-cuong-nang-luc-can-bo",
+    "evidence_substrings": ["học bổng Tiếp nối", "tốt nghiệp"],
+    "requires_ab_validation": true,
+    "status": "candidate-not-validated",
+    "ab_protocol": "Giữ nguyên câu hỏi, embedder, chunker và top_k=3. Chạy một lần không lọc và một lần lọc audience=student. Lưu toàn bộ top-3 và câu trả lời. Chỉ kết luận cần filter nếu kết quả thực chứng cho thấy không lọc trả lời sai đối tượng còn có lọc trả lời đúng. Nếu hai lần đều đúng, câu này chưa đạt yêu cầu cần filter."
+  }
+]

@@ -1,0 +1,1713 @@
+{
+  "backend": "mock",
+  "backend_name": "mock embeddings fallback",
+  "chunk_size": 500,
+  "top_k": 3,
+  "queries_sha256": "a510eafbfa6b15ec57377bd6acc7795e165b3e9c0b81d0b8261369c2fcaf8210",
+  "scoring_note": "retrieval_proxy_score is evidence coverage only, NOT official rubric/LLM correctness.",
+  "agent_note": "No generative LLM configured. Agent emits source context through a labelled extractive llm_fn; correctness ungraded.",
+  "strategies": {
+    "fixed": {
+      "chunk_count": 12,
+      "avg_length": 419.9166666666667,
+      "max_length": 500,
+      "documents": {
+        "hoc-bong-tang-cuong-nang-luc-can-bo": {
+          "count": 1
+        },
+        "hoc-bong-tiep-noi-sinh-vien": {
+          "count": 1
+        },
+        "muc-hoc-phi-2026-2027": {
+          "count": 4
+        },
+        "phi-gia-han-dao-tao-2025-2026": {
+          "count": 2
+        },
+        "thu-hoc-phi-hk2-2025-2026": {
+          "count": 4
+        }
+      },
+      "evaluations": {
+        "Q1": {
+          "filter": {
+            "academic_year": "2026-2027"
+          },
+          "results": [
+            {
+              "id": "muc-hoc-phi-2026-2027#2",
+              "content": "; tín chỉ 984.\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ –.\n\n## 2. Mức học phí áp dụng cho sinh viên quốc tế (trừ sinh viên trao đổi thuộc Liên minh USTH)\n\nĐơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm).\n\n- Sinh viên đại học ngành Kỹ thuật Hàng không Y1-Y3: niên chế 145; tín chỉ 2.417.\n- Bằng đôi: niên chế 105; tín chỉ 1.750.\n- Chương trình chuẩn 3 năm và B0: niên chế 78; tín chỉ 1.300.\n- Học viên thạc sĩ chương trình chuẩn: niên chế 105; t",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 2,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.02091276634979982
+            },
+            {
+              "id": "muc-hoc-phi-2026-2027#3",
+              "content": "c viên thạc sĩ chương trình chuẩn: niên chế 105; tín chỉ 1.750.\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ không nêu.\n\n*Áp dụng đối với trường hợp đăng ký học theo tín chỉ và đăng ký học lại.",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 3,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.005734356957730394
+            },
+            {
+              "id": "muc-hoc-phi-2026-2027#0",
+              "content": "# Mức học phí USTH năm học 2026-2027\n\nTrường Đại học Khoa học và Công nghệ Hà Nội thông báo quy định mức thu học phí năm học 2026-2027 như sau:\n\n## 1. Mức học phí áp dụng cho sinh viên Việt Nam\n\nĐơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm).\n\n- Kỹ thuật Hàng không Y1-Y3 (các tín chỉ do USTH đào tạo): niên chế 105; tín chỉ 1.750.\n- Kỹ thuật Hàng không (37 tín chỉ B1+B2 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không (60 tín chỉ năm B2+B3 d",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 0,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": -0.006430522106895001
+            }
+          ],
+          "gold_document_rank": 1,
+          "document_hit": true,
+          "evidence_hit": false,
+          "evidence_coverage_rank": null,
+          "missing_evidence": [
+            "chương trình chuẩn 3 năm và b0: niên chế 59"
+          ],
+          "retrieval_proxy_score": 0,
+          "official_score": null,
+          "agent_mode": "extractive-context-preview",
+          "agent_answer": "BẢN TRÍCH NGỮ CẢNH (không phải câu trả lời tổng hợp của LLM):\n[1] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#2\n; tín chỉ 984.\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ –.\n\n## 2. Mức học phí áp dụng cho sinh viên quốc tế (trừ sinh viên trao đổi thuộc Liên minh USTH)\n\nĐơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm).\n\n- Sinh viên đại học ngành Kỹ thuật Hàng không Y1-Y3: niên chế 145; tín chỉ 2.417.\n- Bằng đôi: niên chế 105; tín chỉ 1.750.\n- Chương trình chuẩn 3 năm và B0: niên chế 78; tín chỉ 1.300.\n- Học viên thạc sĩ chương trình chuẩn: niên chế 105; t\n\n[2] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#3\nc viên thạc sĩ chương trình chuẩn: niên chế 105; tín chỉ 1.750.\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ không nêu.\n\n*Áp dụng đối với trường hợp đăng ký học theo tín chỉ và đăng ký học lại.\n\n[3] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#0\n# Mức học phí USTH năm học 2026-2027\n\nTrường Đại học Khoa học và Công nghệ Hà Nội thông báo quy định mức thu học phí năm học 2026-2027 như sau:\n\n## 1. Mức học phí áp dụng cho sinh viên Việt Nam\n\nĐơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm).\n\n- Kỹ thuật Hàng không Y1-Y3 (các tín chỉ do USTH đào tạo): niên chế 105; tín chỉ 1.750.\n- Kỹ thuật Hàng không (37 tín chỉ B1+B2 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không (60 tín chỉ năm B2+B3 d",
+          "agent_correct": null
+        },
+        "Q2": {
+          "filter": {
+            "academic_year": "2025-2026"
+          },
+          "results": [
+            {
+              "id": "thu-hoc-phi-hk2-2025-2026#3",
+              "content": "ủa Nhà trường.\n\nCác bước thực hiện:\n\nĐăng nhập hệ thống ERP: https://erp.usth.edu.vn/students\n\nChọn mục Học phí, tra cứu hóa đơn\n\nKiểm tra mức học phí phải nộp\n\nQuét mã QR để hoàn tất thanh toán\n\nThanh toán được xác nhận khi trạng thái hóa đơn chuyển sang “Đã đóng”.\n\n## 5. Hỗ trợ sinh viên\n\nSinh viên vui lòng lưu giữ xác nhận chuyển khoản để đối chiếu khi cần thiết.\n\nMọi thắc mắc xin liên hệ Phòng Công tác Sinh viên:\n\n📧 student.services@usth.edu.vn",
+              "metadata": {
+                "doc_id": "thu-hoc-phi-hk2-2025-2026",
+                "title": "Thu học phí USTH học kỳ II năm học 2025-2026",
+                "source_url": "https://usth.edu.vn/tb-ve-viec-thu-hoc-phi-hoc-ky-ii-nam-hoc-2025-2026-chuong-trinh-dao-tao-trinh-do-dai-hoc-29249/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-payment",
+                "language": "vi",
+                "academic_year": "2025-2026",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Thông báo áp dụng học kỳ II năm học 2025-2026, không áp dụng thay cho năm 2026-2027.",
+                "fee_basis": "Quyết định số 563/QĐ-ĐHKHCN ngày 01/07/2025",
+                "chunk_index": 3,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/thu-hoc-phi-hk2-2025-2026.md"
+              },
+              "score": 0.03210602574791889
+            },
+            {
+              "id": "phi-gia-han-dao-tao-2025-2026#0",
+              "content": "# Phí gia hạn đào tạo USTH năm học 2025-2026\n\nUSTH thông báo thu phí gia hạn đào tạo năm học 2025–2026 cho sinh viên đại học và học viên thạc sĩ. \n\nThời gian đóng từ 04/05/2026 đến 18/05/2026.\n\nSinh viên nộp học phí bằng hình thức chuyển khoản qua mã QR hiển thị trên hệ thống ERP của Nhà trường.\n\nCác bước thực hiện:\n\nĐăng nhập hệ thống ERP: https://erp.usth.edu.vn/students\n\nChọn mục Học phí, tra cứu hóa đơn\n\nKiểm tra số tiền phải nộp\n\nQuét mã QR để hoàn tất thanh toán\n\nThanh toán được xác nhận k",
+              "metadata": {
+                "doc_id": "phi-gia-han-dao-tao-2025-2026",
+                "title": "Phí gia hạn đào tạo USTH năm học 2025-2026",
+                "source_url": "https://usth.edu.vn/thong-bao-thu-phi-gia-han-dao-tao-nam-hoc-2025-2026-31390/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "training-extension-fee",
+                "language": "vi",
+                "academic_year": "2025-2026",
+                "extraction_note": "Chỉ lấy HTML công khai; không tải danh sách sinh viên đính kèm. HTML không nêu số tiền phí gia hạn.",
+                "chunk_index": 0,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/phi-gia-han-dao-tao-2025-2026.md"
+              },
+              "score": -0.008516956039931106
+            },
+            {
+              "id": "thu-hoc-phi-hk2-2025-2026#1",
+              "content": "\n(Mức thu áp dụng theo Quyết định số 563/QĐ-ĐHKHCN ngày 01/07/2025)\n\nĐơn vị: triệu đồng/học kỳ.\n\n- Ngành Kỹ thuật Hàng không (3 năm tại Trường, 1 năm tại VAECO): sinh viên Việt Nam 62,5; sinh viên quốc tế Không áp dụng.\n- Ngành Kỹ thuật Hàng không (3 năm tại Trường): sinh viên Việt Nam 50,0; sinh viên quốc tế 70,25.\n- Các chương trình đại học (song bằng): sinh viên Việt Nam 39,5; sinh viên quốc tế 50,0.\n- Ngành Dược học: sinh viên Việt Nam 36,75; sinh viên quốc tế Không áp dụng.\n- Các chương trì",
+              "metadata": {
+                "doc_id": "thu-hoc-phi-hk2-2025-2026",
+                "title": "Thu học phí USTH học kỳ II năm học 2025-2026",
+                "source_url": "https://usth.edu.vn/tb-ve-viec-thu-hoc-phi-hoc-ky-ii-nam-hoc-2025-2026-chuong-trinh-dao-tao-trinh-do-dai-hoc-29249/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-payment",
+                "language": "vi",
+                "academic_year": "2025-2026",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Thông báo áp dụng học kỳ II năm học 2025-2026, không áp dụng thay cho năm 2026-2027.",
+                "fee_basis": "Quyết định số 563/QĐ-ĐHKHCN ngày 01/07/2025",
+                "chunk_index": 1,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/thu-hoc-phi-hk2-2025-2026.md"
+              },
+              "score": -0.010091145714385647
+            }
+          ],
+          "gold_document_rank": 1,
+          "document_hit": true,
+          "evidence_hit": false,
+          "evidence_coverage_rank": null,
+          "missing_evidence": [
+            "05/02/2026",
+            "không được tham gia"
+          ],
+          "retrieval_proxy_score": 0,
+          "official_score": null,
+          "agent_mode": "extractive-context-preview",
+          "agent_answer": "BẢN TRÍCH NGỮ CẢNH (không phải câu trả lời tổng hợp của LLM):\n[1] Nguồn: https://usth.edu.vn/tb-ve-viec-thu-hoc-phi-hoc-ky-ii-nam-hoc-2025-2026-chuong-trinh-dao-tao-trinh-do-dai-hoc-29249/\nTài liệu: thu-hoc-phi-hk2-2025-2026 | Chunk: thu-hoc-phi-hk2-2025-2026#3\nủa Nhà trường.\n\nCác bước thực hiện:\n\nĐăng nhập hệ thống ERP: https://erp.usth.edu.vn/students\n\nChọn mục Học phí, tra cứu hóa đơn\n\nKiểm tra mức học phí phải nộp\n\nQuét mã QR để hoàn tất thanh toán\n\nThanh toán được xác nhận khi trạng thái hóa đơn chuyển sang “Đã đóng”.\n\n## 5. Hỗ trợ sinh viên\n\nSinh viên vui lòng lưu giữ xác nhận chuyển khoản để đối chiếu khi cần thiết.\n\nMọi thắc mắc xin liên hệ Phòng Công tác Sinh viên:\n\n📧 student.services@usth.edu.vn\n\n[2] Nguồn: https://usth.edu.vn/thong-bao-thu-phi-gia-han-dao-tao-nam-hoc-2025-2026-31390/\nTài liệu: phi-gia-han-dao-tao-2025-2026 | Chunk: phi-gia-han-dao-tao-2025-2026#0\n# Phí gia hạn đào tạo USTH năm học 2025-2026\n\nUSTH thông báo thu phí gia hạn đào tạo năm học 2025–2026 cho sinh viên đại học và học viên thạc sĩ. \n\nThời gian đóng từ 04/05/2026 đến 18/05/2026.\n\nSinh viên nộp học phí bằng hình thức chuyển khoản qua mã QR hiển thị trên hệ thống ERP của Nhà trường.\n\nCác bước thực hiện:\n\nĐăng nhập hệ thống ERP: https://erp.usth.edu.vn/students\n\nChọn mục Học phí, tra cứu hóa đơn\n\nKiểm tra số tiền phải nộp\n\nQuét mã QR để hoàn tất thanh toán\n\nThanh toán được xác nhận k\n\n[3] Nguồn: https://usth.edu.vn/tb-ve-viec-thu-hoc-phi-hoc-ky-ii-nam-hoc-2025-2026-chuong-trinh-dao-tao-trinh-do-dai-hoc-29249/\nTài liệu: thu-hoc-phi-hk2-2025-2026 | Chunk: thu-hoc-phi-hk2-2025-2026#1\n\n(Mức thu áp dụng theo Quyết định số 563/QĐ-ĐHKHCN ngày 01/07/2025)\n\nĐơn vị: triệu đồng/học kỳ.\n\n- Ngành Kỹ thuật Hàng không (3 năm tại Trường, 1 năm tại VAECO): sinh viên Việt Nam 62,5; sinh viên quốc tế Không áp dụng.\n- Ngành Kỹ thuật Hàng không (3 năm tại Trường): sinh viên Việt Nam 50,0; sinh viên quốc tế 70,25.\n- Các chương trình đại học (song bằng): sinh viên Việt Nam 39,5; sinh viên quốc tế 50,0.\n- Ngành Dược học: sinh viên Việt Nam 36,75; sinh viên quốc tế Không áp dụng.\n- Các chương trì",
+          "agent_correct": null
+        },
+        "Q3": {
+          "filter": {},
+          "results": [
+            {
+              "id": "muc-hoc-phi-2026-2027#3",
+              "content": "c viên thạc sĩ chương trình chuẩn: niên chế 105; tín chỉ 1.750.\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ không nêu.\n\n*Áp dụng đối với trường hợp đăng ký học theo tín chỉ và đăng ký học lại.",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 3,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.19844780391253158
+            },
+            {
+              "id": "muc-hoc-phi-2026-2027#2",
+              "content": "; tín chỉ 984.\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ –.\n\n## 2. Mức học phí áp dụng cho sinh viên quốc tế (trừ sinh viên trao đổi thuộc Liên minh USTH)\n\nĐơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm).\n\n- Sinh viên đại học ngành Kỹ thuật Hàng không Y1-Y3: niên chế 145; tín chỉ 2.417.\n- Bằng đôi: niên chế 105; tín chỉ 1.750.\n- Chương trình chuẩn 3 năm và B0: niên chế 78; tín chỉ 1.300.\n- Học viên thạc sĩ chương trình chuẩn: niên chế 105; t",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 2,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.17644025613774558
+            },
+            {
+              "id": "muc-hoc-phi-2026-2027#0",
+              "content": "# Mức học phí USTH năm học 2026-2027\n\nTrường Đại học Khoa học và Công nghệ Hà Nội thông báo quy định mức thu học phí năm học 2026-2027 như sau:\n\n## 1. Mức học phí áp dụng cho sinh viên Việt Nam\n\nĐơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm).\n\n- Kỹ thuật Hàng không Y1-Y3 (các tín chỉ do USTH đào tạo): niên chế 105; tín chỉ 1.750.\n- Kỹ thuật Hàng không (37 tín chỉ B1+B2 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không (60 tín chỉ năm B2+B3 d",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 0,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.13645191546686983
+            }
+          ],
+          "gold_document_rank": null,
+          "document_hit": false,
+          "evidence_hit": false,
+          "evidence_coverage_rank": null,
+          "missing_evidence": [
+            "https://erp.usth.edu.vn/students",
+            "đã đóng"
+          ],
+          "retrieval_proxy_score": 0,
+          "official_score": null,
+          "agent_mode": "extractive-context-preview",
+          "agent_answer": "BẢN TRÍCH NGỮ CẢNH (không phải câu trả lời tổng hợp của LLM):\n[1] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#3\nc viên thạc sĩ chương trình chuẩn: niên chế 105; tín chỉ 1.750.\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ không nêu.\n\n*Áp dụng đối với trường hợp đăng ký học theo tín chỉ và đăng ký học lại.\n\n[2] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#2\n; tín chỉ 984.\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ –.\n\n## 2. Mức học phí áp dụng cho sinh viên quốc tế (trừ sinh viên trao đổi thuộc Liên minh USTH)\n\nĐơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm).\n\n- Sinh viên đại học ngành Kỹ thuật Hàng không Y1-Y3: niên chế 145; tín chỉ 2.417.\n- Bằng đôi: niên chế 105; tín chỉ 1.750.\n- Chương trình chuẩn 3 năm và B0: niên chế 78; tín chỉ 1.300.\n- Học viên thạc sĩ chương trình chuẩn: niên chế 105; t\n\n[3] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#0\n# Mức học phí USTH năm học 2026-2027\n\nTrường Đại học Khoa học và Công nghệ Hà Nội thông báo quy định mức thu học phí năm học 2026-2027 như sau:\n\n## 1. Mức học phí áp dụng cho sinh viên Việt Nam\n\nĐơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm).\n\n- Kỹ thuật Hàng không Y1-Y3 (các tín chỉ do USTH đào tạo): niên chế 105; tín chỉ 1.750.\n- Kỹ thuật Hàng không (37 tín chỉ B1+B2 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không (60 tín chỉ năm B2+B3 d",
+          "agent_correct": null
+        },
+        "Q4": {
+          "filter": {
+            "academic_year": "2026-2027"
+          },
+          "results": [
+            {
+              "id": "muc-hoc-phi-2026-2027#1",
+              "content": "000.\n- Kỹ thuật Hàng không (60 tín chỉ năm B2+B3 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không Y1-Y3 + Đào tạo B1&B2 tại VAECO (áp dụng cho những SV đã nộp HP theo niên chế trong năm học 2025-2026): niên chế 130; tín chỉ không nêu.\n- Bằng đôi: niên chế 83; tín chỉ 1384.\n- Dược học: niên chế 77; tín chỉ 1284.\n- Chương trình chuẩn 3 năm và B0: niên chế 59; tín chỉ 984.\n- Học viên thạc sĩ chương trình chuẩn: niên chế 59; tín chỉ 984.\n- Nghiên cứu sinh chương trình Đào ",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 1,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.07583501288931166
+            },
+            {
+              "id": "muc-hoc-phi-2026-2027#2",
+              "content": "; tín chỉ 984.\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ –.\n\n## 2. Mức học phí áp dụng cho sinh viên quốc tế (trừ sinh viên trao đổi thuộc Liên minh USTH)\n\nĐơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm).\n\n- Sinh viên đại học ngành Kỹ thuật Hàng không Y1-Y3: niên chế 145; tín chỉ 2.417.\n- Bằng đôi: niên chế 105; tín chỉ 1.750.\n- Chương trình chuẩn 3 năm và B0: niên chế 78; tín chỉ 1.300.\n- Học viên thạc sĩ chương trình chuẩn: niên chế 105; t",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 2,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.06505895400568437
+            },
+            {
+              "id": "muc-hoc-phi-2026-2027#0",
+              "content": "# Mức học phí USTH năm học 2026-2027\n\nTrường Đại học Khoa học và Công nghệ Hà Nội thông báo quy định mức thu học phí năm học 2026-2027 như sau:\n\n## 1. Mức học phí áp dụng cho sinh viên Việt Nam\n\nĐơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm).\n\n- Kỹ thuật Hàng không Y1-Y3 (các tín chỉ do USTH đào tạo): niên chế 105; tín chỉ 1.750.\n- Kỹ thuật Hàng không (37 tín chỉ B1+B2 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không (60 tín chỉ năm B2+B3 d",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 0,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.06043605923398247
+            }
+          ],
+          "gold_document_rank": 1,
+          "document_hit": true,
+          "evidence_hit": false,
+          "evidence_coverage_rank": null,
+          "missing_evidence": [
+            "đăng ký học theo tín chỉ và đăng ký học lại"
+          ],
+          "retrieval_proxy_score": 0,
+          "official_score": null,
+          "agent_mode": "extractive-context-preview",
+          "agent_answer": "BẢN TRÍCH NGỮ CẢNH (không phải câu trả lời tổng hợp của LLM):\n[1] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#1\n000.\n- Kỹ thuật Hàng không (60 tín chỉ năm B2+B3 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không Y1-Y3 + Đào tạo B1&B2 tại VAECO (áp dụng cho những SV đã nộp HP theo niên chế trong năm học 2025-2026): niên chế 130; tín chỉ không nêu.\n- Bằng đôi: niên chế 83; tín chỉ 1384.\n- Dược học: niên chế 77; tín chỉ 1284.\n- Chương trình chuẩn 3 năm và B0: niên chế 59; tín chỉ 984.\n- Học viên thạc sĩ chương trình chuẩn: niên chế 59; tín chỉ 984.\n- Nghiên cứu sinh chương trình Đào \n\n[2] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#2\n; tín chỉ 984.\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ –.\n\n## 2. Mức học phí áp dụng cho sinh viên quốc tế (trừ sinh viên trao đổi thuộc Liên minh USTH)\n\nĐơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm).\n\n- Sinh viên đại học ngành Kỹ thuật Hàng không Y1-Y3: niên chế 145; tín chỉ 2.417.\n- Bằng đôi: niên chế 105; tín chỉ 1.750.\n- Chương trình chuẩn 3 năm và B0: niên chế 78; tín chỉ 1.300.\n- Học viên thạc sĩ chương trình chuẩn: niên chế 105; t\n\n[3] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#0\n# Mức học phí USTH năm học 2026-2027\n\nTrường Đại học Khoa học và Công nghệ Hà Nội thông báo quy định mức thu học phí năm học 2026-2027 như sau:\n\n## 1. Mức học phí áp dụng cho sinh viên Việt Nam\n\nĐơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm).\n\n- Kỹ thuật Hàng không Y1-Y3 (các tín chỉ do USTH đào tạo): niên chế 105; tín chỉ 1.750.\n- Kỹ thuật Hàng không (37 tín chỉ B1+B2 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không (60 tín chỉ năm B2+B3 d",
+          "agent_correct": null
+        },
+        "Q5": {
+          "filter": {
+            "audience": "student"
+          },
+          "results": [
+            {
+              "id": "muc-hoc-phi-2026-2027#0",
+              "content": "# Mức học phí USTH năm học 2026-2027\n\nTrường Đại học Khoa học và Công nghệ Hà Nội thông báo quy định mức thu học phí năm học 2026-2027 như sau:\n\n## 1. Mức học phí áp dụng cho sinh viên Việt Nam\n\nĐơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm).\n\n- Kỹ thuật Hàng không Y1-Y3 (các tín chỉ do USTH đào tạo): niên chế 105; tín chỉ 1.750.\n- Kỹ thuật Hàng không (37 tín chỉ B1+B2 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không (60 tín chỉ năm B2+B3 d",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 0,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.3127934374862384
+            },
+            {
+              "id": "muc-hoc-phi-2026-2027#1",
+              "content": "000.\n- Kỹ thuật Hàng không (60 tín chỉ năm B2+B3 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không Y1-Y3 + Đào tạo B1&B2 tại VAECO (áp dụng cho những SV đã nộp HP theo niên chế trong năm học 2025-2026): niên chế 130; tín chỉ không nêu.\n- Bằng đôi: niên chế 83; tín chỉ 1384.\n- Dược học: niên chế 77; tín chỉ 1284.\n- Chương trình chuẩn 3 năm và B0: niên chế 59; tín chỉ 984.\n- Học viên thạc sĩ chương trình chuẩn: niên chế 59; tín chỉ 984.\n- Nghiên cứu sinh chương trình Đào ",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 1,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.23201996797034488
+            },
+            {
+              "id": "muc-hoc-phi-2026-2027#3",
+              "content": "c viên thạc sĩ chương trình chuẩn: niên chế 105; tín chỉ 1.750.\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ không nêu.\n\n*Áp dụng đối với trường hợp đăng ký học theo tín chỉ và đăng ký học lại.",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 3,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.15714927502724502
+            }
+          ],
+          "gold_document_rank": null,
+          "document_hit": false,
+          "evidence_hit": false,
+          "evidence_coverage_rank": null,
+          "missing_evidence": [
+            "học bổng tiếp nối",
+            "tốt nghiệp"
+          ],
+          "retrieval_proxy_score": 0,
+          "official_score": null,
+          "agent_mode": "extractive-context-preview",
+          "agent_answer": "BẢN TRÍCH NGỮ CẢNH (không phải câu trả lời tổng hợp của LLM):\n[1] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#0\n# Mức học phí USTH năm học 2026-2027\n\nTrường Đại học Khoa học và Công nghệ Hà Nội thông báo quy định mức thu học phí năm học 2026-2027 như sau:\n\n## 1. Mức học phí áp dụng cho sinh viên Việt Nam\n\nĐơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm).\n\n- Kỹ thuật Hàng không Y1-Y3 (các tín chỉ do USTH đào tạo): niên chế 105; tín chỉ 1.750.\n- Kỹ thuật Hàng không (37 tín chỉ B1+B2 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không (60 tín chỉ năm B2+B3 d\n\n[2] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#1\n000.\n- Kỹ thuật Hàng không (60 tín chỉ năm B2+B3 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không Y1-Y3 + Đào tạo B1&B2 tại VAECO (áp dụng cho những SV đã nộp HP theo niên chế trong năm học 2025-2026): niên chế 130; tín chỉ không nêu.\n- Bằng đôi: niên chế 83; tín chỉ 1384.\n- Dược học: niên chế 77; tín chỉ 1284.\n- Chương trình chuẩn 3 năm và B0: niên chế 59; tín chỉ 984.\n- Học viên thạc sĩ chương trình chuẩn: niên chế 59; tín chỉ 984.\n- Nghiên cứu sinh chương trình Đào \n\n[3] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#3\nc viên thạc sĩ chương trình chuẩn: niên chế 105; tín chỉ 1.750.\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ không nêu.\n\n*Áp dụng đối với trường hợp đăng ký học theo tín chỉ và đăng ký học lại.",
+          "agent_correct": null
+        }
+      },
+      "ab_q5": {
+        "without_filter": {
+          "filter": {},
+          "results": [
+            {
+              "id": "muc-hoc-phi-2026-2027#0",
+              "content": "# Mức học phí USTH năm học 2026-2027\n\nTrường Đại học Khoa học và Công nghệ Hà Nội thông báo quy định mức thu học phí năm học 2026-2027 như sau:\n\n## 1. Mức học phí áp dụng cho sinh viên Việt Nam\n\nĐơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm).\n\n- Kỹ thuật Hàng không Y1-Y3 (các tín chỉ do USTH đào tạo): niên chế 105; tín chỉ 1.750.\n- Kỹ thuật Hàng không (37 tín chỉ B1+B2 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không (60 tín chỉ năm B2+B3 d",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 0,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.3127934374862384
+            },
+            {
+              "id": "muc-hoc-phi-2026-2027#1",
+              "content": "000.\n- Kỹ thuật Hàng không (60 tín chỉ năm B2+B3 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không Y1-Y3 + Đào tạo B1&B2 tại VAECO (áp dụng cho những SV đã nộp HP theo niên chế trong năm học 2025-2026): niên chế 130; tín chỉ không nêu.\n- Bằng đôi: niên chế 83; tín chỉ 1384.\n- Dược học: niên chế 77; tín chỉ 1284.\n- Chương trình chuẩn 3 năm và B0: niên chế 59; tín chỉ 984.\n- Học viên thạc sĩ chương trình chuẩn: niên chế 59; tín chỉ 984.\n- Nghiên cứu sinh chương trình Đào ",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 1,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.23201996797034488
+            },
+            {
+              "id": "muc-hoc-phi-2026-2027#3",
+              "content": "c viên thạc sĩ chương trình chuẩn: niên chế 105; tín chỉ 1.750.\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ không nêu.\n\n*Áp dụng đối với trường hợp đăng ký học theo tín chỉ và đăng ký học lại.",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 3,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.15714927502724502
+            }
+          ],
+          "gold_document_rank": null,
+          "document_hit": false,
+          "evidence_hit": false,
+          "evidence_coverage_rank": null,
+          "missing_evidence": [
+            "học bổng tiếp nối",
+            "tốt nghiệp"
+          ],
+          "retrieval_proxy_score": 0,
+          "official_score": null,
+          "agent_mode": "extractive-context-preview",
+          "agent_answer": "BẢN TRÍCH NGỮ CẢNH (không phải câu trả lời tổng hợp của LLM):\n[1] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#0\n# Mức học phí USTH năm học 2026-2027\n\nTrường Đại học Khoa học và Công nghệ Hà Nội thông báo quy định mức thu học phí năm học 2026-2027 như sau:\n\n## 1. Mức học phí áp dụng cho sinh viên Việt Nam\n\nĐơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm).\n\n- Kỹ thuật Hàng không Y1-Y3 (các tín chỉ do USTH đào tạo): niên chế 105; tín chỉ 1.750.\n- Kỹ thuật Hàng không (37 tín chỉ B1+B2 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không (60 tín chỉ năm B2+B3 d\n\n[2] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#1\n000.\n- Kỹ thuật Hàng không (60 tín chỉ năm B2+B3 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không Y1-Y3 + Đào tạo B1&B2 tại VAECO (áp dụng cho những SV đã nộp HP theo niên chế trong năm học 2025-2026): niên chế 130; tín chỉ không nêu.\n- Bằng đôi: niên chế 83; tín chỉ 1384.\n- Dược học: niên chế 77; tín chỉ 1284.\n- Chương trình chuẩn 3 năm và B0: niên chế 59; tín chỉ 984.\n- Học viên thạc sĩ chương trình chuẩn: niên chế 59; tín chỉ 984.\n- Nghiên cứu sinh chương trình Đào \n\n[3] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#3\nc viên thạc sĩ chương trình chuẩn: niên chế 105; tín chỉ 1.750.\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ không nêu.\n\n*Áp dụng đối với trường hợp đăng ký học theo tín chỉ và đăng ký học lại.",
+          "agent_correct": null
+        },
+        "with_filter": {
+          "filter": {
+            "audience": "student"
+          },
+          "results": [
+            {
+              "id": "muc-hoc-phi-2026-2027#0",
+              "content": "# Mức học phí USTH năm học 2026-2027\n\nTrường Đại học Khoa học và Công nghệ Hà Nội thông báo quy định mức thu học phí năm học 2026-2027 như sau:\n\n## 1. Mức học phí áp dụng cho sinh viên Việt Nam\n\nĐơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm).\n\n- Kỹ thuật Hàng không Y1-Y3 (các tín chỉ do USTH đào tạo): niên chế 105; tín chỉ 1.750.\n- Kỹ thuật Hàng không (37 tín chỉ B1+B2 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không (60 tín chỉ năm B2+B3 d",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 0,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.3127934374862384
+            },
+            {
+              "id": "muc-hoc-phi-2026-2027#1",
+              "content": "000.\n- Kỹ thuật Hàng không (60 tín chỉ năm B2+B3 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không Y1-Y3 + Đào tạo B1&B2 tại VAECO (áp dụng cho những SV đã nộp HP theo niên chế trong năm học 2025-2026): niên chế 130; tín chỉ không nêu.\n- Bằng đôi: niên chế 83; tín chỉ 1384.\n- Dược học: niên chế 77; tín chỉ 1284.\n- Chương trình chuẩn 3 năm và B0: niên chế 59; tín chỉ 984.\n- Học viên thạc sĩ chương trình chuẩn: niên chế 59; tín chỉ 984.\n- Nghiên cứu sinh chương trình Đào ",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 1,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.23201996797034488
+            },
+            {
+              "id": "muc-hoc-phi-2026-2027#3",
+              "content": "c viên thạc sĩ chương trình chuẩn: niên chế 105; tín chỉ 1.750.\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ không nêu.\n\n*Áp dụng đối với trường hợp đăng ký học theo tín chỉ và đăng ký học lại.",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 3,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.15714927502724502
+            }
+          ],
+          "gold_document_rank": null,
+          "document_hit": false,
+          "evidence_hit": false,
+          "evidence_coverage_rank": null,
+          "missing_evidence": [
+            "học bổng tiếp nối",
+            "tốt nghiệp"
+          ],
+          "retrieval_proxy_score": 0,
+          "official_score": null,
+          "agent_mode": "extractive-context-preview",
+          "agent_answer": "BẢN TRÍCH NGỮ CẢNH (không phải câu trả lời tổng hợp của LLM):\n[1] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#0\n# Mức học phí USTH năm học 2026-2027\n\nTrường Đại học Khoa học và Công nghệ Hà Nội thông báo quy định mức thu học phí năm học 2026-2027 như sau:\n\n## 1. Mức học phí áp dụng cho sinh viên Việt Nam\n\nĐơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm).\n\n- Kỹ thuật Hàng không Y1-Y3 (các tín chỉ do USTH đào tạo): niên chế 105; tín chỉ 1.750.\n- Kỹ thuật Hàng không (37 tín chỉ B1+B2 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không (60 tín chỉ năm B2+B3 d\n\n[2] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#1\n000.\n- Kỹ thuật Hàng không (60 tín chỉ năm B2+B3 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không Y1-Y3 + Đào tạo B1&B2 tại VAECO (áp dụng cho những SV đã nộp HP theo niên chế trong năm học 2025-2026): niên chế 130; tín chỉ không nêu.\n- Bằng đôi: niên chế 83; tín chỉ 1384.\n- Dược học: niên chế 77; tín chỉ 1284.\n- Chương trình chuẩn 3 năm và B0: niên chế 59; tín chỉ 984.\n- Học viên thạc sĩ chương trình chuẩn: niên chế 59; tín chỉ 984.\n- Nghiên cứu sinh chương trình Đào \n\n[3] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#3\nc viên thạc sĩ chương trình chuẩn: niên chế 105; tín chỉ 1.750.\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ không nêu.\n\n*Áp dụng đối với trường hợp đăng ký học theo tín chỉ và đăng ký học lại.",
+          "agent_correct": null
+        },
+        "same_top3": true,
+        "filter_necessity_proven": false
+      },
+      "document_hits": 3,
+      "evidence_hits": 0,
+      "retrieval_proxy_total": 0
+    },
+    "recursive": {
+      "chunk_count": 13,
+      "avg_length": 360.6923076923077,
+      "max_length": 488,
+      "documents": {
+        "hoc-bong-tang-cuong-nang-luc-can-bo": {
+          "count": 1
+        },
+        "hoc-bong-tiep-noi-sinh-vien": {
+          "count": 1
+        },
+        "muc-hoc-phi-2026-2027": {
+          "count": 4
+        },
+        "phi-gia-han-dao-tao-2025-2026": {
+          "count": 2
+        },
+        "thu-hoc-phi-hk2-2025-2026": {
+          "count": 5
+        }
+      },
+      "evaluations": {
+        "Q1": {
+          "filter": {
+            "academic_year": "2026-2027"
+          },
+          "results": [
+            {
+              "id": "muc-hoc-phi-2026-2027#1",
+              "content": "- Kỹ thuật Hàng không Y1-Y3 (các tín chỉ do USTH đào tạo): niên chế 105; tín chỉ 1.750.\n- Kỹ thuật Hàng không (37 tín chỉ B1+B2 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không (60 tín chỉ năm B2+B3 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không Y1-Y3 + Đào tạo B1&B2 tại VAECO (áp dụng cho những SV đã nộp HP theo niên chế trong năm học 2025-2026): niên chế 130; tín chỉ không nêu.\n- Bằng đôi: niên chế 83; tín chỉ 1384.\n",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 1,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.09196151541439382
+            },
+            {
+              "id": "muc-hoc-phi-2026-2027#0",
+              "content": "# Mức học phí USTH năm học 2026-2027\n\nTrường Đại học Khoa học và Công nghệ Hà Nội thông báo quy định mức thu học phí năm học 2026-2027 như sau:\n\n## 1. Mức học phí áp dụng cho sinh viên Việt Nam\n\nĐơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm).\n\n",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 0,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.04363765417221288
+            },
+            {
+              "id": "muc-hoc-phi-2026-2027#3",
+              "content": "- Sinh viên đại học ngành Kỹ thuật Hàng không Y1-Y3: niên chế 145; tín chỉ 2.417.\n- Bằng đôi: niên chế 105; tín chỉ 1.750.\n- Chương trình chuẩn 3 năm và B0: niên chế 78; tín chỉ 1.300.\n- Học viên thạc sĩ chương trình chuẩn: niên chế 105; tín chỉ 1.750.\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ không nêu.\n\n*Áp dụng đối với trường hợp đăng ký học theo tín chỉ và đăng ký học lại.",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 3,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": -0.005010634030811548
+            }
+          ],
+          "gold_document_rank": 1,
+          "document_hit": true,
+          "evidence_hit": false,
+          "evidence_coverage_rank": null,
+          "missing_evidence": [
+            "chương trình chuẩn 3 năm và b0: niên chế 59"
+          ],
+          "retrieval_proxy_score": 0,
+          "official_score": null,
+          "agent_mode": "extractive-context-preview",
+          "agent_answer": "BẢN TRÍCH NGỮ CẢNH (không phải câu trả lời tổng hợp của LLM):\n[1] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#1\n- Kỹ thuật Hàng không Y1-Y3 (các tín chỉ do USTH đào tạo): niên chế 105; tín chỉ 1.750.\n- Kỹ thuật Hàng không (37 tín chỉ B1+B2 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không (60 tín chỉ năm B2+B3 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không Y1-Y3 + Đào tạo B1&B2 tại VAECO (áp dụng cho những SV đã nộp HP theo niên chế trong năm học 2025-2026): niên chế 130; tín chỉ không nêu.\n- Bằng đôi: niên chế 83; tín chỉ 1384.\n\n\n[2] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#0\n# Mức học phí USTH năm học 2026-2027\n\nTrường Đại học Khoa học và Công nghệ Hà Nội thông báo quy định mức thu học phí năm học 2026-2027 như sau:\n\n## 1. Mức học phí áp dụng cho sinh viên Việt Nam\n\nĐơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm).\n\n\n\n[3] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#3\n- Sinh viên đại học ngành Kỹ thuật Hàng không Y1-Y3: niên chế 145; tín chỉ 2.417.\n- Bằng đôi: niên chế 105; tín chỉ 1.750.\n- Chương trình chuẩn 3 năm và B0: niên chế 78; tín chỉ 1.300.\n- Học viên thạc sĩ chương trình chuẩn: niên chế 105; tín chỉ 1.750.\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ không nêu.\n\n*Áp dụng đối với trường hợp đăng ký học theo tín chỉ và đăng ký học lại.",
+          "agent_correct": null
+        },
+        "Q2": {
+          "filter": {
+            "academic_year": "2025-2026"
+          },
+          "results": [
+            {
+              "id": "phi-gia-han-dao-tao-2025-2026#1",
+              "content": "Thanh toán được xác nhận khi trạng thái hóa đơn chuyển sang “Đã đóng”.\n\nSinh viên vui lòng lưu giữ xác nhận chuyển khoản để đối chiếu khi cần thiết.\n\nMọi thắc mắc xin liên hệ Phòng Công tác Sinh viên:\n\n📧 student.services@usth.edu.vn",
+              "metadata": {
+                "doc_id": "phi-gia-han-dao-tao-2025-2026",
+                "title": "Phí gia hạn đào tạo USTH năm học 2025-2026",
+                "source_url": "https://usth.edu.vn/thong-bao-thu-phi-gia-han-dao-tao-nam-hoc-2025-2026-31390/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "training-extension-fee",
+                "language": "vi",
+                "academic_year": "2025-2026",
+                "extraction_note": "Chỉ lấy HTML công khai; không tải danh sách sinh viên đính kèm. HTML không nêu số tiền phí gia hạn.",
+                "chunk_index": 1,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/phi-gia-han-dao-tao-2025-2026.md"
+              },
+              "score": 0.2616614886242951
+            },
+            {
+              "id": "thu-hoc-phi-hk2-2025-2026#2",
+              "content": "- Ngành Kỹ thuật Hàng không (3 năm tại Trường, 1 năm tại VAECO): sinh viên Việt Nam 62,5; sinh viên quốc tế Không áp dụng.\n- Ngành Kỹ thuật Hàng không (3 năm tại Trường): sinh viên Việt Nam 50,0; sinh viên quốc tế 70,25.\n- Các chương trình đại học (song bằng): sinh viên Việt Nam 39,5; sinh viên quốc tế 50,0.\n- Ngành Dược học: sinh viên Việt Nam 36,75; sinh viên quốc tế Không áp dụng.\n- Các chương trình đại học (đơn bằng): sinh viên Việt Nam 28,0; sinh viên quốc tế 37,0.\n\n",
+              "metadata": {
+                "doc_id": "thu-hoc-phi-hk2-2025-2026",
+                "title": "Thu học phí USTH học kỳ II năm học 2025-2026",
+                "source_url": "https://usth.edu.vn/tb-ve-viec-thu-hoc-phi-hoc-ky-ii-nam-hoc-2025-2026-chuong-trinh-dao-tao-trinh-do-dai-hoc-29249/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-payment",
+                "language": "vi",
+                "academic_year": "2025-2026",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Thông báo áp dụng học kỳ II năm học 2025-2026, không áp dụng thay cho năm 2026-2027.",
+                "fee_basis": "Quyết định số 563/QĐ-ĐHKHCN ngày 01/07/2025",
+                "chunk_index": 2,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/thu-hoc-phi-hk2-2025-2026.md"
+              },
+              "score": 0.17369691944893761
+            },
+            {
+              "id": "thu-hoc-phi-hk2-2025-2026#0",
+              "content": "# Thu học phí USTH học kỳ II năm học 2025-2026\n\nUSTH thông báo thu học phí học kỳ II năm học 2025–2026 cho sinh viên đại học. Thời gian đóng từ 23/01/2026 đến 05/02/2026.\n\n## 1. Đối tượng áp dụng\n\nSinh viên thuộc một trong các đối tượng sau:\n\nTân sinh viên B0 (nhập học năm học 2025–2026) chưa được xét hoàn thành chương trình bồi dưỡng tiếng Anh;\n\nSinh viên B2, B3 của tất cả các chương trình đào tạo.\n\n## 2. Mức học phí học kỳ II năm học 2025–2026\n\n",
+              "metadata": {
+                "doc_id": "thu-hoc-phi-hk2-2025-2026",
+                "title": "Thu học phí USTH học kỳ II năm học 2025-2026",
+                "source_url": "https://usth.edu.vn/tb-ve-viec-thu-hoc-phi-hoc-ky-ii-nam-hoc-2025-2026-chuong-trinh-dao-tao-trinh-do-dai-hoc-29249/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-payment",
+                "language": "vi",
+                "academic_year": "2025-2026",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Thông báo áp dụng học kỳ II năm học 2025-2026, không áp dụng thay cho năm 2026-2027.",
+                "fee_basis": "Quyết định số 563/QĐ-ĐHKHCN ngày 01/07/2025",
+                "chunk_index": 0,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/thu-hoc-phi-hk2-2025-2026.md"
+              },
+              "score": 0.010994926267487428
+            }
+          ],
+          "gold_document_rank": 2,
+          "document_hit": true,
+          "evidence_hit": false,
+          "evidence_coverage_rank": null,
+          "missing_evidence": [
+            "không được tham gia"
+          ],
+          "retrieval_proxy_score": 0,
+          "official_score": null,
+          "agent_mode": "extractive-context-preview",
+          "agent_answer": "BẢN TRÍCH NGỮ CẢNH (không phải câu trả lời tổng hợp của LLM):\n[1] Nguồn: https://usth.edu.vn/thong-bao-thu-phi-gia-han-dao-tao-nam-hoc-2025-2026-31390/\nTài liệu: phi-gia-han-dao-tao-2025-2026 | Chunk: phi-gia-han-dao-tao-2025-2026#1\nThanh toán được xác nhận khi trạng thái hóa đơn chuyển sang “Đã đóng”.\n\nSinh viên vui lòng lưu giữ xác nhận chuyển khoản để đối chiếu khi cần thiết.\n\nMọi thắc mắc xin liên hệ Phòng Công tác Sinh viên:\n\n📧 student.services@usth.edu.vn\n\n[2] Nguồn: https://usth.edu.vn/tb-ve-viec-thu-hoc-phi-hoc-ky-ii-nam-hoc-2025-2026-chuong-trinh-dao-tao-trinh-do-dai-hoc-29249/\nTài liệu: thu-hoc-phi-hk2-2025-2026 | Chunk: thu-hoc-phi-hk2-2025-2026#2\n- Ngành Kỹ thuật Hàng không (3 năm tại Trường, 1 năm tại VAECO): sinh viên Việt Nam 62,5; sinh viên quốc tế Không áp dụng.\n- Ngành Kỹ thuật Hàng không (3 năm tại Trường): sinh viên Việt Nam 50,0; sinh viên quốc tế 70,25.\n- Các chương trình đại học (song bằng): sinh viên Việt Nam 39,5; sinh viên quốc tế 50,0.\n- Ngành Dược học: sinh viên Việt Nam 36,75; sinh viên quốc tế Không áp dụng.\n- Các chương trình đại học (đơn bằng): sinh viên Việt Nam 28,0; sinh viên quốc tế 37,0.\n\n\n\n[3] Nguồn: https://usth.edu.vn/tb-ve-viec-thu-hoc-phi-hoc-ky-ii-nam-hoc-2025-2026-chuong-trinh-dao-tao-trinh-do-dai-hoc-29249/\nTài liệu: thu-hoc-phi-hk2-2025-2026 | Chunk: thu-hoc-phi-hk2-2025-2026#0\n# Thu học phí USTH học kỳ II năm học 2025-2026\n\nUSTH thông báo thu học phí học kỳ II năm học 2025–2026 cho sinh viên đại học. Thời gian đóng từ 23/01/2026 đến 05/02/2026.\n\n## 1. Đối tượng áp dụng\n\nSinh viên thuộc một trong các đối tượng sau:\n\nTân sinh viên B0 (nhập học năm học 2025–2026) chưa được xét hoàn thành chương trình bồi dưỡng tiếng Anh;\n\nSinh viên B2, B3 của tất cả các chương trình đào tạo.\n\n## 2. Mức học phí học kỳ II năm học 2025–2026\n\n",
+          "agent_correct": null
+        },
+        "Q3": {
+          "filter": {},
+          "results": [
+            {
+              "id": "thu-hoc-phi-hk2-2025-2026#3",
+              "content": "## 3. Thời gian đóng học phí\n\nTừ ngày 23/01/2026 đến hết ngày 05/02/2026.\n\nSinh viên không hoàn thành việc đóng học phí đúng thời hạn sẽ không được tham gia các học phần thuộc học kỳ II, năm học 2025–2026.\n\n## 4. Phương thức đóng học phí\n\nSinh viên nộp học phí bằng hình thức chuyển khoản qua mã QR hiển thị trên hệ thống ERP của Nhà trường.\n\nCác bước thực hiện:\n\nĐăng nhập hệ thống ERP: https://erp.usth.edu.vn/students\n\nChọn mục Học phí, tra cứu hóa đơn\n\nKiểm tra mức học phí phải nộp\n\n",
+              "metadata": {
+                "doc_id": "thu-hoc-phi-hk2-2025-2026",
+                "title": "Thu học phí USTH học kỳ II năm học 2025-2026",
+                "source_url": "https://usth.edu.vn/tb-ve-viec-thu-hoc-phi-hoc-ky-ii-nam-hoc-2025-2026-chuong-trinh-dao-tao-trinh-do-dai-hoc-29249/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-payment",
+                "language": "vi",
+                "academic_year": "2025-2026",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Thông báo áp dụng học kỳ II năm học 2025-2026, không áp dụng thay cho năm 2026-2027.",
+                "fee_basis": "Quyết định số 563/QĐ-ĐHKHCN ngày 01/07/2025",
+                "chunk_index": 3,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/thu-hoc-phi-hk2-2025-2026.md"
+              },
+              "score": 0.2651260151665053
+            },
+            {
+              "id": "thu-hoc-phi-hk2-2025-2026#2",
+              "content": "- Ngành Kỹ thuật Hàng không (3 năm tại Trường, 1 năm tại VAECO): sinh viên Việt Nam 62,5; sinh viên quốc tế Không áp dụng.\n- Ngành Kỹ thuật Hàng không (3 năm tại Trường): sinh viên Việt Nam 50,0; sinh viên quốc tế 70,25.\n- Các chương trình đại học (song bằng): sinh viên Việt Nam 39,5; sinh viên quốc tế 50,0.\n- Ngành Dược học: sinh viên Việt Nam 36,75; sinh viên quốc tế Không áp dụng.\n- Các chương trình đại học (đơn bằng): sinh viên Việt Nam 28,0; sinh viên quốc tế 37,0.\n\n",
+              "metadata": {
+                "doc_id": "thu-hoc-phi-hk2-2025-2026",
+                "title": "Thu học phí USTH học kỳ II năm học 2025-2026",
+                "source_url": "https://usth.edu.vn/tb-ve-viec-thu-hoc-phi-hoc-ky-ii-nam-hoc-2025-2026-chuong-trinh-dao-tao-trinh-do-dai-hoc-29249/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-payment",
+                "language": "vi",
+                "academic_year": "2025-2026",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Thông báo áp dụng học kỳ II năm học 2025-2026, không áp dụng thay cho năm 2026-2027.",
+                "fee_basis": "Quyết định số 563/QĐ-ĐHKHCN ngày 01/07/2025",
+                "chunk_index": 2,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/thu-hoc-phi-hk2-2025-2026.md"
+              },
+              "score": 0.23979159932094193
+            },
+            {
+              "id": "thu-hoc-phi-hk2-2025-2026#0",
+              "content": "# Thu học phí USTH học kỳ II năm học 2025-2026\n\nUSTH thông báo thu học phí học kỳ II năm học 2025–2026 cho sinh viên đại học. Thời gian đóng từ 23/01/2026 đến 05/02/2026.\n\n## 1. Đối tượng áp dụng\n\nSinh viên thuộc một trong các đối tượng sau:\n\nTân sinh viên B0 (nhập học năm học 2025–2026) chưa được xét hoàn thành chương trình bồi dưỡng tiếng Anh;\n\nSinh viên B2, B3 của tất cả các chương trình đào tạo.\n\n## 2. Mức học phí học kỳ II năm học 2025–2026\n\n",
+              "metadata": {
+                "doc_id": "thu-hoc-phi-hk2-2025-2026",
+                "title": "Thu học phí USTH học kỳ II năm học 2025-2026",
+                "source_url": "https://usth.edu.vn/tb-ve-viec-thu-hoc-phi-hoc-ky-ii-nam-hoc-2025-2026-chuong-trinh-dao-tao-trinh-do-dai-hoc-29249/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-payment",
+                "language": "vi",
+                "academic_year": "2025-2026",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Thông báo áp dụng học kỳ II năm học 2025-2026, không áp dụng thay cho năm 2026-2027.",
+                "fee_basis": "Quyết định số 563/QĐ-ĐHKHCN ngày 01/07/2025",
+                "chunk_index": 0,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/thu-hoc-phi-hk2-2025-2026.md"
+              },
+              "score": 0.15587950227914554
+            }
+          ],
+          "gold_document_rank": 1,
+          "document_hit": true,
+          "evidence_hit": false,
+          "evidence_coverage_rank": null,
+          "missing_evidence": [
+            "đã đóng"
+          ],
+          "retrieval_proxy_score": 0,
+          "official_score": null,
+          "agent_mode": "extractive-context-preview",
+          "agent_answer": "BẢN TRÍCH NGỮ CẢNH (không phải câu trả lời tổng hợp của LLM):\n[1] Nguồn: https://usth.edu.vn/tb-ve-viec-thu-hoc-phi-hoc-ky-ii-nam-hoc-2025-2026-chuong-trinh-dao-tao-trinh-do-dai-hoc-29249/\nTài liệu: thu-hoc-phi-hk2-2025-2026 | Chunk: thu-hoc-phi-hk2-2025-2026#3\n## 3. Thời gian đóng học phí\n\nTừ ngày 23/01/2026 đến hết ngày 05/02/2026.\n\nSinh viên không hoàn thành việc đóng học phí đúng thời hạn sẽ không được tham gia các học phần thuộc học kỳ II, năm học 2025–2026.\n\n## 4. Phương thức đóng học phí\n\nSinh viên nộp học phí bằng hình thức chuyển khoản qua mã QR hiển thị trên hệ thống ERP của Nhà trường.\n\nCác bước thực hiện:\n\nĐăng nhập hệ thống ERP: https://erp.usth.edu.vn/students\n\nChọn mục Học phí, tra cứu hóa đơn\n\nKiểm tra mức học phí phải nộp\n\n\n\n[2] Nguồn: https://usth.edu.vn/tb-ve-viec-thu-hoc-phi-hoc-ky-ii-nam-hoc-2025-2026-chuong-trinh-dao-tao-trinh-do-dai-hoc-29249/\nTài liệu: thu-hoc-phi-hk2-2025-2026 | Chunk: thu-hoc-phi-hk2-2025-2026#2\n- Ngành Kỹ thuật Hàng không (3 năm tại Trường, 1 năm tại VAECO): sinh viên Việt Nam 62,5; sinh viên quốc tế Không áp dụng.\n- Ngành Kỹ thuật Hàng không (3 năm tại Trường): sinh viên Việt Nam 50,0; sinh viên quốc tế 70,25.\n- Các chương trình đại học (song bằng): sinh viên Việt Nam 39,5; sinh viên quốc tế 50,0.\n- Ngành Dược học: sinh viên Việt Nam 36,75; sinh viên quốc tế Không áp dụng.\n- Các chương trình đại học (đơn bằng): sinh viên Việt Nam 28,0; sinh viên quốc tế 37,0.\n\n\n\n[3] Nguồn: https://usth.edu.vn/tb-ve-viec-thu-hoc-phi-hoc-ky-ii-nam-hoc-2025-2026-chuong-trinh-dao-tao-trinh-do-dai-hoc-29249/\nTài liệu: thu-hoc-phi-hk2-2025-2026 | Chunk: thu-hoc-phi-hk2-2025-2026#0\n# Thu học phí USTH học kỳ II năm học 2025-2026\n\nUSTH thông báo thu học phí học kỳ II năm học 2025–2026 cho sinh viên đại học. Thời gian đóng từ 23/01/2026 đến 05/02/2026.\n\n## 1. Đối tượng áp dụng\n\nSinh viên thuộc một trong các đối tượng sau:\n\nTân sinh viên B0 (nhập học năm học 2025–2026) chưa được xét hoàn thành chương trình bồi dưỡng tiếng Anh;\n\nSinh viên B2, B3 của tất cả các chương trình đào tạo.\n\n## 2. Mức học phí học kỳ II năm học 2025–2026\n\n",
+          "agent_correct": null
+        },
+        "Q4": {
+          "filter": {
+            "academic_year": "2026-2027"
+          },
+          "results": [
+            {
+              "id": "muc-hoc-phi-2026-2027#2",
+              "content": "- Dược học: niên chế 77; tín chỉ 1284.\n- Chương trình chuẩn 3 năm và B0: niên chế 59; tín chỉ 984.\n- Học viên thạc sĩ chương trình chuẩn: niên chế 59; tín chỉ 984.\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ –.\n\n## 2. Mức học phí áp dụng cho sinh viên quốc tế (trừ sinh viên trao đổi thuộc Liên minh USTH)\n\nĐơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm).\n\n",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 2,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.2157169118307769
+            },
+            {
+              "id": "muc-hoc-phi-2026-2027#0",
+              "content": "# Mức học phí USTH năm học 2026-2027\n\nTrường Đại học Khoa học và Công nghệ Hà Nội thông báo quy định mức thu học phí năm học 2026-2027 như sau:\n\n## 1. Mức học phí áp dụng cho sinh viên Việt Nam\n\nĐơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm).\n\n",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 0,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.17193058625633034
+            },
+            {
+              "id": "muc-hoc-phi-2026-2027#1",
+              "content": "- Kỹ thuật Hàng không Y1-Y3 (các tín chỉ do USTH đào tạo): niên chế 105; tín chỉ 1.750.\n- Kỹ thuật Hàng không (37 tín chỉ B1+B2 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không (60 tín chỉ năm B2+B3 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không Y1-Y3 + Đào tạo B1&B2 tại VAECO (áp dụng cho những SV đã nộp HP theo niên chế trong năm học 2025-2026): niên chế 130; tín chỉ không nêu.\n- Bằng đôi: niên chế 83; tín chỉ 1384.\n",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 1,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.05517470633240789
+            }
+          ],
+          "gold_document_rank": 1,
+          "document_hit": true,
+          "evidence_hit": false,
+          "evidence_coverage_rank": null,
+          "missing_evidence": [
+            "đăng ký học theo tín chỉ và đăng ký học lại"
+          ],
+          "retrieval_proxy_score": 0,
+          "official_score": null,
+          "agent_mode": "extractive-context-preview",
+          "agent_answer": "BẢN TRÍCH NGỮ CẢNH (không phải câu trả lời tổng hợp của LLM):\n[1] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#2\n- Dược học: niên chế 77; tín chỉ 1284.\n- Chương trình chuẩn 3 năm và B0: niên chế 59; tín chỉ 984.\n- Học viên thạc sĩ chương trình chuẩn: niên chế 59; tín chỉ 984.\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ –.\n\n## 2. Mức học phí áp dụng cho sinh viên quốc tế (trừ sinh viên trao đổi thuộc Liên minh USTH)\n\nĐơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm).\n\n\n\n[2] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#0\n# Mức học phí USTH năm học 2026-2027\n\nTrường Đại học Khoa học và Công nghệ Hà Nội thông báo quy định mức thu học phí năm học 2026-2027 như sau:\n\n## 1. Mức học phí áp dụng cho sinh viên Việt Nam\n\nĐơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm).\n\n\n\n[3] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#1\n- Kỹ thuật Hàng không Y1-Y3 (các tín chỉ do USTH đào tạo): niên chế 105; tín chỉ 1.750.\n- Kỹ thuật Hàng không (37 tín chỉ B1+B2 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không (60 tín chỉ năm B2+B3 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không Y1-Y3 + Đào tạo B1&B2 tại VAECO (áp dụng cho những SV đã nộp HP theo niên chế trong năm học 2025-2026): niên chế 130; tín chỉ không nêu.\n- Bằng đôi: niên chế 83; tín chỉ 1384.\n",
+          "agent_correct": null
+        },
+        "Q5": {
+          "filter": {
+            "audience": "student"
+          },
+          "results": [
+            {
+              "id": "muc-hoc-phi-2026-2027#0",
+              "content": "# Mức học phí USTH năm học 2026-2027\n\nTrường Đại học Khoa học và Công nghệ Hà Nội thông báo quy định mức thu học phí năm học 2026-2027 như sau:\n\n## 1. Mức học phí áp dụng cho sinh viên Việt Nam\n\nĐơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm).\n\n",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 0,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.11930603190196976
+            },
+            {
+              "id": "muc-hoc-phi-2026-2027#1",
+              "content": "- Kỹ thuật Hàng không Y1-Y3 (các tín chỉ do USTH đào tạo): niên chế 105; tín chỉ 1.750.\n- Kỹ thuật Hàng không (37 tín chỉ B1+B2 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không (60 tín chỉ năm B2+B3 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không Y1-Y3 + Đào tạo B1&B2 tại VAECO (áp dụng cho những SV đã nộp HP theo niên chế trong năm học 2025-2026): niên chế 130; tín chỉ không nêu.\n- Bằng đôi: niên chế 83; tín chỉ 1384.\n",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 1,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.08985303950479019
+            },
+            {
+              "id": "phi-gia-han-dao-tao-2025-2026#0",
+              "content": "# Phí gia hạn đào tạo USTH năm học 2025-2026\n\nUSTH thông báo thu phí gia hạn đào tạo năm học 2025–2026 cho sinh viên đại học và học viên thạc sĩ. \n\nThời gian đóng từ 04/05/2026 đến 18/05/2026.\n\nSinh viên nộp học phí bằng hình thức chuyển khoản qua mã QR hiển thị trên hệ thống ERP của Nhà trường.\n\nCác bước thực hiện:\n\nĐăng nhập hệ thống ERP: https://erp.usth.edu.vn/students\n\nChọn mục Học phí, tra cứu hóa đơn\n\nKiểm tra số tiền phải nộp\n\nQuét mã QR để hoàn tất thanh toán\n\n",
+              "metadata": {
+                "doc_id": "phi-gia-han-dao-tao-2025-2026",
+                "title": "Phí gia hạn đào tạo USTH năm học 2025-2026",
+                "source_url": "https://usth.edu.vn/thong-bao-thu-phi-gia-han-dao-tao-nam-hoc-2025-2026-31390/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "training-extension-fee",
+                "language": "vi",
+                "academic_year": "2025-2026",
+                "extraction_note": "Chỉ lấy HTML công khai; không tải danh sách sinh viên đính kèm. HTML không nêu số tiền phí gia hạn.",
+                "chunk_index": 0,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/phi-gia-han-dao-tao-2025-2026.md"
+              },
+              "score": 0.07146787197386652
+            }
+          ],
+          "gold_document_rank": null,
+          "document_hit": false,
+          "evidence_hit": false,
+          "evidence_coverage_rank": null,
+          "missing_evidence": [
+            "học bổng tiếp nối",
+            "tốt nghiệp"
+          ],
+          "retrieval_proxy_score": 0,
+          "official_score": null,
+          "agent_mode": "extractive-context-preview",
+          "agent_answer": "BẢN TRÍCH NGỮ CẢNH (không phải câu trả lời tổng hợp của LLM):\n[1] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#0\n# Mức học phí USTH năm học 2026-2027\n\nTrường Đại học Khoa học và Công nghệ Hà Nội thông báo quy định mức thu học phí năm học 2026-2027 như sau:\n\n## 1. Mức học phí áp dụng cho sinh viên Việt Nam\n\nĐơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm).\n\n\n\n[2] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#1\n- Kỹ thuật Hàng không Y1-Y3 (các tín chỉ do USTH đào tạo): niên chế 105; tín chỉ 1.750.\n- Kỹ thuật Hàng không (37 tín chỉ B1+B2 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không (60 tín chỉ năm B2+B3 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không Y1-Y3 + Đào tạo B1&B2 tại VAECO (áp dụng cho những SV đã nộp HP theo niên chế trong năm học 2025-2026): niên chế 130; tín chỉ không nêu.\n- Bằng đôi: niên chế 83; tín chỉ 1384.\n\n\n[3] Nguồn: https://usth.edu.vn/thong-bao-thu-phi-gia-han-dao-tao-nam-hoc-2025-2026-31390/\nTài liệu: phi-gia-han-dao-tao-2025-2026 | Chunk: phi-gia-han-dao-tao-2025-2026#0\n# Phí gia hạn đào tạo USTH năm học 2025-2026\n\nUSTH thông báo thu phí gia hạn đào tạo năm học 2025–2026 cho sinh viên đại học và học viên thạc sĩ. \n\nThời gian đóng từ 04/05/2026 đến 18/05/2026.\n\nSinh viên nộp học phí bằng hình thức chuyển khoản qua mã QR hiển thị trên hệ thống ERP của Nhà trường.\n\nCác bước thực hiện:\n\nĐăng nhập hệ thống ERP: https://erp.usth.edu.vn/students\n\nChọn mục Học phí, tra cứu hóa đơn\n\nKiểm tra số tiền phải nộp\n\nQuét mã QR để hoàn tất thanh toán\n\n",
+          "agent_correct": null
+        }
+      },
+      "ab_q5": {
+        "without_filter": {
+          "filter": {},
+          "results": [
+            {
+              "id": "muc-hoc-phi-2026-2027#0",
+              "content": "# Mức học phí USTH năm học 2026-2027\n\nTrường Đại học Khoa học và Công nghệ Hà Nội thông báo quy định mức thu học phí năm học 2026-2027 như sau:\n\n## 1. Mức học phí áp dụng cho sinh viên Việt Nam\n\nĐơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm).\n\n",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 0,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.11930603190196976
+            },
+            {
+              "id": "muc-hoc-phi-2026-2027#1",
+              "content": "- Kỹ thuật Hàng không Y1-Y3 (các tín chỉ do USTH đào tạo): niên chế 105; tín chỉ 1.750.\n- Kỹ thuật Hàng không (37 tín chỉ B1+B2 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không (60 tín chỉ năm B2+B3 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không Y1-Y3 + Đào tạo B1&B2 tại VAECO (áp dụng cho những SV đã nộp HP theo niên chế trong năm học 2025-2026): niên chế 130; tín chỉ không nêu.\n- Bằng đôi: niên chế 83; tín chỉ 1384.\n",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 1,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.08985303950479019
+            },
+            {
+              "id": "phi-gia-han-dao-tao-2025-2026#0",
+              "content": "# Phí gia hạn đào tạo USTH năm học 2025-2026\n\nUSTH thông báo thu phí gia hạn đào tạo năm học 2025–2026 cho sinh viên đại học và học viên thạc sĩ. \n\nThời gian đóng từ 04/05/2026 đến 18/05/2026.\n\nSinh viên nộp học phí bằng hình thức chuyển khoản qua mã QR hiển thị trên hệ thống ERP của Nhà trường.\n\nCác bước thực hiện:\n\nĐăng nhập hệ thống ERP: https://erp.usth.edu.vn/students\n\nChọn mục Học phí, tra cứu hóa đơn\n\nKiểm tra số tiền phải nộp\n\nQuét mã QR để hoàn tất thanh toán\n\n",
+              "metadata": {
+                "doc_id": "phi-gia-han-dao-tao-2025-2026",
+                "title": "Phí gia hạn đào tạo USTH năm học 2025-2026",
+                "source_url": "https://usth.edu.vn/thong-bao-thu-phi-gia-han-dao-tao-nam-hoc-2025-2026-31390/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "training-extension-fee",
+                "language": "vi",
+                "academic_year": "2025-2026",
+                "extraction_note": "Chỉ lấy HTML công khai; không tải danh sách sinh viên đính kèm. HTML không nêu số tiền phí gia hạn.",
+                "chunk_index": 0,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/phi-gia-han-dao-tao-2025-2026.md"
+              },
+              "score": 0.07146787197386652
+            }
+          ],
+          "gold_document_rank": null,
+          "document_hit": false,
+          "evidence_hit": false,
+          "evidence_coverage_rank": null,
+          "missing_evidence": [
+            "học bổng tiếp nối",
+            "tốt nghiệp"
+          ],
+          "retrieval_proxy_score": 0,
+          "official_score": null,
+          "agent_mode": "extractive-context-preview",
+          "agent_answer": "BẢN TRÍCH NGỮ CẢNH (không phải câu trả lời tổng hợp của LLM):\n[1] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#0\n# Mức học phí USTH năm học 2026-2027\n\nTrường Đại học Khoa học và Công nghệ Hà Nội thông báo quy định mức thu học phí năm học 2026-2027 như sau:\n\n## 1. Mức học phí áp dụng cho sinh viên Việt Nam\n\nĐơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm).\n\n\n\n[2] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#1\n- Kỹ thuật Hàng không Y1-Y3 (các tín chỉ do USTH đào tạo): niên chế 105; tín chỉ 1.750.\n- Kỹ thuật Hàng không (37 tín chỉ B1+B2 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không (60 tín chỉ năm B2+B3 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không Y1-Y3 + Đào tạo B1&B2 tại VAECO (áp dụng cho những SV đã nộp HP theo niên chế trong năm học 2025-2026): niên chế 130; tín chỉ không nêu.\n- Bằng đôi: niên chế 83; tín chỉ 1384.\n\n\n[3] Nguồn: https://usth.edu.vn/thong-bao-thu-phi-gia-han-dao-tao-nam-hoc-2025-2026-31390/\nTài liệu: phi-gia-han-dao-tao-2025-2026 | Chunk: phi-gia-han-dao-tao-2025-2026#0\n# Phí gia hạn đào tạo USTH năm học 2025-2026\n\nUSTH thông báo thu phí gia hạn đào tạo năm học 2025–2026 cho sinh viên đại học và học viên thạc sĩ. \n\nThời gian đóng từ 04/05/2026 đến 18/05/2026.\n\nSinh viên nộp học phí bằng hình thức chuyển khoản qua mã QR hiển thị trên hệ thống ERP của Nhà trường.\n\nCác bước thực hiện:\n\nĐăng nhập hệ thống ERP: https://erp.usth.edu.vn/students\n\nChọn mục Học phí, tra cứu hóa đơn\n\nKiểm tra số tiền phải nộp\n\nQuét mã QR để hoàn tất thanh toán\n\n",
+          "agent_correct": null
+        },
+        "with_filter": {
+          "filter": {
+            "audience": "student"
+          },
+          "results": [
+            {
+              "id": "muc-hoc-phi-2026-2027#0",
+              "content": "# Mức học phí USTH năm học 2026-2027\n\nTrường Đại học Khoa học và Công nghệ Hà Nội thông báo quy định mức thu học phí năm học 2026-2027 như sau:\n\n## 1. Mức học phí áp dụng cho sinh viên Việt Nam\n\nĐơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm).\n\n",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 0,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.11930603190196976
+            },
+            {
+              "id": "muc-hoc-phi-2026-2027#1",
+              "content": "- Kỹ thuật Hàng không Y1-Y3 (các tín chỉ do USTH đào tạo): niên chế 105; tín chỉ 1.750.\n- Kỹ thuật Hàng không (37 tín chỉ B1+B2 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không (60 tín chỉ năm B2+B3 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không Y1-Y3 + Đào tạo B1&B2 tại VAECO (áp dụng cho những SV đã nộp HP theo niên chế trong năm học 2025-2026): niên chế 130; tín chỉ không nêu.\n- Bằng đôi: niên chế 83; tín chỉ 1384.\n",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 1,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.08985303950479019
+            },
+            {
+              "id": "phi-gia-han-dao-tao-2025-2026#0",
+              "content": "# Phí gia hạn đào tạo USTH năm học 2025-2026\n\nUSTH thông báo thu phí gia hạn đào tạo năm học 2025–2026 cho sinh viên đại học và học viên thạc sĩ. \n\nThời gian đóng từ 04/05/2026 đến 18/05/2026.\n\nSinh viên nộp học phí bằng hình thức chuyển khoản qua mã QR hiển thị trên hệ thống ERP của Nhà trường.\n\nCác bước thực hiện:\n\nĐăng nhập hệ thống ERP: https://erp.usth.edu.vn/students\n\nChọn mục Học phí, tra cứu hóa đơn\n\nKiểm tra số tiền phải nộp\n\nQuét mã QR để hoàn tất thanh toán\n\n",
+              "metadata": {
+                "doc_id": "phi-gia-han-dao-tao-2025-2026",
+                "title": "Phí gia hạn đào tạo USTH năm học 2025-2026",
+                "source_url": "https://usth.edu.vn/thong-bao-thu-phi-gia-han-dao-tao-nam-hoc-2025-2026-31390/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "training-extension-fee",
+                "language": "vi",
+                "academic_year": "2025-2026",
+                "extraction_note": "Chỉ lấy HTML công khai; không tải danh sách sinh viên đính kèm. HTML không nêu số tiền phí gia hạn.",
+                "chunk_index": 0,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/phi-gia-han-dao-tao-2025-2026.md"
+              },
+              "score": 0.07146787197386652
+            }
+          ],
+          "gold_document_rank": null,
+          "document_hit": false,
+          "evidence_hit": false,
+          "evidence_coverage_rank": null,
+          "missing_evidence": [
+            "học bổng tiếp nối",
+            "tốt nghiệp"
+          ],
+          "retrieval_proxy_score": 0,
+          "official_score": null,
+          "agent_mode": "extractive-context-preview",
+          "agent_answer": "BẢN TRÍCH NGỮ CẢNH (không phải câu trả lời tổng hợp của LLM):\n[1] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#0\n# Mức học phí USTH năm học 2026-2027\n\nTrường Đại học Khoa học và Công nghệ Hà Nội thông báo quy định mức thu học phí năm học 2026-2027 như sau:\n\n## 1. Mức học phí áp dụng cho sinh viên Việt Nam\n\nĐơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm).\n\n\n\n[2] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#1\n- Kỹ thuật Hàng không Y1-Y3 (các tín chỉ do USTH đào tạo): niên chế 105; tín chỉ 1.750.\n- Kỹ thuật Hàng không (37 tín chỉ B1+B2 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không (60 tín chỉ năm B2+B3 do VAECO đào tạo): niên chế không nêu; tín chỉ 3.000.\n- Kỹ thuật Hàng không Y1-Y3 + Đào tạo B1&B2 tại VAECO (áp dụng cho những SV đã nộp HP theo niên chế trong năm học 2025-2026): niên chế 130; tín chỉ không nêu.\n- Bằng đôi: niên chế 83; tín chỉ 1384.\n\n\n[3] Nguồn: https://usth.edu.vn/thong-bao-thu-phi-gia-han-dao-tao-nam-hoc-2025-2026-31390/\nTài liệu: phi-gia-han-dao-tao-2025-2026 | Chunk: phi-gia-han-dao-tao-2025-2026#0\n# Phí gia hạn đào tạo USTH năm học 2025-2026\n\nUSTH thông báo thu phí gia hạn đào tạo năm học 2025–2026 cho sinh viên đại học và học viên thạc sĩ. \n\nThời gian đóng từ 04/05/2026 đến 18/05/2026.\n\nSinh viên nộp học phí bằng hình thức chuyển khoản qua mã QR hiển thị trên hệ thống ERP của Nhà trường.\n\nCác bước thực hiện:\n\nĐăng nhập hệ thống ERP: https://erp.usth.edu.vn/students\n\nChọn mục Học phí, tra cứu hóa đơn\n\nKiểm tra số tiền phải nộp\n\nQuét mã QR để hoàn tất thanh toán\n\n",
+          "agent_correct": null
+        },
+        "same_top3": true,
+        "filter_necessity_proven": false
+      },
+      "document_hits": 4,
+      "evidence_hits": 0,
+      "retrieval_proxy_total": 0
+    },
+    "heading": {
+      "chunk_count": 19,
+      "avg_length": 297.10526315789474,
+      "max_length": 480,
+      "documents": {
+        "hoc-bong-tang-cuong-nang-luc-can-bo": {
+          "count": 1
+        },
+        "hoc-bong-tiep-noi-sinh-vien": {
+          "count": 1
+        },
+        "muc-hoc-phi-2026-2027": {
+          "count": 7
+        },
+        "phi-gia-han-dao-tao-2025-2026": {
+          "count": 2
+        },
+        "thu-hoc-phi-hk2-2025-2026": {
+          "count": 8
+        }
+      },
+      "evaluations": {
+        "Q1": {
+          "filter": {
+            "academic_year": "2026-2027"
+          },
+          "results": [
+            {
+              "id": "muc-hoc-phi-2026-2027#0",
+              "content": "# Mức học phí USTH năm học 2026-2027\n\nTrường Đại học Khoa học và Công nghệ Hà Nội thông báo quy định mức thu học phí năm học 2026-2027 như sau:",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 0,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.26110849729561664
+            },
+            {
+              "id": "muc-hoc-phi-2026-2027#5",
+              "content": "# Mức học phí USTH năm học 2026-2027\n## 2. Mức học phí áp dụng cho sinh viên quốc tế (trừ sinh viên trao đổi thuộc Liên minh USTH)\n\n- Sinh viên đại học ngành Kỹ thuật Hàng không Y1-Y3: niên chế 145; tín chỉ 2.417.\n- Bằng đôi: niên chế 105; tín chỉ 1.750.\n- Chương trình chuẩn 3 năm và B0: niên chế 78; tín chỉ 1.300.\n- Học viên thạc sĩ chương trình chuẩn: niên chế 105; tín chỉ 1.750.\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ không nêu.",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 5,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.09538940769729883
+            },
+            {
+              "id": "muc-hoc-phi-2026-2027#4",
+              "content": "# Mức học phí USTH năm học 2026-2027\n## 2. Mức học phí áp dụng cho sinh viên quốc tế (trừ sinh viên trao đổi thuộc Liên minh USTH)\n\nĐơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm).",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 4,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.06032394295815878
+            }
+          ],
+          "gold_document_rank": 1,
+          "document_hit": true,
+          "evidence_hit": false,
+          "evidence_coverage_rank": null,
+          "missing_evidence": [
+            "chương trình chuẩn 3 năm và b0: niên chế 59"
+          ],
+          "retrieval_proxy_score": 0,
+          "official_score": null,
+          "agent_mode": "extractive-context-preview",
+          "agent_answer": "BẢN TRÍCH NGỮ CẢNH (không phải câu trả lời tổng hợp của LLM):\n[1] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#0\n# Mức học phí USTH năm học 2026-2027\n\nTrường Đại học Khoa học và Công nghệ Hà Nội thông báo quy định mức thu học phí năm học 2026-2027 như sau:\n\n[2] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#5\n# Mức học phí USTH năm học 2026-2027\n## 2. Mức học phí áp dụng cho sinh viên quốc tế (trừ sinh viên trao đổi thuộc Liên minh USTH)\n\n- Sinh viên đại học ngành Kỹ thuật Hàng không Y1-Y3: niên chế 145; tín chỉ 2.417.\n- Bằng đôi: niên chế 105; tín chỉ 1.750.\n- Chương trình chuẩn 3 năm và B0: niên chế 78; tín chỉ 1.300.\n- Học viên thạc sĩ chương trình chuẩn: niên chế 105; tín chỉ 1.750.\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ không nêu.\n\n[3] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#4\n# Mức học phí USTH năm học 2026-2027\n## 2. Mức học phí áp dụng cho sinh viên quốc tế (trừ sinh viên trao đổi thuộc Liên minh USTH)\n\nĐơn vị theo tiêu đề bảng gốc: niên chế (triệu đ/năm); tín chỉ* (1.000đ/năm).",
+          "agent_correct": null
+        },
+        "Q2": {
+          "filter": {
+            "academic_year": "2025-2026"
+          },
+          "results": [
+            {
+              "id": "phi-gia-han-dao-tao-2025-2026#0",
+              "content": "# Phí gia hạn đào tạo USTH năm học 2025-2026\n\nUSTH thông báo thu phí gia hạn đào tạo năm học 2025–2026 cho sinh viên đại học và học viên thạc sĩ. \n\nThời gian đóng từ 04/05/2026 đến 18/05/2026.\n\nSinh viên nộp học phí bằng hình thức chuyển khoản qua mã QR hiển thị trên hệ thống ERP của Nhà trường.\n\nCác bước thực hiện:\n\nĐăng nhập hệ thống ERP: https://erp.usth.edu.vn/students\n\nChọn mục Học phí, tra cứu hóa đơn\n\nKiểm tra số tiền phải nộp\n\nQuét mã QR để hoàn tất thanh toán",
+              "metadata": {
+                "doc_id": "phi-gia-han-dao-tao-2025-2026",
+                "title": "Phí gia hạn đào tạo USTH năm học 2025-2026",
+                "source_url": "https://usth.edu.vn/thong-bao-thu-phi-gia-han-dao-tao-nam-hoc-2025-2026-31390/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "training-extension-fee",
+                "language": "vi",
+                "academic_year": "2025-2026",
+                "extraction_note": "Chỉ lấy HTML công khai; không tải danh sách sinh viên đính kèm. HTML không nêu số tiền phí gia hạn.",
+                "chunk_index": 0,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/phi-gia-han-dao-tao-2025-2026.md"
+              },
+              "score": 0.1478757868420678
+            },
+            {
+              "id": "thu-hoc-phi-hk2-2025-2026#6",
+              "content": "# Thu học phí USTH học kỳ II năm học 2025-2026\n## 4. Phương thức đóng học phí\n\nSinh viên nộp học phí bằng hình thức chuyển khoản qua mã QR hiển thị trên hệ thống ERP của Nhà trường.\n\nCác bước thực hiện:\n\nĐăng nhập hệ thống ERP: https://erp.usth.edu.vn/students\n\nChọn mục Học phí, tra cứu hóa đơn\n\nKiểm tra mức học phí phải nộp\n\nQuét mã QR để hoàn tất thanh toán\n\nThanh toán được xác nhận khi trạng thái hóa đơn chuyển sang “Đã đóng”.",
+              "metadata": {
+                "doc_id": "thu-hoc-phi-hk2-2025-2026",
+                "title": "Thu học phí USTH học kỳ II năm học 2025-2026",
+                "source_url": "https://usth.edu.vn/tb-ve-viec-thu-hoc-phi-hoc-ky-ii-nam-hoc-2025-2026-chuong-trinh-dao-tao-trinh-do-dai-hoc-29249/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-payment",
+                "language": "vi",
+                "academic_year": "2025-2026",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Thông báo áp dụng học kỳ II năm học 2025-2026, không áp dụng thay cho năm 2026-2027.",
+                "fee_basis": "Quyết định số 563/QĐ-ĐHKHCN ngày 01/07/2025",
+                "chunk_index": 6,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/thu-hoc-phi-hk2-2025-2026.md"
+              },
+              "score": 0.07362459313775954
+            },
+            {
+              "id": "thu-hoc-phi-hk2-2025-2026#5",
+              "content": "# Thu học phí USTH học kỳ II năm học 2025-2026\n## 3. Thời gian đóng học phí\n\nTừ ngày 23/01/2026 đến hết ngày 05/02/2026.\n\nSinh viên không hoàn thành việc đóng học phí đúng thời hạn sẽ không được tham gia các học phần thuộc học kỳ II, năm học 2025–2026.",
+              "metadata": {
+                "doc_id": "thu-hoc-phi-hk2-2025-2026",
+                "title": "Thu học phí USTH học kỳ II năm học 2025-2026",
+                "source_url": "https://usth.edu.vn/tb-ve-viec-thu-hoc-phi-hoc-ky-ii-nam-hoc-2025-2026-chuong-trinh-dao-tao-trinh-do-dai-hoc-29249/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-payment",
+                "language": "vi",
+                "academic_year": "2025-2026",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Thông báo áp dụng học kỳ II năm học 2025-2026, không áp dụng thay cho năm 2026-2027.",
+                "fee_basis": "Quyết định số 563/QĐ-ĐHKHCN ngày 01/07/2025",
+                "chunk_index": 5,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/thu-hoc-phi-hk2-2025-2026.md"
+              },
+              "score": 0.026680274872202706
+            }
+          ],
+          "gold_document_rank": 2,
+          "document_hit": true,
+          "evidence_hit": true,
+          "evidence_coverage_rank": 3,
+          "missing_evidence": [],
+          "retrieval_proxy_score": 1,
+          "official_score": null,
+          "agent_mode": "extractive-context-preview",
+          "agent_answer": "BẢN TRÍCH NGỮ CẢNH (không phải câu trả lời tổng hợp của LLM):\n[1] Nguồn: https://usth.edu.vn/thong-bao-thu-phi-gia-han-dao-tao-nam-hoc-2025-2026-31390/\nTài liệu: phi-gia-han-dao-tao-2025-2026 | Chunk: phi-gia-han-dao-tao-2025-2026#0\n# Phí gia hạn đào tạo USTH năm học 2025-2026\n\nUSTH thông báo thu phí gia hạn đào tạo năm học 2025–2026 cho sinh viên đại học và học viên thạc sĩ. \n\nThời gian đóng từ 04/05/2026 đến 18/05/2026.\n\nSinh viên nộp học phí bằng hình thức chuyển khoản qua mã QR hiển thị trên hệ thống ERP của Nhà trường.\n\nCác bước thực hiện:\n\nĐăng nhập hệ thống ERP: https://erp.usth.edu.vn/students\n\nChọn mục Học phí, tra cứu hóa đơn\n\nKiểm tra số tiền phải nộp\n\nQuét mã QR để hoàn tất thanh toán\n\n[2] Nguồn: https://usth.edu.vn/tb-ve-viec-thu-hoc-phi-hoc-ky-ii-nam-hoc-2025-2026-chuong-trinh-dao-tao-trinh-do-dai-hoc-29249/\nTài liệu: thu-hoc-phi-hk2-2025-2026 | Chunk: thu-hoc-phi-hk2-2025-2026#6\n# Thu học phí USTH học kỳ II năm học 2025-2026\n## 4. Phương thức đóng học phí\n\nSinh viên nộp học phí bằng hình thức chuyển khoản qua mã QR hiển thị trên hệ thống ERP của Nhà trường.\n\nCác bước thực hiện:\n\nĐăng nhập hệ thống ERP: https://erp.usth.edu.vn/students\n\nChọn mục Học phí, tra cứu hóa đơn\n\nKiểm tra mức học phí phải nộp\n\nQuét mã QR để hoàn tất thanh toán\n\nThanh toán được xác nhận khi trạng thái hóa đơn chuyển sang “Đã đóng”.\n\n[3] Nguồn: https://usth.edu.vn/tb-ve-viec-thu-hoc-phi-hoc-ky-ii-nam-hoc-2025-2026-chuong-trinh-dao-tao-trinh-do-dai-hoc-29249/\nTài liệu: thu-hoc-phi-hk2-2025-2026 | Chunk: thu-hoc-phi-hk2-2025-2026#5\n# Thu học phí USTH học kỳ II năm học 2025-2026\n## 3. Thời gian đóng học phí\n\nTừ ngày 23/01/2026 đến hết ngày 05/02/2026.\n\nSinh viên không hoàn thành việc đóng học phí đúng thời hạn sẽ không được tham gia các học phần thuộc học kỳ II, năm học 2025–2026.",
+          "agent_correct": null
+        },
+        "Q3": {
+          "filter": {},
+          "results": [
+            {
+              "id": "phi-gia-han-dao-tao-2025-2026#0",
+              "content": "# Phí gia hạn đào tạo USTH năm học 2025-2026\n\nUSTH thông báo thu phí gia hạn đào tạo năm học 2025–2026 cho sinh viên đại học và học viên thạc sĩ. \n\nThời gian đóng từ 04/05/2026 đến 18/05/2026.\n\nSinh viên nộp học phí bằng hình thức chuyển khoản qua mã QR hiển thị trên hệ thống ERP của Nhà trường.\n\nCác bước thực hiện:\n\nĐăng nhập hệ thống ERP: https://erp.usth.edu.vn/students\n\nChọn mục Học phí, tra cứu hóa đơn\n\nKiểm tra số tiền phải nộp\n\nQuét mã QR để hoàn tất thanh toán",
+              "metadata": {
+                "doc_id": "phi-gia-han-dao-tao-2025-2026",
+                "title": "Phí gia hạn đào tạo USTH năm học 2025-2026",
+                "source_url": "https://usth.edu.vn/thong-bao-thu-phi-gia-han-dao-tao-nam-hoc-2025-2026-31390/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "training-extension-fee",
+                "language": "vi",
+                "academic_year": "2025-2026",
+                "extraction_note": "Chỉ lấy HTML công khai; không tải danh sách sinh viên đính kèm. HTML không nêu số tiền phí gia hạn.",
+                "chunk_index": 0,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/phi-gia-han-dao-tao-2025-2026.md"
+              },
+              "score": 0.1478735873084744
+            },
+            {
+              "id": "hoc-bong-tiep-noi-sinh-vien#0",
+              "content": "# Học bổng Tiếp nối\n\nTheo bài tổng quan chính sách học bổng USTH, người đã tốt nghiệp bậc đại học hoặc thạc sĩ tại USTH và tiếp tục học thạc sĩ hoặc tiến sĩ tại trường thuộc đối tượng của học bổng Tiếp nối.\n\nMục 3.1 không nêu mức tiền hay tỷ lệ miễn học phí của học bổng này.",
+              "metadata": {
+                "doc_id": "hoc-bong-tiep-noi-sinh-vien",
+                "title": "USTH - Học bổng Tiếp nối cho người tốt nghiệp USTH",
+                "source_url": "https://usth.edu.vn/chinh-sach-hoc-bong-cua-usth-8361/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "scholarship",
+                "language": "vi",
+                "source_section": "3.1. Học bổng Tiếp nối",
+                "eligibility_group": "usth-graduate",
+                "temporal_scope": "historical-overview",
+                "extraction_note": "Diễn giải riêng mục 3.1; không phải toàn bộ trang. Nguồn trình bày các học bổng đã được trao, không xác nhận chính sách năm 2026-2027.",
+                "chunk_index": 0,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/hoc-bong-tiep-noi-sinh-vien.md"
+              },
+              "score": 0.12020440210769849
+            },
+            {
+              "id": "hoc-bong-tang-cuong-nang-luc-can-bo#0",
+              "content": "# Học bổng Tăng cường năng lực\n\nTheo bài tổng quan chính sách học bổng USTH, cán bộ các viện nghiên cứu hoặc trung tâm thuộc Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST), khi theo học thạc sĩ hoặc tiến sĩ tại USTH, thuộc đối tượng của học bổng Tăng cường năng lực.\n\nMục 3.2 không nêu mức tiền hay tỷ lệ miễn học phí của học bổng này.",
+              "metadata": {
+                "doc_id": "hoc-bong-tang-cuong-nang-luc-can-bo",
+                "title": "USTH - Học bổng Tăng cường năng lực cho cán bộ VAST",
+                "source_url": "https://usth.edu.vn/chinh-sach-hoc-bong-cua-usth-8361/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "staff",
+                "category": "scholarship",
+                "language": "vi",
+                "source_section": "3.2. Học bổng Tăng cường năng lực",
+                "eligibility_group": "vast-institute-center-staff",
+                "temporal_scope": "historical-overview",
+                "audience_basis": "Đối tượng được nguồn nêu rõ là cán bộ viện nghiên cứu/trung tâm thuộc VAST; đây không phải hướng dẫn nghiệp vụ thu học phí. Cán bộ đồng thời là người học sau đại học.",
+                "extraction_note": "Diễn giải riêng mục 3.2; không phải toàn bộ trang. Nguồn trình bày các học bổng đã được trao, không xác nhận chính sách năm 2026-2027.",
+                "chunk_index": 0,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/hoc-bong-tang-cuong-nang-luc-can-bo.md"
+              },
+              "score": 0.11823538027745883
+            }
+          ],
+          "gold_document_rank": null,
+          "document_hit": false,
+          "evidence_hit": false,
+          "evidence_coverage_rank": null,
+          "missing_evidence": [
+            "https://erp.usth.edu.vn/students",
+            "đã đóng"
+          ],
+          "retrieval_proxy_score": 0,
+          "official_score": null,
+          "agent_mode": "extractive-context-preview",
+          "agent_answer": "BẢN TRÍCH NGỮ CẢNH (không phải câu trả lời tổng hợp của LLM):\n[1] Nguồn: https://usth.edu.vn/thong-bao-thu-phi-gia-han-dao-tao-nam-hoc-2025-2026-31390/\nTài liệu: phi-gia-han-dao-tao-2025-2026 | Chunk: phi-gia-han-dao-tao-2025-2026#0\n# Phí gia hạn đào tạo USTH năm học 2025-2026\n\nUSTH thông báo thu phí gia hạn đào tạo năm học 2025–2026 cho sinh viên đại học và học viên thạc sĩ. \n\nThời gian đóng từ 04/05/2026 đến 18/05/2026.\n\nSinh viên nộp học phí bằng hình thức chuyển khoản qua mã QR hiển thị trên hệ thống ERP của Nhà trường.\n\nCác bước thực hiện:\n\nĐăng nhập hệ thống ERP: https://erp.usth.edu.vn/students\n\nChọn mục Học phí, tra cứu hóa đơn\n\nKiểm tra số tiền phải nộp\n\nQuét mã QR để hoàn tất thanh toán\n\n[2] Nguồn: https://usth.edu.vn/chinh-sach-hoc-bong-cua-usth-8361/\nTài liệu: hoc-bong-tiep-noi-sinh-vien | Chunk: hoc-bong-tiep-noi-sinh-vien#0\n# Học bổng Tiếp nối\n\nTheo bài tổng quan chính sách học bổng USTH, người đã tốt nghiệp bậc đại học hoặc thạc sĩ tại USTH và tiếp tục học thạc sĩ hoặc tiến sĩ tại trường thuộc đối tượng của học bổng Tiếp nối.\n\nMục 3.1 không nêu mức tiền hay tỷ lệ miễn học phí của học bổng này.\n\n[3] Nguồn: https://usth.edu.vn/chinh-sach-hoc-bong-cua-usth-8361/\nTài liệu: hoc-bong-tang-cuong-nang-luc-can-bo | Chunk: hoc-bong-tang-cuong-nang-luc-can-bo#0\n# Học bổng Tăng cường năng lực\n\nTheo bài tổng quan chính sách học bổng USTH, cán bộ các viện nghiên cứu hoặc trung tâm thuộc Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST), khi theo học thạc sĩ hoặc tiến sĩ tại USTH, thuộc đối tượng của học bổng Tăng cường năng lực.\n\nMục 3.2 không nêu mức tiền hay tỷ lệ miễn học phí của học bổng này.",
+          "agent_correct": null
+        },
+        "Q4": {
+          "filter": {
+            "academic_year": "2026-2027"
+          },
+          "results": [
+            {
+              "id": "muc-hoc-phi-2026-2027#5",
+              "content": "# Mức học phí USTH năm học 2026-2027\n## 2. Mức học phí áp dụng cho sinh viên quốc tế (trừ sinh viên trao đổi thuộc Liên minh USTH)\n\n- Sinh viên đại học ngành Kỹ thuật Hàng không Y1-Y3: niên chế 145; tín chỉ 2.417.\n- Bằng đôi: niên chế 105; tín chỉ 1.750.\n- Chương trình chuẩn 3 năm và B0: niên chế 78; tín chỉ 1.300.\n- Học viên thạc sĩ chương trình chuẩn: niên chế 105; tín chỉ 1.750.\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ không nêu.",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 5,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.3228236049702083
+            },
+            {
+              "id": "muc-hoc-phi-2026-2027#6",
+              "content": "# Mức học phí USTH năm học 2026-2027\n## 2. Mức học phí áp dụng cho sinh viên quốc tế (trừ sinh viên trao đổi thuộc Liên minh USTH)\n\n*Áp dụng đối với trường hợp đăng ký học theo tín chỉ và đăng ký học lại.",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 6,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.06785643745288988
+            },
+            {
+              "id": "muc-hoc-phi-2026-2027#0",
+              "content": "# Mức học phí USTH năm học 2026-2027\n\nTrường Đại học Khoa học và Công nghệ Hà Nội thông báo quy định mức thu học phí năm học 2026-2027 như sau:",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 0,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.04379584001135025
+            }
+          ],
+          "gold_document_rank": 1,
+          "document_hit": true,
+          "evidence_hit": true,
+          "evidence_coverage_rank": 2,
+          "missing_evidence": [],
+          "retrieval_proxy_score": 1,
+          "official_score": null,
+          "agent_mode": "extractive-context-preview",
+          "agent_answer": "BẢN TRÍCH NGỮ CẢNH (không phải câu trả lời tổng hợp của LLM):\n[1] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#5\n# Mức học phí USTH năm học 2026-2027\n## 2. Mức học phí áp dụng cho sinh viên quốc tế (trừ sinh viên trao đổi thuộc Liên minh USTH)\n\n- Sinh viên đại học ngành Kỹ thuật Hàng không Y1-Y3: niên chế 145; tín chỉ 2.417.\n- Bằng đôi: niên chế 105; tín chỉ 1.750.\n- Chương trình chuẩn 3 năm và B0: niên chế 78; tín chỉ 1.300.\n- Học viên thạc sĩ chương trình chuẩn: niên chế 105; tín chỉ 1.750.\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ không nêu.\n\n[2] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#6\n# Mức học phí USTH năm học 2026-2027\n## 2. Mức học phí áp dụng cho sinh viên quốc tế (trừ sinh viên trao đổi thuộc Liên minh USTH)\n\n*Áp dụng đối với trường hợp đăng ký học theo tín chỉ và đăng ký học lại.\n\n[3] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#0\n# Mức học phí USTH năm học 2026-2027\n\nTrường Đại học Khoa học và Công nghệ Hà Nội thông báo quy định mức thu học phí năm học 2026-2027 như sau:",
+          "agent_correct": null
+        },
+        "Q5": {
+          "filter": {
+            "audience": "student"
+          },
+          "results": [
+            {
+              "id": "muc-hoc-phi-2026-2027#5",
+              "content": "# Mức học phí USTH năm học 2026-2027\n## 2. Mức học phí áp dụng cho sinh viên quốc tế (trừ sinh viên trao đổi thuộc Liên minh USTH)\n\n- Sinh viên đại học ngành Kỹ thuật Hàng không Y1-Y3: niên chế 145; tín chỉ 2.417.\n- Bằng đôi: niên chế 105; tín chỉ 1.750.\n- Chương trình chuẩn 3 năm và B0: niên chế 78; tín chỉ 1.300.\n- Học viên thạc sĩ chương trình chuẩn: niên chế 105; tín chỉ 1.750.\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ không nêu.",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 5,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.22645632264742174
+            },
+            {
+              "id": "muc-hoc-phi-2026-2027#3",
+              "content": "# Mức học phí USTH năm học 2026-2027\n## 1. Mức học phí áp dụng cho sinh viên Việt Nam\n\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ –.",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 3,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.164410138446674
+            },
+            {
+              "id": "thu-hoc-phi-hk2-2025-2026#3",
+              "content": "# Thu học phí USTH học kỳ II năm học 2025-2026\n## 2. Mức học phí học kỳ II năm học 2025–2026\n\n- Ngành Kỹ thuật Hàng không (3 năm tại Trường, 1 năm tại VAECO): sinh viên Việt Nam 62,5; sinh viên quốc tế Không áp dụng.\n- Ngành Kỹ thuật Hàng không (3 năm tại Trường): sinh viên Việt Nam 50,0; sinh viên quốc tế 70,25.\n- Các chương trình đại học (song bằng): sinh viên Việt Nam 39,5; sinh viên quốc tế 50,0.\n- Ngành Dược học: sinh viên Việt Nam 36,75; sinh viên quốc tế Không áp dụng.",
+              "metadata": {
+                "doc_id": "thu-hoc-phi-hk2-2025-2026",
+                "title": "Thu học phí USTH học kỳ II năm học 2025-2026",
+                "source_url": "https://usth.edu.vn/tb-ve-viec-thu-hoc-phi-hoc-ky-ii-nam-hoc-2025-2026-chuong-trinh-dao-tao-trinh-do-dai-hoc-29249/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-payment",
+                "language": "vi",
+                "academic_year": "2025-2026",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Thông báo áp dụng học kỳ II năm học 2025-2026, không áp dụng thay cho năm 2026-2027.",
+                "fee_basis": "Quyết định số 563/QĐ-ĐHKHCN ngày 01/07/2025",
+                "chunk_index": 3,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/thu-hoc-phi-hk2-2025-2026.md"
+              },
+              "score": 0.1000699733638816
+            }
+          ],
+          "gold_document_rank": null,
+          "document_hit": false,
+          "evidence_hit": false,
+          "evidence_coverage_rank": null,
+          "missing_evidence": [
+            "học bổng tiếp nối",
+            "tốt nghiệp"
+          ],
+          "retrieval_proxy_score": 0,
+          "official_score": null,
+          "agent_mode": "extractive-context-preview",
+          "agent_answer": "BẢN TRÍCH NGỮ CẢNH (không phải câu trả lời tổng hợp của LLM):\n[1] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#5\n# Mức học phí USTH năm học 2026-2027\n## 2. Mức học phí áp dụng cho sinh viên quốc tế (trừ sinh viên trao đổi thuộc Liên minh USTH)\n\n- Sinh viên đại học ngành Kỹ thuật Hàng không Y1-Y3: niên chế 145; tín chỉ 2.417.\n- Bằng đôi: niên chế 105; tín chỉ 1.750.\n- Chương trình chuẩn 3 năm và B0: niên chế 78; tín chỉ 1.300.\n- Học viên thạc sĩ chương trình chuẩn: niên chế 105; tín chỉ 1.750.\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ không nêu.\n\n[2] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#3\n# Mức học phí USTH năm học 2026-2027\n## 1. Mức học phí áp dụng cho sinh viên Việt Nam\n\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ –.\n\n[3] Nguồn: https://usth.edu.vn/tb-ve-viec-thu-hoc-phi-hoc-ky-ii-nam-hoc-2025-2026-chuong-trinh-dao-tao-trinh-do-dai-hoc-29249/\nTài liệu: thu-hoc-phi-hk2-2025-2026 | Chunk: thu-hoc-phi-hk2-2025-2026#3\n# Thu học phí USTH học kỳ II năm học 2025-2026\n## 2. Mức học phí học kỳ II năm học 2025–2026\n\n- Ngành Kỹ thuật Hàng không (3 năm tại Trường, 1 năm tại VAECO): sinh viên Việt Nam 62,5; sinh viên quốc tế Không áp dụng.\n- Ngành Kỹ thuật Hàng không (3 năm tại Trường): sinh viên Việt Nam 50,0; sinh viên quốc tế 70,25.\n- Các chương trình đại học (song bằng): sinh viên Việt Nam 39,5; sinh viên quốc tế 50,0.\n- Ngành Dược học: sinh viên Việt Nam 36,75; sinh viên quốc tế Không áp dụng.",
+          "agent_correct": null
+        }
+      },
+      "ab_q5": {
+        "without_filter": {
+          "filter": {},
+          "results": [
+            {
+              "id": "muc-hoc-phi-2026-2027#5",
+              "content": "# Mức học phí USTH năm học 2026-2027\n## 2. Mức học phí áp dụng cho sinh viên quốc tế (trừ sinh viên trao đổi thuộc Liên minh USTH)\n\n- Sinh viên đại học ngành Kỹ thuật Hàng không Y1-Y3: niên chế 145; tín chỉ 2.417.\n- Bằng đôi: niên chế 105; tín chỉ 1.750.\n- Chương trình chuẩn 3 năm và B0: niên chế 78; tín chỉ 1.300.\n- Học viên thạc sĩ chương trình chuẩn: niên chế 105; tín chỉ 1.750.\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ không nêu.",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 5,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.22645632264742174
+            },
+            {
+              "id": "muc-hoc-phi-2026-2027#3",
+              "content": "# Mức học phí USTH năm học 2026-2027\n## 1. Mức học phí áp dụng cho sinh viên Việt Nam\n\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ –.",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 3,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.164410138446674
+            },
+            {
+              "id": "thu-hoc-phi-hk2-2025-2026#3",
+              "content": "# Thu học phí USTH học kỳ II năm học 2025-2026\n## 2. Mức học phí học kỳ II năm học 2025–2026\n\n- Ngành Kỹ thuật Hàng không (3 năm tại Trường, 1 năm tại VAECO): sinh viên Việt Nam 62,5; sinh viên quốc tế Không áp dụng.\n- Ngành Kỹ thuật Hàng không (3 năm tại Trường): sinh viên Việt Nam 50,0; sinh viên quốc tế 70,25.\n- Các chương trình đại học (song bằng): sinh viên Việt Nam 39,5; sinh viên quốc tế 50,0.\n- Ngành Dược học: sinh viên Việt Nam 36,75; sinh viên quốc tế Không áp dụng.",
+              "metadata": {
+                "doc_id": "thu-hoc-phi-hk2-2025-2026",
+                "title": "Thu học phí USTH học kỳ II năm học 2025-2026",
+                "source_url": "https://usth.edu.vn/tb-ve-viec-thu-hoc-phi-hoc-ky-ii-nam-hoc-2025-2026-chuong-trinh-dao-tao-trinh-do-dai-hoc-29249/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-payment",
+                "language": "vi",
+                "academic_year": "2025-2026",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Thông báo áp dụng học kỳ II năm học 2025-2026, không áp dụng thay cho năm 2026-2027.",
+                "fee_basis": "Quyết định số 563/QĐ-ĐHKHCN ngày 01/07/2025",
+                "chunk_index": 3,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/thu-hoc-phi-hk2-2025-2026.md"
+              },
+              "score": 0.1000699733638816
+            }
+          ],
+          "gold_document_rank": null,
+          "document_hit": false,
+          "evidence_hit": false,
+          "evidence_coverage_rank": null,
+          "missing_evidence": [
+            "học bổng tiếp nối",
+            "tốt nghiệp"
+          ],
+          "retrieval_proxy_score": 0,
+          "official_score": null,
+          "agent_mode": "extractive-context-preview",
+          "agent_answer": "BẢN TRÍCH NGỮ CẢNH (không phải câu trả lời tổng hợp của LLM):\n[1] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#5\n# Mức học phí USTH năm học 2026-2027\n## 2. Mức học phí áp dụng cho sinh viên quốc tế (trừ sinh viên trao đổi thuộc Liên minh USTH)\n\n- Sinh viên đại học ngành Kỹ thuật Hàng không Y1-Y3: niên chế 145; tín chỉ 2.417.\n- Bằng đôi: niên chế 105; tín chỉ 1.750.\n- Chương trình chuẩn 3 năm và B0: niên chế 78; tín chỉ 1.300.\n- Học viên thạc sĩ chương trình chuẩn: niên chế 105; tín chỉ 1.750.\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ không nêu.\n\n[2] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#3\n# Mức học phí USTH năm học 2026-2027\n## 1. Mức học phí áp dụng cho sinh viên Việt Nam\n\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ –.\n\n[3] Nguồn: https://usth.edu.vn/tb-ve-viec-thu-hoc-phi-hoc-ky-ii-nam-hoc-2025-2026-chuong-trinh-dao-tao-trinh-do-dai-hoc-29249/\nTài liệu: thu-hoc-phi-hk2-2025-2026 | Chunk: thu-hoc-phi-hk2-2025-2026#3\n# Thu học phí USTH học kỳ II năm học 2025-2026\n## 2. Mức học phí học kỳ II năm học 2025–2026\n\n- Ngành Kỹ thuật Hàng không (3 năm tại Trường, 1 năm tại VAECO): sinh viên Việt Nam 62,5; sinh viên quốc tế Không áp dụng.\n- Ngành Kỹ thuật Hàng không (3 năm tại Trường): sinh viên Việt Nam 50,0; sinh viên quốc tế 70,25.\n- Các chương trình đại học (song bằng): sinh viên Việt Nam 39,5; sinh viên quốc tế 50,0.\n- Ngành Dược học: sinh viên Việt Nam 36,75; sinh viên quốc tế Không áp dụng.",
+          "agent_correct": null
+        },
+        "with_filter": {
+          "filter": {
+            "audience": "student"
+          },
+          "results": [
+            {
+              "id": "muc-hoc-phi-2026-2027#5",
+              "content": "# Mức học phí USTH năm học 2026-2027\n## 2. Mức học phí áp dụng cho sinh viên quốc tế (trừ sinh viên trao đổi thuộc Liên minh USTH)\n\n- Sinh viên đại học ngành Kỹ thuật Hàng không Y1-Y3: niên chế 145; tín chỉ 2.417.\n- Bằng đôi: niên chế 105; tín chỉ 1.750.\n- Chương trình chuẩn 3 năm và B0: niên chế 78; tín chỉ 1.300.\n- Học viên thạc sĩ chương trình chuẩn: niên chế 105; tín chỉ 1.750.\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ không nêu.",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 5,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.22645632264742174
+            },
+            {
+              "id": "muc-hoc-phi-2026-2027#3",
+              "content": "# Mức học phí USTH năm học 2026-2027\n## 1. Mức học phí áp dụng cho sinh viên Việt Nam\n\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ –.",
+              "metadata": {
+                "doc_id": "muc-hoc-phi-2026-2027",
+                "title": "Mức học phí USTH năm học 2026-2027",
+                "source_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-rates",
+                "language": "vi",
+                "academic_year": "2026-2027",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Giữ nguyên đơn vị tín chỉ của bảng gốc; không tự sửa đơn vị. Không nêu nghĩa là ô trống trong nguồn.",
+                "chunk_index": 3,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/muc-hoc-phi-2026-2027.md"
+              },
+              "score": 0.164410138446674
+            },
+            {
+              "id": "thu-hoc-phi-hk2-2025-2026#3",
+              "content": "# Thu học phí USTH học kỳ II năm học 2025-2026\n## 2. Mức học phí học kỳ II năm học 2025–2026\n\n- Ngành Kỹ thuật Hàng không (3 năm tại Trường, 1 năm tại VAECO): sinh viên Việt Nam 62,5; sinh viên quốc tế Không áp dụng.\n- Ngành Kỹ thuật Hàng không (3 năm tại Trường): sinh viên Việt Nam 50,0; sinh viên quốc tế 70,25.\n- Các chương trình đại học (song bằng): sinh viên Việt Nam 39,5; sinh viên quốc tế 50,0.\n- Ngành Dược học: sinh viên Việt Nam 36,75; sinh viên quốc tế Không áp dụng.",
+              "metadata": {
+                "doc_id": "thu-hoc-phi-hk2-2025-2026",
+                "title": "Thu học phí USTH học kỳ II năm học 2025-2026",
+                "source_url": "https://usth.edu.vn/tb-ve-viec-thu-hoc-phi-hoc-ky-ii-nam-hoc-2025-2026-chuong-trinh-dao-tao-trinh-do-dai-hoc-29249/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "audience": "student",
+                "category": "tuition-payment",
+                "language": "vi",
+                "academic_year": "2025-2026",
+                "extraction_note": "Chỉ lấy nội dung HTML; chưa trích tài liệu nhúng. Thông báo áp dụng học kỳ II năm học 2025-2026, không áp dụng thay cho năm 2026-2027.",
+                "fee_basis": "Quyết định số 563/QĐ-ĐHKHCN ngày 01/07/2025",
+                "chunk_index": 3,
+                "source": "D:/K4-DAY07-DuongMinhHieu-2A202602488/data/hoc-phi-usth/thu-hoc-phi-hk2-2025-2026.md"
+              },
+              "score": 0.1000699733638816
+            }
+          ],
+          "gold_document_rank": null,
+          "document_hit": false,
+          "evidence_hit": false,
+          "evidence_coverage_rank": null,
+          "missing_evidence": [
+            "học bổng tiếp nối",
+            "tốt nghiệp"
+          ],
+          "retrieval_proxy_score": 0,
+          "official_score": null,
+          "agent_mode": "extractive-context-preview",
+          "agent_answer": "BẢN TRÍCH NGỮ CẢNH (không phải câu trả lời tổng hợp của LLM):\n[1] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#5\n# Mức học phí USTH năm học 2026-2027\n## 2. Mức học phí áp dụng cho sinh viên quốc tế (trừ sinh viên trao đổi thuộc Liên minh USTH)\n\n- Sinh viên đại học ngành Kỹ thuật Hàng không Y1-Y3: niên chế 145; tín chỉ 2.417.\n- Bằng đôi: niên chế 105; tín chỉ 1.750.\n- Chương trình chuẩn 3 năm và B0: niên chế 78; tín chỉ 1.300.\n- Học viên thạc sĩ chương trình chuẩn: niên chế 105; tín chỉ 1.750.\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ không nêu.\n\n[2] Nguồn: https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2026-2027-33107/\nTài liệu: muc-hoc-phi-2026-2027 | Chunk: muc-hoc-phi-2026-2027#3\n# Mức học phí USTH năm học 2026-2027\n## 1. Mức học phí áp dụng cho sinh viên Việt Nam\n\n- Nghiên cứu sinh chương trình Đào tạo tiến sĩ: niên chế 23; tín chỉ –.\n\n[3] Nguồn: https://usth.edu.vn/tb-ve-viec-thu-hoc-phi-hoc-ky-ii-nam-hoc-2025-2026-chuong-trinh-dao-tao-trinh-do-dai-hoc-29249/\nTài liệu: thu-hoc-phi-hk2-2025-2026 | Chunk: thu-hoc-phi-hk2-2025-2026#3\n# Thu học phí USTH học kỳ II năm học 2025-2026\n## 2. Mức học phí học kỳ II năm học 2025–2026\n\n- Ngành Kỹ thuật Hàng không (3 năm tại Trường, 1 năm tại VAECO): sinh viên Việt Nam 62,5; sinh viên quốc tế Không áp dụng.\n- Ngành Kỹ thuật Hàng không (3 năm tại Trường): sinh viên Việt Nam 50,0; sinh viên quốc tế 70,25.\n- Các chương trình đại học (song bằng): sinh viên Việt Nam 39,5; sinh viên quốc tế 50,0.\n- Ngành Dược học: sinh viên Việt Nam 36,75; sinh viên quốc tế Không áp dụng.",
+          "agent_correct": null
+        },
+        "same_top3": true,
+        "filter_necessity_proven": false
+      },
+      "document_hits": 3,
+      "evidence_hits": 2,
+      "retrieval_proxy_total": 2
+    }
+  }
+}
